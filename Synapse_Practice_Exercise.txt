@@ -1,0 +1,39 @@
+--creating a staging table to get data from data lake
+CREATE TABLE StageTicketData
+(
+	Ticket_Id INT,
+	Description varchar(200),
+	Priority varchar(20),
+	Status varchar(200),
+	[Created On] Date,
+	[End User Company] varchar(400),
+	[Current Responsible Person] varchar(400),
+	[Due Date] varchar(200)
+)
+WITH 
+(
+	DISTRIBUTION = ROUND_ROBIN,
+	CLUSTERED COLUMNSTORE INDEX
+)
+
+-- populating staging table with data from data lake file
+
+
+COPY INTO dbo.StageTicketData
+     (Ticket_Id, Description, Priority, Status, [Created On],[End User Company],[Current Responsible Person], [Due Date]  )
+ FROM 'https://datalakenx0ub6z.dfs.core.windows.net/files/data/MOCK_DATA.csv'
+ WITH
+ (
+     FILE_TYPE = 'CSV',
+     MAXERRORS = 0,
+     IDENTITY_INSERT = 'OFF',
+     FIRSTROW = 2 --Skip header row
+ );
+
+SELECT * FROM StageTicketData
+
+
+
+ 
+
+
