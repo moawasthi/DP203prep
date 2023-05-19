@@ -1,5 +1,13 @@
+-- creating schema 
+
+
+CREATE SCHEMA staging
+GO
 --creating a staging table to get data from data lake
-CREATE TABLE StageTicketData
+
+IF(  OBJECT_ID('staging.StageTicketData') IS NOT NULL)
+    DROP TABLE staging.StageTicketData
+CREATE TABLE staging.StageTicketData
 (
 	Ticket_Id INT,
 	Description varchar(200),
@@ -12,16 +20,16 @@ CREATE TABLE StageTicketData
 )
 WITH 
 (
-	DISTRIBUTION = ROUND_ROBIN,
+	DISTRIBUTION = ROUND_ROBIN, -- round robin for staging tables
 	CLUSTERED COLUMNSTORE INDEX
 )
 
 -- populating staging table with data from data lake file
 
 
-COPY INTO dbo.StageTicketData
+COPY INTO staging.StageTicketData
      (Ticket_Id, Description, Priority, Status, [Created On],[End User Company],[Current Responsible Person], [Due Date]  )
- FROM 'https://datalakenx0ub6z.dfs.core.windows.net/files/data/MOCK_DATA.csv'
+ FROM 'https://devsynapsestoragett.dfs.core.windows.net/ticketdata/MOCK_DATA.csv'
  WITH
  (
      FILE_TYPE = 'CSV',
@@ -30,10 +38,89 @@ COPY INTO dbo.StageTicketData
      FIRSTROW = 2 --Skip header row
  );
 
-SELECT * FROM StageTicketData
+SELECT * FROM staging.StageTicketData
+
+-- Create dimension tables
+
+IF( OBJECT_ID('Status') IS NOT NULL)
+    DROP TABLE dbo.Status
+
+CREATE TABLE dbo.Status
+(
+Status_Id INT IDENTITY(1,1),
+Status varchar(200)
+)
+WITH
+(
+DISTRIBUTION = REPLICATE,
+CLUSTERED COLUMNSTORE INDEX
+)
+
+INSERT INTO dbo.Status
+SELECT DISTINCT Status FROM staging.StageTicketData
+
+IF( OBJECT_ID('TicketDetails') IS NOT NULL)
+    DROP TABLE dbo.TicketDetails
+
+CREATE TABLE dbo.TicketDetails
+( TicketDetails_Id INT IDENTITY(1,1),
+  Ticket_Id INT,
+  Description varchar(200),
+  Created_On DATE
+)
+WITH
+(
+    DISTRIBUTION = REPLICATE,
+    CLUSTERED COLUMNSTORE INDEX
+)
+
+INSERT INTO dbo.TicketDetails
+SELECT DISTINCT Ticket_Id, Description, [Created On] FROM staging.StageTicketData
+
+IF (OBJECT_ID('dbo.UserCompany') IS NOT NULL)
+    DROP TABLE dbo.UserCompany
+
+CREATE TABLE dbo.UserCompany
+(
+    Company_id INT IDENTITY(1,1),
+    CompanyName varchar(200)
+
+)
+WITH
+(
+    DISTRIBUTION = REPLICATE,
+    CLUSTERED COLUMNSTORE INDEX
+)
+INSERT INTO dbo.UserCompany
+SELECT DISTINCT [End User Company] FROM staging.StageTicketData
+
+IF (OBJECT_ID ('dbo.FactTicketDetails') IS NOT NULL)
+    DROP TABLE dbo.FactTicketDetails
+CREATE TABLE dbo.FactTicketDetails
+(
+    FactTicket_Id INT IDENTITY(1,1),
+    TicketDetails_Id INT,
+    Company_Id INT,
+    StatusId INT,
+    CountofTickets INT
+)
+WITH
+(
+    DISTRIBUTION = HASH(FactTicket_Id),
+    CLUSTERED COLUMNSTORE INDEX
+)
 
 
+INSERT INTO dbo.FactTicketDetails
 
- 
-
-
+SELECT ROW_NUMBER() OVER (ORDER BY s.Ticket_Id) ,
+       ISNULL(td.TicketDetails_Id,0),
+       ISNULL(uc.Company_Id,0),
+       ISNULL(st.Status_Id, 0) ,
+       
+      
+       1 
+FROM staging.StageTicketData s
+LEFT JOIN dbo.Status st ON s.Status = st.Status  
+LEFT JOIN dbo.TicketDetails td on s.Ticket_Id = td.Ticket_Id
+LEFT JOIN dbo.UserCompany uc ON s.[End User Company] = uc.CompanyName
