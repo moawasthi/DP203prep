@@ -13,3 +13,12 @@ def readfiles(file_format, first_row_as_headers, infer_schema, sep, path):
         .option("sep", sep)\
         .load(path)
     return df
+
+# COMMAND ----------
+
+
+def writedataframetoDBFS(df, file_format, header, sep, location):
+    df.write.format(file_format).mode("overwrite")\
+    .option("header", header)\
+    .option("sep", sep).save(location)
+
