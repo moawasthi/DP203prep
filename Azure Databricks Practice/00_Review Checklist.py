@@ -8,7 +8,10 @@
         # Group columns and rename in groups in a df
         # sort columns in a df
         # merge two different df
+        # when otherwise
         # select distinct records from df
     # 3 : write data to a dbfs location
     # 4 : read data written to a dbfs location
     # 5 : modularize code by using run command
+    # 6 : Study Joins
+        # cross join
