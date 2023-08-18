@@ -1,6 +1,6 @@
 # Databricks notebook source
 #importing libraries
-from pyspark.sql.functions import col, concat_ws, substring
+from pyspark.sql.functions import col, concat_ws, substring, when
 
 # COMMAND ----------
 

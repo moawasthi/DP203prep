@@ -1,8 +1,17 @@
 # Databricks notebook source
-# MAGIC %run "../Azure Databricks Practice/GenericUtils"
+# MAGIC %run "../Azure Databricks Practice/02_GenericUtils"
 
 # COMMAND ----------
 
+#using when otherwise
+df = readfiles("csv", "true", "true",",","dbfs:/FileStore/demo/MOCK_DATA.csv")
+df = df.groupBy(substring(df.first_name, 1,1).alias("StartsWith") ).count()
+df = df.select(col("*"), when(df.StartsWith.isin(["A","E", "I", "O","U"]), "Vowels"  ).otherwise("Consonants").alias("Vowels/Consonants") )
+display(df)
+
+# COMMAND ----------
+
+#writing data
 dfnew = readfiles("csv", "true", "true", ",", "dbfs:/FileStore/demo/MOCK_DATA.csv")
 dfnew.printSchema()
 # Grouping data
