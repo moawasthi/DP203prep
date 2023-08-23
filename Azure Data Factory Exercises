@@ -1,0 +1,5 @@
+# 1 Copy files from one container to another container
+# 2 Use Parameterized Dataset and copy files from one container to another
+# 3 Move data from one storage account container to another in case size > 1000 Bytes
+# 4 Move data from one storage account container to another in case Number of columns > 5
+# 5 Copy data from blob storage to SQL db using Lookup and Foreach
