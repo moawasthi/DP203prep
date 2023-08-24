@@ -4,3 +4,5 @@
 # 4 Move data from one storage account container to another in case Number of columns > 5
 # 5 Copy data from blob storage to SQL db using Get Metadata and Foreach
 # 6 Copy data from sql db to blob storage using lookup and Foreach
+# 7 Execute Azure notebook from Azure data factory
+# 8 Call rest API and consume in Azure data factory
