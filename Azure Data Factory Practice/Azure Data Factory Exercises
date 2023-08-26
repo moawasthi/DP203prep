@@ -8,3 +8,4 @@
 # 8 Call rest API and consume in Azure data factory
 # 9 Execute Azure Notebook from Azure data factory and store results in Data lake
 #10 Practice Data Flow Joins taking examples from TSQL Book
+#11 Use conditional split in Azure data flow
