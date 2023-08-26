@@ -1,5 +1,5 @@
 User Story 1:
-User will place files in a sharepoint site containing SAP product masterdata with additional hierarchy information. 
+User will place files in a azure blob storage containing SAP product masterdata with additional hierarchy information. 
 This masterdata is enhanced and useful for end reporting
 
 The system should :
