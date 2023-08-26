@@ -11,3 +11,10 @@
 #11 Use conditional split in Azure data flow
 #12 use Union in Azure Data flow
 #13 Use Lookup in Azure Data Flow
+
+
+
+SAMPLE REST API
+============================
+https://dummy.restapiexample.com/api/v1/employees
+https://dummy.restapiexample.com/api/v1/employee/1
