@@ -1,0 +1,9 @@
+User Story 1:
+User will place files in a sharepoint site containing SAP product masterdata with additional hierarchy information. 
+This masterdata is enhanced and useful for end reporting
+
+The system should :
+1) Ingest this masterdata into TMP_Product table. THis table should have same structure as the masterdata
+2) Keys to access sharepoint should be stored in Azure Key vault and used from there
+3) Create a log table with ext_id, status, date of run, the period of run, yearmonth
+4) Update or insert into this log table based on a new run,
