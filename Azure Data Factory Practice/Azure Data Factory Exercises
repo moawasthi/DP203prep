@@ -12,6 +12,13 @@
 #12 use Union in Azure Data flow
 #13 Use Lookup in Azure Data Flow
 
+CONCEPTS:
+===========================
+System Assigned identities
+User Assigned identities
+Key Vault use in Linked services
+
+
 
 
 SAMPLE REST API
