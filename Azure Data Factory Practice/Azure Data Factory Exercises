@@ -11,6 +11,20 @@
 #11 Use conditional split in Azure data flow
 #12 use Union in Azure Data flow
 #13 Use Lookup in Azure Data Flow
+#14 Practice below expressions
+  ADD
+  ARRAY
+  AND
+  BETWEEN
+  CASE
+  CONCAT
+  CONCAT_WS
+  CURRENTDATE
+  CURRENTTIMESTAMP
+  COLLECT
+  DROPLEFT
+  DROPRIGHT
+
 
 CONCEPTS:
 ===========================
