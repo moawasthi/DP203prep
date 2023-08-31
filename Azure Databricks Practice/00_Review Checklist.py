@@ -15,3 +15,5 @@
     # 5 : modularize code by using run command
     # 6 : Study Joins
         # cross join
+    # 7 : connect Azure databricks to Azure adls using service principle
+    # 8 : connect Azure databricks to Azure adls using service principle and Key vault
