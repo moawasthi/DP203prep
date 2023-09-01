@@ -1,0 +1,12 @@
+USER STORY 1:
+Ingest Sales_Retail_NA file from source storage container to to azure data lake raw folder container = sellout/raw/fact/file/Retailer1
+if the copy is success == move files to archive in source data container ==> use azure data bricks, use dbutils.widget.text to parameterize values
+
+Raw to bronze activities
+create file directories based on the output parameters passed, create three folders == bronze input bronze output bronze error
+read and clean file
+
+
+
+
+
