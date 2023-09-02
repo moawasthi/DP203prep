@@ -1,10 +1,34 @@
-USER STORY 1:
-Ingest Sales_Retail_NA file from source storage container to to azure data lake raw folder container = sellout/raw/fact/file/Retailer1
-if the copy is success == move files to archive in source data container ==> use azure data bricks, use dbutils.widget.text to parameterize values
+create an adls account with name Sellout_Retailers
+create source folders = NA/Retailer Files/Retailer1
+Upload file Sellout retailer in this adls account
 
-Raw to bronze activities
-create file directories based on the output parameters passed, create three folders == bronze input bronze output bronze error
-read and clean file
+
+create another adls account
+create container : salestrade
+create folders sellout/raw/fact/file/retailerecommercesales/delta/retailerecommercesales_NA/Retailer1/
+
+
+create a pipeline to move data from one adls account to another adls account, parametrize to take above folders locations
+
+
+create a notebook with parameters
+pass following parameters from adf = source = NA/Retailer Files/Retailer1
+NA/Archive/Retailer1
+move = 1
+raw path = sellout/raw/fact/file/retailerecommercesales/delta/retailerecommercesales_NA/Amazon
+container = salestrade
+
+functionality
+	read files in the destination container
+	if the files are matching the name of the file in the source and if move =1 
+	move to the folder with year and month in archive
+	if move <> 1
+	copy to the folder with year and month in archive
+
+
+
+
+
 
 
 
