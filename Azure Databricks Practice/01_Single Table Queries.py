@@ -16,6 +16,7 @@ connectToAdLS("sabicontosodev")
 # COMMAND ----------
 
 from pyspark.sql.functions import *
+from pyspark.sql.window import Window
 
 df = spark.read.option("header",True).csv("abfss://source@sabicontosodev.dfs.core.windows.net/Orders.csv")
 
@@ -43,7 +44,27 @@ df_orders_select = df_orders.withColumn("year", year("orderdate")).withColumn("n
 df_orders = spark.read.option("header", True).csv("abfss://source@sabicontosodev.dfs.core.windows.net/Orders.csv")
 df_addyear_orders = df_orders.withColumn("orderyear", year("orderdate"))
 df_groupby_orders = df_addyear_orders.groupBy("empid", "orderyear").agg( count("empid").alias("numorders") ).orderBy(col("empid").desc(), col("orderyear").asc())
-display(df_groupby_orders)
+#display(df_groupby_orders)
+# display top 10 records
+#df_groupby_orders.show(10)
+
+# row number example
+df_orders = spark.read.option("header", True).csv("abfss://source@sabicontosodev.dfs.core.windows.net/Orders.csv")
+df_windows = df_orders.withColumn("rno", row_number().over( Window.partitionBy("custid").orderBy("freight")) )
+df_windows_select = df_windows.select("orderid","custid", "freight", "rno").orderBy("custid", "freight")
+#display(df_windows_select)
+
+# filter clause example
+df_orders = spark.read.option("header",True).csv("abfss://source@sabicontosodev.dfs.core.windows.net/Orders.csv")
+df_filtered_select = df_orders.select("orderid","empid", "orderdate").filter(col("orderid").isin(10248, 10249, 10250))
+#display(df_filtered_select)
+
+# filter with between
+df_orders = spark.read.option("header", True).csv("abfss://source@sabicontosodev.dfs.core.windows.net/Orders.csv")
+df_select_between = df_orders.select("orderid", "empid", "orderdate").filter(col("orderid").between(10248, 10250) )
+display(df_select_between)
+
+
 
 
 
