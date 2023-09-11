@@ -37,7 +37,13 @@ df_shippers = spark.read.option("header",True).csv("abfss://source@sabicontosode
 
 df_orders = spark.read.option("header",True).csv("abfss://source@sabicontosodev.dfs.core.windows.net/Orders.csv")
 df_orders_select = df_orders.withColumn("year", year("orderdate")).withColumn("nextyear" , year("orderdate") +1 ).select("orderid", "year", "nextyear")
-display(df_orders_select)
+#display(df_orders_select)
+
+# order by empid and orderyear
+df_orders = spark.read.option("header", True).csv("abfss://source@sabicontosodev.dfs.core.windows.net/Orders.csv")
+df_addyear_orders = df_orders.withColumn("orderyear", year("orderdate"))
+df_groupby_orders = df_addyear_orders.groupBy("empid", "orderyear").agg( count("empid").alias("numorders") ).orderBy(col("empid").desc(), col("orderyear").asc())
+display(df_groupby_orders)
 
 
 
