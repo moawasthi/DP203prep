@@ -13,7 +13,36 @@
 					"secureOutput": false,
 					"secureInput": false
 				},
-				"userProperties": []
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "DelimitedTextSource",
+						"storeSettings": {
+							"type": "AzureBlobFSReadSettings",
+							"recursive": true,
+							"enablePartitionDiscovery": false
+						},
+						"formatSettings": {
+							"type": "DelimitedTextReadSettings"
+						}
+					},
+					"dataset": {
+						"referenceName": "ds_iac2402_RawFileCsv",
+						"type": "DatasetReference",
+						"parameters": {
+							"blobContainer": {
+								"value": "@pipeline().parameters.blobContainerConfig",
+								"type": "Expression"
+							},
+							"path": {
+								"value": "@pipeline().parameters.rawFolderpathConfig",
+								"type": "Expression"
+							},
+							"fileName": "config_iac2402_DeltaLake.csv"
+						}
+					},
+					"firstRowOnly": false
+				}
 			},
 			{
 				"name": "Fiter Config Product Flow To Load",
@@ -26,9 +55,71 @@
 						]
 					}
 				],
-				"userProperties": []
+				"userProperties": [],
+				"typeProperties": {
+					"items": {
+						"value": "@activity('Lookup Config File Delta Lake').output.value",
+						"type": "Expression"
+					},
+					"condition": {
+						"value": "@equals(item().SubEntity, 'Product')\r\n",
+						"type": "Expression"
+					}
+				}
+			},
+			{
+				"name": "Check If Raw Folder Exists",
+				"type": "GetMetadata",
+				"state": "Inactive",
+				"onInactiveMarkAs": "Succeeded",
+				"dependsOn": [
+					{
+						"activity": "Fiter Config Product Flow To Load",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"dataset": {
+						"referenceName": "ds_iac2402_RawFileCsv",
+						"type": "DatasetReference",
+						"parameters": {
+							"blobContainer": {
+								"value": "@activity('Fiter Config Product Flow To Load').output[0].FunctionalDomain",
+								"type": "Expression"
+							}
+						}
+					},
+					"fieldList": [],
+					"storeSettings": {
+						"type": "AzureBlobFSReadSettings",
+						"enablePartitionDiscovery": false
+					},
+					"formatSettings": {
+						"type": "DelimitedTextReadSettings"
+					}
+				}
 			}
 		],
+		"parameters": {
+			"blobContainerConfig": {
+				"type": "string",
+				"defaultValue": "000projectconfig"
+			},
+			"rawFolderpathConfig": {
+				"type": "string",
+				"defaultValue": "2402_iactransportationproject"
+			}
+		},
 		"folder": {
 			"name": "1- ToRaw"
 		},
