@@ -1,0 +1,219 @@
+{
+	"$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"type": "string",
+			"metadata": "Data Factory name",
+			"defaultValue": "iac-adf-2402-dev"
+		},
+		"LS_572_toADL_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://sabiiac2402dev.dfs.core.windows.net/"
+		}
+	},
+	"variables": {
+		"factoryId": "[concat('Microsoft.DataFactory/factories/', parameters('factoryName'))]"
+	},
+	"resources": [
+		{
+			"name": "[concat(parameters('factoryName'), '/LS_572_toADL')]",
+			"type": "Microsoft.DataFactory/factories/linkedServices",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"annotations": [],
+				"type": "AzureBlobFS",
+				"typeProperties": {
+					"url": "[parameters('LS_572_toADL_properties_typeProperties_url')]"
+				}
+			},
+			"dependsOn": []
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/ds_iac2402_RawFileCsv')]",
+			"type": "Microsoft.DataFactory/factories/datasets",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"linkedServiceName": {
+					"referenceName": "LS_572_toADL",
+					"type": "LinkedServiceReference"
+				},
+				"parameters": {
+					"blobContainer": {
+						"type": "String"
+					},
+					"path": {
+						"type": "String"
+					},
+					"fileName": {
+						"type": "String"
+					}
+				},
+				"annotations": [],
+				"type": "DelimitedText",
+				"typeProperties": {
+					"location": {
+						"type": "AzureBlobFSLocation",
+						"fileName": {
+							"value": "@dataset().fileName",
+							"type": "Expression"
+						},
+						"folderPath": {
+							"value": "@dataset().path",
+							"type": "Expression"
+						},
+						"fileSystem": {
+							"value": "@dataset().blobContainer",
+							"type": "Expression"
+						}
+					},
+					"columnDelimiter": ",",
+					"escapeChar": "\\",
+					"firstRowAsHeader": true,
+					"quoteChar": "\""
+				},
+				"schema": []
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/linkedServices/LS_572_toADL')]"
+			]
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/pl_2402_ToRaw_Product')]",
+			"type": "Microsoft.DataFactory/factories/pipelines",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"activities": [
+					{
+						"name": "Lookup Config File Delta Lake",
+						"type": "Lookup",
+						"dependsOn": [],
+						"policy": {
+							"timeout": "0.12:00:00",
+							"retry": 0,
+							"retryIntervalInSeconds": 30,
+							"secureOutput": false,
+							"secureInput": false
+						},
+						"userProperties": [],
+						"typeProperties": {
+							"source": {
+								"type": "DelimitedTextSource",
+								"storeSettings": {
+									"type": "AzureBlobFSReadSettings",
+									"recursive": true,
+									"enablePartitionDiscovery": false
+								},
+								"formatSettings": {
+									"type": "DelimitedTextReadSettings"
+								}
+							},
+							"dataset": {
+								"referenceName": "ds_iac2402_RawFileCsv",
+								"type": "DatasetReference",
+								"parameters": {
+									"blobContainer": {
+										"value": "@pipeline().parameters.blobContainerConfig",
+										"type": "Expression"
+									},
+									"path": {
+										"value": "@pipeline().parameters.rawFolderpathConfig",
+										"type": "Expression"
+									},
+									"fileName": "config_iac2402_DeltaLake.csv"
+								}
+							},
+							"firstRowOnly": false
+						}
+					},
+					{
+						"name": "Fiter Config Product Flow To Load",
+						"type": "Filter",
+						"dependsOn": [
+							{
+								"activity": "Lookup Config File Delta Lake",
+								"dependencyConditions": [
+									"Succeeded"
+								]
+							}
+						],
+						"userProperties": [],
+						"typeProperties": {
+							"items": {
+								"value": "@activity('Lookup Config File Delta Lake').output.value",
+								"type": "Expression"
+							},
+							"condition": {
+								"value": "@equals(item().SubEntity, 'Product')\r\n",
+								"type": "Expression"
+							}
+						}
+					},
+					{
+						"name": "Check If Raw Folder Exists",
+						"type": "GetMetadata",
+						"state": "Inactive",
+						"onInactiveMarkAs": "Succeeded",
+						"dependsOn": [
+							{
+								"activity": "Fiter Config Product Flow To Load",
+								"dependencyConditions": [
+									"Succeeded"
+								]
+							}
+						],
+						"policy": {
+							"timeout": "0.12:00:00",
+							"retry": 0,
+							"retryIntervalInSeconds": 30,
+							"secureOutput": false,
+							"secureInput": false
+						},
+						"userProperties": [],
+						"typeProperties": {
+							"dataset": {
+								"referenceName": "ds_iac2402_RawFileCsv",
+								"type": "DatasetReference",
+								"parameters": {
+									"blobContainer": {
+										"value": "@activity('Fiter Config Product Flow To Load').output[0].FunctionalDomain",
+										"type": "Expression"
+									}
+								}
+							},
+							"fieldList": [],
+							"storeSettings": {
+								"type": "AzureBlobFSReadSettings",
+								"recursive": true,
+								"enablePartitionDiscovery": false
+							},
+							"formatSettings": {
+								"type": "DelimitedTextReadSettings"
+							}
+						}
+					}
+				],
+				"policy": {
+					"elapsedTimeMetric": {}
+				},
+				"parameters": {
+					"blobContainerConfig": {
+						"type": "string",
+						"defaultValue": "000projectconfig"
+					},
+					"rawFolderpathConfig": {
+						"type": "string",
+						"defaultValue": "2402_iactransportationproject"
+					}
+				},
+				"folder": {
+					"name": "1- ToRaw"
+				},
+				"annotations": []
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/datasets/ds_iac2402_RawFileCsv')]"
+			]
+		}
+	]
+}
