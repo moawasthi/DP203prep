@@ -1,0 +1,2 @@
+Functional Domain,Functional Sub Domain,Layer,Data Type,Data Source,Entity,Ingestion Type,SubEntity
+masterdata,,raw,master,file,product,full,Product
