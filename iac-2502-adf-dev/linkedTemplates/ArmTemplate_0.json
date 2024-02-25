@@ -172,10 +172,10 @@
 										"type": "Expression"
 									},
 									"path": {
-										"value": "@concat(activity('Filter Config File Delta Lake').output.value[0].FunctionalSubDomain, '/', activity('Filter Config File Delta Lake').output.value[0].flowId, '/')",
+										"value": "@concat(activity('Filter Config File Delta Lake').output.value[0].FunctionalSubDomain, '/', activity('Filter Config File Delta Lake').output.value[0].flowId, '/',activity('Filter Config File Delta Lake').output.value[0].Datasource, '/')",
 										"type": "Expression"
 									},
-									"fileName": "Products.csv"
+									"fileName": "products.csv"
 								}
 							},
 							"fieldList": [
@@ -231,7 +231,7 @@
 													"type": "Expression"
 												},
 												"path": {
-													"value": "@concat(activity('Filter Config File Delta Lake').output.value[0].FunctionalSubDomain, '/', activity('Filter Config File Delta Lake').output.value[0].flowId, '/')",
+													"value": "@concat(activity('Filter Config File Delta Lake').output.value[0].FunctionalSubDomain, '/', activity('Filter Config File Delta Lake').output.value[0].flowId, '/',activity('Filter Config File Delta Lake').output.value[0].Datasource, '/')",
 													"type": "Expression"
 												},
 												"fileName": "product.csv"
