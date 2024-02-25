@@ -235,6 +235,7 @@
 									"type": "DatasetReference",
 									"parameters": {
 										"blobcontainer": "sharepointreplica",
+										"path": "teams",
 										"fileName": "products.csv"
 									}
 								}
