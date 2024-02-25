@@ -1,0 +1,9 @@
+{
+	"name": "iac-2502-adf-dev",
+	"location": "southindia",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "8fc2b0af-5f63-4554-a38c-6bde495d3d22",
+		"tenantId": "d4b3ee6c-57d2-4a98-9614-17c24476d63b"
+	}
+}
