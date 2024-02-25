@@ -1,0 +1,10 @@
+{
+	"name": "LS_2502_toADL",
+	"properties": {
+		"annotations": [],
+		"type": "AzureBlobFS",
+		"typeProperties": {
+			"url": "https://sabiiac2502dev.dfs.core.windows.net/"
+		}
+	}
+}
