@@ -205,7 +205,7 @@
 						"userProperties": [],
 						"typeProperties": {
 							"expression": {
-								"value": "@and(equals(activity('Check if raw folder exists').output.exists,true), equals(activity('Filter Config File Delta Lake').output.value[0].TempFlagToLoad,1) )",
+								"value": "@and(equals(activity('Check if raw folder exists').output.exists,true), equals(activity('Filter Config File Delta Lake').output.value[0].TempFlagToLoad,'1') )",
 								"type": "Expression"
 							},
 							"ifTrueActivities": [
@@ -262,7 +262,7 @@
 						"userProperties": [],
 						"typeProperties": {
 							"expression": {
-								"value": "@equals(activity('Filter Config File Delta Lake').output.value[0].TempFlagToLoad,1)",
+								"value": "@equals(activity('Filter Config File Delta Lake').output.value[0].TempFlagToLoad,'1')",
 								"type": "Expression"
 							},
 							"ifTrueActivities": [
