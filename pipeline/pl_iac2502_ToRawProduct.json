@@ -1,0 +1,174 @@
+{
+	"name": "pl_iac2502_ToRawProduct",
+	"properties": {
+		"activities": [
+			{
+				"name": "Lookup Config File Delta Lake",
+				"type": "Lookup",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "DelimitedTextSource",
+						"storeSettings": {
+							"type": "AzureBlobFSReadSettings",
+							"recursive": true,
+							"enablePartitionDiscovery": false
+						},
+						"formatSettings": {
+							"type": "DelimitedTextReadSettings"
+						}
+					},
+					"dataset": {
+						"referenceName": "ds_RawFileCsv",
+						"type": "DatasetReference",
+						"parameters": {
+							"blobcontainer": "000projectconfig",
+							"path": "2502_iactransportationproject",
+							"fileName": "config_iac2402_DeltaLake.csv"
+						}
+					},
+					"firstRowOnly": false
+				}
+			},
+			{
+				"name": "Filter Config File Delta Lake",
+				"type": "Filter",
+				"dependsOn": [
+					{
+						"activity": "Lookup Config File Delta Lake",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"userProperties": [],
+				"typeProperties": {
+					"items": {
+						"value": "@activity('Lookup Config File Delta Lake').output.value",
+						"type": "Expression"
+					},
+					"condition": {
+						"value": "@equals(item().SubEntity, 'PRODUCT')",
+						"type": "Expression"
+					}
+				}
+			},
+			{
+				"name": "Check if raw folder exists",
+				"type": "GetMetadata",
+				"dependsOn": [
+					{
+						"activity": "Filter Config File Delta Lake",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"dataset": {
+						"referenceName": "ds_RawFileCsv",
+						"type": "DatasetReference",
+						"parameters": {
+							"blobcontainer": {
+								"value": "@activity('Filter Config File Delta Lake').output.value[0].FunctionalDomain",
+								"type": "Expression"
+							},
+							"path": {
+								"value": "@concat(activity('Filter Config File Delta Lake').output.value[0].FunctionalSubDomain, '/', activity('Filter Config File Delta Lake').output.value[0].flowId, '/')",
+								"type": "Expression"
+							},
+							"fileName": "Products.csv"
+						}
+					},
+					"fieldList": [
+						"exists"
+					],
+					"storeSettings": {
+						"type": "AzureBlobFSReadSettings",
+						"enablePartitionDiscovery": false
+					},
+					"formatSettings": {
+						"type": "DelimitedTextReadSettings"
+					}
+				}
+			},
+			{
+				"name": "If Condition1",
+				"type": "IfCondition",
+				"dependsOn": [
+					{
+						"activity": "Check if raw folder exists",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"userProperties": [],
+				"typeProperties": {
+					"expression": {
+						"value": "@equals(activity('Check if raw folder exists').output.exists,true)",
+						"type": "Expression"
+					},
+					"ifTrueActivities": [
+						{
+							"name": "clean raw folder",
+							"type": "Delete",
+							"dependsOn": [],
+							"policy": {
+								"timeout": "0.12:00:00",
+								"retry": 0,
+								"retryIntervalInSeconds": 30,
+								"secureOutput": false,
+								"secureInput": false
+							},
+							"userProperties": [],
+							"typeProperties": {
+								"dataset": {
+									"referenceName": "ds_RawFileCsv",
+									"type": "DatasetReference",
+									"parameters": {
+										"blobcontainer": {
+											"value": "@activity('Filter Config File Delta Lake').output.value[0].FunctionalDomain",
+											"type": "Expression"
+										},
+										"path": {
+											"value": "@concat(activity('Filter Config File Delta Lake').output.value[0].FunctionalSubDomain, '/', activity('Filter Config File Delta Lake').output.value[0].flowId, '/')",
+											"type": "Expression"
+										},
+										"fileName": "product.csv"
+									}
+								},
+								"enableLogging": false,
+								"storeSettings": {
+									"type": "AzureBlobFSReadSettings",
+									"recursive": true,
+									"enablePartitionDiscovery": false
+								}
+							}
+						}
+					]
+				}
+			}
+		],
+		"folder": {
+			"name": "1- ToRaw"
+		},
+		"annotations": []
+	}
+}
