@@ -20,12 +20,7 @@ sub_entity = dbutils.widgets.get("SubEntity")
 
 # COMMAND ----------
 
-
-
-
-# COMMAND ----------
-
-path_raw = 'abfss://' + functional_domain + '@sabiiacdev' + '.dfs.core.windows.net/raw/input'
+path_raw = 'abfss://' + functional_domain + '@sabiiacdev' + '.dfs.core.windows.net/raw/{0}/{1}/{2}/{3}/{4}/'.format(flow_id,data_source,entity,ingestion_type,sub_entity)
 path_input = 'abfss://' + functional_domain + '@sabiiacdev' + '.dfs.core.windows.net/{0}/input/{1}/{2}/{3}/{4}/{5}'.format(functional_sub_domain, flow_id, data_source, entity, ingestion_type, sub_entity)
 path_output = 'abfss://' + functional_domain + '@sabiiacdev' + '.dfs.core.windows.net/{0}/output/{1}/{2}/{3}/{4}/{5}'.format(functional_sub_domain, flow_id, data_source, entity, ingestion_type, sub_entity)
 path_error = 'abfss://' + functional_domain + '@sabiiacdev' + '.dfs.core.windows.net/{0}/output/{1}/{2}/{3}/{4}/{5}'.format(functional_sub_domain, flow_id, data_source, entity, ingestion_type, sub_entity)
@@ -34,7 +29,7 @@ display(path_raw)
 
 # COMMAND ----------
 
-dbutils.fs.ls(path_raw)
+dbutils.fs.ls('abfss://masterdata@sabiiacdev.dfs.core.windows.net/raw')
 
 # COMMAND ----------
 
@@ -55,10 +50,6 @@ def getFilebyTime_in_subentityFolder(directory, expectedname, searchmethod = 'la
 # COMMAND ----------
 
 try:
-    filename = getFilebyTime_in_subentityFolder('abfss://masterdata@sabiiacdev.dfs.core.windows.net/raw/input', 'dailyTripData')
+    filename = getFilebyTime_in_subentityFolder(path_raw,sub_entity)
 except:
     raise Exception(f'None of the filenames in path {path_raw} contains {sub_entity}')
-
-# COMMAND ----------
-
-dbutils.fs.cp('abfss://masterdata@sabiiacdev.dfs.core.windows.net/raw/input/'+ filename , 'abfss://masterdata@sabiiacdev.dfs.core.windows.net/raw/input/staging/' + filename )
