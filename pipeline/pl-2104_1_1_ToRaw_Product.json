@@ -1,6 +1,21 @@
 {
 	"name": "pl-2104_1_1_ToRaw_Product",
 	"properties": {
+		"activities": [
+			{
+				"name": "Lookup Config File Delta Lake",
+				"type": "Lookup",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": []
+			}
+		],
 		"folder": {
 			"name": "1 - ToRaw"
 		},
