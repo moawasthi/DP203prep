@@ -99,7 +99,7 @@
 								"value": "@concat(activity('Filter Config Product Flow To Load').output.flowId,'/',activity('Filter Config Product Flow To Load').output.Datasource, '/' ,activity('Filter Config Product Flow To Load').output.Entity,'/', activity('Filter Config Product Flow To Load').output.IngestionType, '/', activity('Filter Config Product Flow To Load').output.SubEntity\r\n)",
 								"type": "Expression"
 							},
-							"filename": "PRODUCT.csv"
+							"filename": "Product.csv"
 						}
 					},
 					"fieldList": [],
