@@ -1,0 +1,10 @@
+{
+	"name": "LS_2104_ToADL",
+	"properties": {
+		"annotations": [],
+		"type": "AzureBlobFS",
+		"typeProperties": {
+			"url": "https://sabicontosodev.dfs.core.windows.net/"
+		}
+	}
+}
