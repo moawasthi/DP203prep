@@ -102,7 +102,9 @@
 							"filename": "Product.csv"
 						}
 					},
-					"fieldList": [],
+					"fieldList": [
+						"exists"
+					],
 					"storeSettings": {
 						"type": "AzureBlobFSReadSettings",
 						"enablePartitionDiscovery": false
