@@ -66,6 +66,51 @@
 						"type": "Expression"
 					}
 				}
+			},
+			{
+				"name": "Check if Raw Folder Exists",
+				"type": "GetMetadata",
+				"dependsOn": [
+					{
+						"activity": "Filter Config Product Flow To Load",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"dataset": {
+						"referenceName": "ds_2104_RawFileCsv",
+						"type": "DatasetReference",
+						"parameters": {
+							"blobcontainer": {
+								"value": "@activity('Filter Config Product Flow To Load').output.FunctionalDomain",
+								"type": "Expression"
+							},
+							"path": {
+								"value": "@concat(activity('Filter Config Product Flow To Load').output.flowId,'/',activity('Filter Config Product Flow To Load').output.Datasource, '/' ,activity('Filter Config Product Flow To Load').output.Entity,'/', activity('Filter Config Product Flow To Load').output.IngestionType, '/', activity('Filter Config Product Flow To Load').output.SubEntity\r\n)",
+								"type": "Expression"
+							},
+							"filename": "PRODUCT.csv"
+						}
+					},
+					"fieldList": [],
+					"storeSettings": {
+						"type": "AzureBlobFSReadSettings",
+						"enablePartitionDiscovery": false
+					},
+					"formatSettings": {
+						"type": "DelimitedTextReadSettings"
+					}
+				}
 			}
 		],
 		"parameters": {
