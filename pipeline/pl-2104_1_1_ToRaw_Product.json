@@ -40,6 +40,30 @@
 							},
 							"filename": "config_2104_DeltaLake.csv"
 						}
+					},
+					"firstRowOnly": false
+				}
+			},
+			{
+				"name": "Filter Config Product Flow To Load",
+				"type": "Filter",
+				"dependsOn": [
+					{
+						"activity": "Lookup Config File Delta Lake",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"userProperties": [],
+				"typeProperties": {
+					"items": {
+						"value": "@activity('Lookup Config File Delta Lake').output.value",
+						"type": "Expression"
+					},
+					"condition": {
+						"value": "@equals(item().SubEntity,'PRODUCT')",
+						"type": "Expression"
 					}
 				}
 			}
