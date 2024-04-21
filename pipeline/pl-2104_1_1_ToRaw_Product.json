@@ -92,11 +92,11 @@
 						"type": "DatasetReference",
 						"parameters": {
 							"blobcontainer": {
-								"value": "@activity('Filter Config Product Flow To Load').output.FunctionalDomain",
+								"value": "@activity('Filter Config Product Flow To Load').output.value.FunctionalDomain",
 								"type": "Expression"
 							},
 							"path": {
-								"value": "@concat(activity('Filter Config Product Flow To Load').output.flowId,'/',activity('Filter Config Product Flow To Load').output.Datasource, '/' ,activity('Filter Config Product Flow To Load').output.Entity,'/', activity('Filter Config Product Flow To Load').output.IngestionType, '/', activity('Filter Config Product Flow To Load').output.SubEntity,'/'\n)",
+								"value": "@concat(activity('Filter Config Product Flow To Load').output.value.flowId,'/',activity('Filter Config Product Flow To Load').output.value.Datasource, '/' ,activity('Filter Config Product Flow To Load').output.value.Entity,'/', activity('Filter Config Product Flow To Load').output.value.IngestionType, '/', activity('Filter Config Product Flow To Load').output.value.SubEntity,'/'\n)",
 								"type": "Expression"
 							},
 							"filename": "Product.csv"
