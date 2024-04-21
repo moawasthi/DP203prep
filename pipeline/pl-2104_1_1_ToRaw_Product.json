@@ -96,7 +96,7 @@
 								"type": "Expression"
 							},
 							"path": {
-								"value": "@concat(activity('Filter Config Product Flow To Load').output.flowId,'/',activity('Filter Config Product Flow To Load').output.Datasource, '/' ,activity('Filter Config Product Flow To Load').output.Entity,'/', activity('Filter Config Product Flow To Load').output.IngestionType, '/', activity('Filter Config Product Flow To Load').output.SubEntity\r\n)",
+								"value": "@concat(activity('Filter Config Product Flow To Load').output.flowId,'/',activity('Filter Config Product Flow To Load').output.Datasource, '/' ,activity('Filter Config Product Flow To Load').output.Entity,'/', activity('Filter Config Product Flow To Load').output.IngestionType, '/', activity('Filter Config Product Flow To Load').output.SubEntity,'/'\n)",
 								"type": "Expression"
 							},
 							"filename": "Product.csv"
