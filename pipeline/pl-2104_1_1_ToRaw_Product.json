@@ -13,9 +13,47 @@
 					"secureOutput": false,
 					"secureInput": false
 				},
-				"userProperties": []
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "DelimitedTextSource",
+						"storeSettings": {
+							"type": "AzureBlobFSReadSettings",
+							"recursive": true,
+							"enablePartitionDiscovery": false
+						},
+						"formatSettings": {
+							"type": "DelimitedTextReadSettings"
+						}
+					},
+					"dataset": {
+						"referenceName": "ds_2104_RawFileCsv",
+						"type": "DatasetReference",
+						"parameters": {
+							"blobcontainer": {
+								"value": "@pipeline().parameters.blobcontainerconfig",
+								"type": "Expression"
+							},
+							"path": {
+								"value": "@pipeline().parameters.rawfolderfilepathconfig",
+								"type": "Expression"
+							},
+							"filename": "config_2104_DeltaLake.csv"
+						}
+					}
+				}
 			}
 		],
+		"parameters": {
+			"blobcontainerconfig": {
+				"type": "String",
+				"defaultValue": "projectconfig"
+			},
+			"rawfolderfilepathconfig": {
+				"type": "String",
+				"defaultValue": "2104_IAC_Transportation_WareHouse"
+			}
+		},
 		"folder": {
 			"name": "1 - ToRaw"
 		},
