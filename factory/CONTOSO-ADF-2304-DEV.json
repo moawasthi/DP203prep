@@ -1,0 +1,9 @@
+{
+	"name": "CONTOSO-ADF-2304-DEV",
+	"location": "southindia",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "a61b22a9-8e9a-4e83-9599-1f01510a0f9c",
+		"tenantId": "d4b3ee6c-57d2-4a98-9614-17c24476d63b"
+	}
+}
