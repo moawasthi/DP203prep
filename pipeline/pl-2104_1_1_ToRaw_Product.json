@@ -161,7 +161,7 @@
 										"filename": "Product.csv"
 									}
 								},
-								"enableLogging": true,
+								"enableLogging": false,
 								"storeSettings": {
 									"type": "AzureBlobFSReadSettings",
 									"recursive": true,
