@@ -171,6 +171,65 @@
 						}
 					]
 				}
+			},
+			{
+				"name": "If Product Flow is Active",
+				"type": "IfCondition",
+				"dependsOn": [
+					{
+						"activity": "Check if Raw folder exists and Product Flow is Active",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"userProperties": [],
+				"typeProperties": {
+					"expression": {
+						"value": "@equals(activity('Filter Config Product Flow To Load').output.Value[0].TempFlagToLoad, true)",
+						"type": "Expression"
+					},
+					"ifTrueActivities": [
+						{
+							"name": "Copy Products data",
+							"type": "Copy",
+							"dependsOn": [],
+							"policy": {
+								"timeout": "0.12:00:00",
+								"retry": 0,
+								"retryIntervalInSeconds": 30,
+								"secureOutput": false,
+								"secureInput": false
+							},
+							"userProperties": [],
+							"typeProperties": {
+								"source": {
+									"type": "DelimitedTextSource",
+									"storeSettings": {
+										"type": "AzureBlobFSReadSettings",
+										"recursive": true,
+										"enablePartitionDiscovery": false
+									},
+									"formatSettings": {
+										"type": "DelimitedTextReadSettings"
+									}
+								},
+								"enableStaging": false
+							},
+							"inputs": [
+								{
+									"referenceName": "ds_2104_RawFileCsv",
+									"type": "DatasetReference",
+									"parameters": {
+										"blobcontainer": "sharepointreplica",
+										"path": "masterdata",
+										"filename": "Product.csv"
+									}
+								}
+							]
+						}
+					]
+				}
 			}
 		],
 		"parameters": {
