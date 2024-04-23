@@ -186,7 +186,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"expression": {
-						"value": "@equals(activity('Filter Config Product Flow To Load').output.Value[0].TempFlagToLoad, true)",
+						"value": "@equals(activity('Filter Config Product Flow To Load').output.Value[0].TempFlagToLoad, 1)",
 						"type": "Expression"
 					},
 					"ifTrueActivities": [
