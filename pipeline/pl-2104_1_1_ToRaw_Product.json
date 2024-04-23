@@ -241,7 +241,7 @@
 									"type": "DatasetReference",
 									"parameters": {
 										"blobcontainer": "sharepointreplica",
-										"path": "masterdata",
+										"path": "2104_IAC_Transportation_WareHouse/masterdata/",
 										"filename": "Product.csv"
 									}
 								}
