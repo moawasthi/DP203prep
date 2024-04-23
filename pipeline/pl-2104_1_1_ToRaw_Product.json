@@ -214,7 +214,26 @@
 										"type": "DelimitedTextReadSettings"
 									}
 								},
-								"enableStaging": false
+								"sink": {
+									"type": "DelimitedTextSink",
+									"storeSettings": {
+										"type": "AzureBlobFSWriteSettings"
+									},
+									"formatSettings": {
+										"type": "DelimitedTextWriteSettings",
+										"quoteAllText": true,
+										"fileExtension": ".txt"
+									}
+								},
+								"enableStaging": false,
+								"translator": {
+									"type": "TabularTranslator",
+									"typeConversion": true,
+									"typeConversionSettings": {
+										"allowDataTruncation": true,
+										"treatBooleanAsNumber": false
+									}
+								}
 							},
 							"inputs": [
 								{
@@ -223,6 +242,23 @@
 									"parameters": {
 										"blobcontainer": "sharepointreplica",
 										"path": "masterdata",
+										"filename": "Product.csv"
+									}
+								}
+							],
+							"outputs": [
+								{
+									"referenceName": "ds_2104_RawFileCsv",
+									"type": "DatasetReference",
+									"parameters": {
+										"blobcontainer": {
+											"value": "@activity('Filter Config Product Flow To Load').output.Value[0].FunctionalDomain",
+											"type": "Expression"
+										},
+										"path": {
+											"value": "@concat(activity('Filter Config Product Flow To Load').output.Value[0].flowId,'/',activity('Filter Config Product Flow To Load').output.Value[0].Datasource, '/' ,activity('Filter Config Product Flow To Load').output.Value[0].Entity,'/', activity('Filter Config Product Flow To Load').output.Value[0].IngestionType, '/', activity('Filter Config Product Flow To Load').output.Value[0].SubEntity,'/'\n)",
+											"type": "Expression"
+										},
 										"filename": "Product.csv"
 									}
 								}
