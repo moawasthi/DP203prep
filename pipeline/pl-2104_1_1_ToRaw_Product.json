@@ -107,11 +107,69 @@
 					],
 					"storeSettings": {
 						"type": "AzureBlobFSReadSettings",
+						"recursive": true,
 						"enablePartitionDiscovery": false
 					},
 					"formatSettings": {
 						"type": "DelimitedTextReadSettings"
 					}
+				}
+			},
+			{
+				"name": "Check if Raw folder exists and Product Flow is Active",
+				"type": "IfCondition",
+				"dependsOn": [
+					{
+						"activity": "Check if Raw Folder Exists",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"userProperties": [],
+				"typeProperties": {
+					"expression": {
+						"value": "@and(equals(activity('Check if Raw Folder Exists').output.exists, true), equals(activity('Filter Config Product Flow To Load').output.Value[0].TempFlagToLoad ,1) )",
+						"type": "Expression"
+					},
+					"ifTrueActivities": [
+						{
+							"name": "Clean raw Folder",
+							"type": "Delete",
+							"dependsOn": [],
+							"policy": {
+								"timeout": "0.12:00:00",
+								"retry": 0,
+								"retryIntervalInSeconds": 30,
+								"secureOutput": false,
+								"secureInput": false
+							},
+							"userProperties": [],
+							"typeProperties": {
+								"dataset": {
+									"referenceName": "ds_2104_RawFileCsv",
+									"type": "DatasetReference",
+									"parameters": {
+										"blobcontainer": {
+											"value": "@pipeline().parameters.blobcontainerconfig",
+											"type": "Expression"
+										},
+										"path": {
+											"value": "@pipeline().parameters.rawfolderfilepathconfig",
+											"type": "Expression"
+										},
+										"filename": "Product.csv"
+									}
+								},
+								"enableLogging": true,
+								"storeSettings": {
+									"type": "AzureBlobFSReadSettings",
+									"recursive": true,
+									"enablePartitionDiscovery": false
+								}
+							}
+						}
+					]
 				}
 			}
 		],
