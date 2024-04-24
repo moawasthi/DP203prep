@@ -1,0 +1,86 @@
+{
+	"name": "pl_2104_2_1_ToSilver_Product",
+	"properties": {
+		"activities": [
+			{
+				"name": "Lookup Config File",
+				"type": "Lookup",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "DelimitedTextSource",
+						"storeSettings": {
+							"type": "AzureBlobFSReadSettings",
+							"recursive": true,
+							"enablePartitionDiscovery": false
+						},
+						"formatSettings": {
+							"type": "DelimitedTextReadSettings"
+						}
+					},
+					"dataset": {
+						"referenceName": "ds_2104_RawFileCsv",
+						"type": "DatasetReference",
+						"parameters": {
+							"blobcontainer": {
+								"value": "@pipeline().parameters.blobcontainerConfig",
+								"type": "Expression"
+							},
+							"path": {
+								"value": "@pipeline().parameters.rawfolderfilepathconfig",
+								"type": "Expression"
+							},
+							"filename": "config_2104_DeltaLake.csv"
+						}
+					},
+					"firstRowOnly": false
+				}
+			},
+			{
+				"name": "Filter Config Master Data to Load",
+				"type": "Filter",
+				"dependsOn": [
+					{
+						"activity": "Lookup Config File",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"userProperties": [],
+				"typeProperties": {
+					"items": {
+						"value": "@activity('Lookup Config File').output.value",
+						"type": "Expression"
+					},
+					"condition": {
+						"value": "@equals(int(item().TempFlagToLoad),1)",
+						"type": "Expression"
+					}
+				}
+			}
+		],
+		"parameters": {
+			"blobcontainerConfig": {
+				"type": "string",
+				"defaultValue": "projectconfig"
+			},
+			"rawfolderfilepathconfig": {
+				"type": "string",
+				"defaultValue": "2104_IAC_Transportation_WareHouse"
+			}
+		},
+		"folder": {
+			"name": "2 -ToSilver"
+		},
+		"annotations": []
+	}
+}
