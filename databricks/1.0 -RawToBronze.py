@@ -8,6 +8,7 @@ dbutils.widgets.text("IngestionType","")
 dbutils.widgets.text("SubEntity","")
 
 
+
 # COMMAND ----------
 
 functional_domain = dbutils.widgets.get("FunctionalDomain")
@@ -21,7 +22,16 @@ display(functional_domain)
 
 # COMMAND ----------
 
+path_raw = 'abfss://' + functional_domain + '@sabicontoso2604dev.dfs.core.windows.net/raw/master/'
+display(path_raw)
+
+# COMMAND ----------
+
+dbutils.fs.ls('abfss://masterdata@sabicontoso2604dev.dfs.core.windows.net/raw/master/file/product/full/PRODUCT')
+
+# COMMAND ----------
+
 try:
-    dbutils.fs.ls('abfss://masterdata@sabicontosodev.dfs.core.windows.net/raw/master/file/product/full/PRODUCT')
+    dbutils.fs.ls(path_raw)
 except:
     dbutils.notebook.exit('no files in raw path')
