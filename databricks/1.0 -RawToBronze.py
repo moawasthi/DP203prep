@@ -22,12 +22,12 @@ display(functional_domain)
 
 # COMMAND ----------
 
-path_raw = 'abfss://' + functional_domain + '@sabicontoso2604dev.dfs.core.windows.net/raw/master/'
+path_raw = 'abfss://' + functional_domain + '@sabicontosodev.dfs.core.windows.net/raw/{0}/{1}/{2}/{3}/{4}/'.format(flow_id, data_source, entity, ingestion_type, sub_entity)
 display(path_raw)
 
 # COMMAND ----------
 
-dbutils.fs.ls('abfss://masterdata@sabicontoso2604dev.dfs.core.windows.net/raw/master/file/product/full/PRODUCT')
+dbutils.fs.ls(path_raw)
 
 # COMMAND ----------
 
