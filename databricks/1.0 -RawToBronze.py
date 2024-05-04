@@ -6,7 +6,7 @@ dbutils.widgets.text("DataSource","")
 dbutils.widgets.text("Entity","")
 dbutils.widgets.text("IngestionType","")
 dbutils.widgets.text("SubEntity","")
-business_date = dbutils.widgets.get("BusinessDate")
+business_date = dbutils.widgets.get("BusinessDate") 
 
 # COMMAND ----------
 
@@ -51,6 +51,7 @@ except:
     dbutils.notebook.exit('no files in raw path')
 
 # COMMAND ----------
+
 try:
     search_method = 'first'
     raw_file_name = getfilebytime_in_subentityfolder(path_raw, sub_entity, search_method)
@@ -58,5 +59,6 @@ except:
     raise Exception ("raw path {path_raw} does not contain files with name {sub_entity}")
 
 # COMMAND ----------
+
 bronze_input_file_name = business_date + raw_file_name
 dbutils.fs.cp(path_raw + raw_file_name, path_bronze_input + bronze_input_file_name)
