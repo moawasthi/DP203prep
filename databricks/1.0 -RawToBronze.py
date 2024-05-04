@@ -6,7 +6,21 @@ dbutils.widgets.text("DataSource","")
 dbutils.widgets.text("Entity","")
 dbutils.widgets.text("IngestionType","")
 dbutils.widgets.text("SubEntity","")
+dbutils.widgets.text("BusinessDate", "")
 business_date = dbutils.widgets.get("BusinessDate") 
+
+# COMMAND ----------
+
+col_dict_Silver_Name_Datatype_PRODUCT = \
+    {
+        "category" : "StringType",
+        "CategoryDesc" : "StringType",
+        "Brand" : "StringType",
+        "BrandDesc" : "StringType",
+        "Weight" : "StringType",
+        "Volume" : "StringType",
+        "Net Volume" : "StringType"
+    }
 
 # COMMAND ----------
 
@@ -29,7 +43,6 @@ data_source = dbutils.widgets.get("DataSource")
 entity = dbutils.widgets.get("Entity")
 ingestion_type = dbutils.widgets.get("IngestionType")
 sub_entity = dbutils.widgets.get("SubEntity")
-display(functional_domain)
 
 # COMMAND ----------
 
@@ -37,7 +50,7 @@ path_raw = 'abfss://' + functional_domain + '@sabicontosodev.dfs.core.windows.ne
 path_bronze_input = 'abfss://' + functional_domain + '@sabicontosodev.dfs.core.windows.net/bronze/{0}/{1}/{2}/{3}/input/{4}/'.format(flow_id, data_source, entity, ingestion_type, sub_entity)
 path_bronze_output = 'abfss://' + functional_domain + '@sabicontosodev.dfs.core.windows.net/bronze/{0}/{1}/{2}/{3}/output/{4}/'.format(flow_id, data_source, entity, ingestion_type, sub_entity)
 path_bronze_error = 'abfss://' + functional_domain + '@sabicontosodev.dfs.core.windows.net/bronze/{0}/{1}/{2}/{3}/error/{4}/'.format(flow_id, data_source, entity, ingestion_type, sub_entity)
-display(path_raw)
+
 
 # COMMAND ----------
 
@@ -60,5 +73,22 @@ except:
 
 # COMMAND ----------
 
-bronze_input_file_name = business_date + raw_file_name
+bronze_input_file_name = business_date + '_' + raw_file_name
 dbutils.fs.cp(path_raw + raw_file_name, path_bronze_input + bronze_input_file_name)
+
+# COMMAND ----------
+
+df_raw = spark.read.format("csv").option("header",True).load(path_bronze_input+bronze_input_file_name)
+num_rows = df_raw.count()
+display(df_raw)
+if num_rows == 0:
+    dbutils.notebook.exit("There are no rows in the file {raw_file_name} at path {path_raw}")
+
+
+# COMMAND ----------
+
+col_dict_Silver = eval('col_dict_Silver_Name_Datatype_' + sub_entity)
+col_required_in_Silver = set(col_dict_Silver.keys())
+col_in_raw = set(df_raw.columns)
+if col_required_in_Silver.difference(col_in_raw):
+    raise Exception(f'There are missing attributes in {raw_file_name} at {path_raw}. Missing attributes are {col_required_in_Silver.difference(col_in_raw)}')
