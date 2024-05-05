@@ -1,4 +1,11 @@
 # Databricks notebook source
+import os
+from pyspark.sql.functions import lit, col
+import logging
+import pyspark.sql.functions as F
+
+# COMMAND ----------
+
 dbutils.widgets.text("FunctionalDomain","")
 dbutils.widgets.text("FunctionalSubDomain","")
 dbutils.widgets.text("FlowId","")
@@ -18,8 +25,15 @@ col_dict_Silver_Name_Datatype_PRODUCT = \
         "Brand" : "StringType",
         "BrandDesc" : "StringType",
         "Weight" : "StringType",
-        "Volume" : "StringType",
-        "Net Volume" : "StringType"
+        "Volume" : "StringType"
+    }
+
+
+# COMMAND ----------
+
+col_dict_primary_key = \
+    {
+        "PRODUCT" : ["category", "CategoryDesc", "Brand", "BrandDesc"]
     }
 
 # COMMAND ----------
@@ -51,10 +65,6 @@ path_bronze_input = 'abfss://' + functional_domain + '@sabicontosodev.dfs.core.w
 path_bronze_output = 'abfss://' + functional_domain + '@sabicontosodev.dfs.core.windows.net/bronze/{0}/{1}/{2}/{3}/output/{4}/'.format(flow_id, data_source, entity, ingestion_type, sub_entity)
 path_bronze_error = 'abfss://' + functional_domain + '@sabicontosodev.dfs.core.windows.net/bronze/{0}/{1}/{2}/{3}/error/{4}/'.format(flow_id, data_source, entity, ingestion_type, sub_entity)
 
-
-# COMMAND ----------
-
-dbutils.fs.ls(path_raw)
 
 # COMMAND ----------
 
@@ -92,3 +102,16 @@ col_required_in_Silver = set(col_dict_Silver.keys())
 col_in_raw = set(df_raw.columns)
 if col_required_in_Silver.difference(col_in_raw):
     raise Exception(f'There are missing attributes in {raw_file_name} at {path_raw}. Missing attributes are {col_required_in_Silver.difference(col_in_raw)}')
+
+# COMMAND ----------
+
+primary_key = col_dict_primary_key[sub_entity]
+#display(primary_key)
+df_error = None
+if primary_key:
+    count_distinct_primary_key = df_raw.select(primary_key).count() - (df_raw.select(primary_key).distinct().count())
+    if count_distinct_primary_key > 0:
+       df_error = df_raw.groupBy(primary_key).count().filter(col('count') > 1).join(df_raw, primary_key, 'left').select(df_raw.columns).withColumn('CORRUPTED_DATA', lit('Duplicate in Primary Key') )
+       df_raw = df_raw.distinct()
+display(df_error)
+display(df_raw)
