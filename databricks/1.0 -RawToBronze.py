@@ -60,11 +60,16 @@ sub_entity = dbutils.widgets.get("SubEntity")
 
 # COMMAND ----------
 
-path_raw = 'abfss://' + functional_domain + '@sabicontosodev.dfs.core.windows.net/raw/{0}/{1}/{2}/{3}/{4}/'.format(flow_id, data_source, entity, ingestion_type, sub_entity)
-path_bronze_input = 'abfss://' + functional_domain + '@sabicontosodev.dfs.core.windows.net/bronze/{0}/{1}/{2}/{3}/input/{4}/'.format(flow_id, data_source, entity, ingestion_type, sub_entity)
-path_bronze_output = 'abfss://' + functional_domain + '@sabicontosodev.dfs.core.windows.net/bronze/{0}/{1}/{2}/{3}/output/{4}/'.format(flow_id, data_source, entity, ingestion_type, sub_entity)
-path_bronze_error = 'abfss://' + functional_domain + '@sabicontosodev.dfs.core.windows.net/bronze/{0}/{1}/{2}/{3}/error/{4}/'.format(flow_id, data_source, entity, ingestion_type, sub_entity)
+path_raw = 'abfss://' + functional_domain + '@sabicontosodev.dfs.core.windows.net/{0}/raw/{1}/{2}/{3}/{4}/'.format(flow_id, data_source, entity, ingestion_type, sub_entity)
+path_bronze_input = 'abfss://' + functional_domain + '@sabicontosodev.dfs.core.windows.net/{0}/bronze/{1}/{2}/{3}/input/{4}/'.format(flow_id, data_source, entity, ingestion_type, sub_entity)
+path_bronze_output = 'abfss://' + functional_domain + '@sabicontosodev.dfs.core.windows.net/{0}/bronze/{1}/{2}/{3}/output/{4}/'.format(flow_id, data_source, entity, ingestion_type, sub_entity)
+path_bronze_error = 'abfss://' + functional_domain + '@sabicontosodev.dfs.core.windows.net/{0}/bronze/{1}/{2}/{3}/error/{4}/'.format(flow_id, data_source, entity, ingestion_type, sub_entity)
 
+
+# COMMAND ----------
+
+display(path_bronze_input)
+#dbutils.fs.ls()
 
 # COMMAND ----------
 
@@ -79,7 +84,7 @@ try:
     search_method = 'first'
     raw_file_name = getfilebytime_in_subentityfolder(path_raw, sub_entity, search_method)
 except:
-    raise Exception ("raw path {path_raw} does not contain files with name {sub_entity}")
+    raise Exception (f"raw path {path_raw} does not contain files with name {sub_entity}")
 
 # COMMAND ----------
 
@@ -115,3 +120,33 @@ if primary_key:
        df_raw = df_raw.distinct()
 display(df_error)
 display(df_raw)
+
+# COMMAND ----------
+
+isnull_condition = "AND ".join(f"(({col} IS NULL OR {col} = ' ' ))" for col in primary_key)
+display(isnull_condition)
+argument = "case when " + isnull_condition + "then 'NULL PK' else NULL END"
+df_raw = df_raw.withColumn('CORRUPTED_DATA', F.expr( argument) )
+display(df_raw) 
+
+# COMMAND ----------
+
+df_bronze_output = df_raw.filter(df_raw.CORRUPTED_DATA.isNull()).drop('CORRUPTED_DATA')
+df_bronze_error = df_raw.filter(df_raw.CORRUPTED_DATA.isNotNull()).withColumn("Processing_Date",F.lit(business_date))
+
+if (df_error is not None):
+    df_bronze_error = df_bronze_error.union(df_error.withColumn("Processing_Date",F.lit(business_date)) )
+
+df_bronze_error.write.mode('append').format('delta').option("mergeSchema","true").option("path", path_bronze_error).save()
+
+
+
+# COMMAND ----------
+
+spark.sql(f"DROP TABLE IF EXISTS dbo.{sub_entity}")
+spark.sql(f"CREATE EXTERNAL TABLE IF NOT EXISTS dbo.{sub_entity} LOCATION '{path_bronze_output}'")
+
+
+# COMMAND ----------
+
+df_bronze_output.write.mode('overwrite').format('delta').option('mergeSchema',"true").option('path', path_bronze_output).saveAsTable('dbo.' + sub_entity)
