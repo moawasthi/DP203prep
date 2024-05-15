@@ -143,10 +143,20 @@ df_bronze_error.write.mode('append').format('delta').option("mergeSchema","true"
 
 # COMMAND ----------
 
-spark.sql(f"DROP TABLE IF EXISTS dbo.{sub_entity}")
-spark.sql(f"CREATE EXTERNAL TABLE IF NOT EXISTS dbo.{sub_entity} LOCATION '{path_bronze_output}'")
+display(df_bronze_output)
+
+# COMMAND ----------
+
+spark.sql(f"DROP TABLE IF EXISTS dev.dbo.{sub_entity}")
+spark.sql(f"CREATE EXTERNAL TABLE IF NOT EXISTS dev.dbo.{sub_entity} LOCATION '{path_bronze_output}'")
 
 
 # COMMAND ----------
 
-df_bronze_output.write.mode('overwrite').format('delta').option('mergeSchema',"true").option('path', path_bronze_output).saveAsTable('dbo.' + sub_entity)
+df_bronze_output.write.mode('overwrite').format('delta').option('mergeSchema',"true").option('path', path_bronze_output).saveAsTable('dev.dbo.' + sub_entity)
+
+# COMMAND ----------
+
+# MAGIC %sql
+# MAGIC
+# MAGIC select * FROM dev.dbo.product
