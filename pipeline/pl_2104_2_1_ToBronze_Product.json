@@ -1,5 +1,5 @@
 {
-	"name": "pl_2104_2_1_ToSilver_Product",
+	"name": "pl_2104_2_1_ToBronze_Product",
 	"properties": {
 		"activities": [
 			{
@@ -66,6 +66,53 @@
 						"type": "Expression"
 					}
 				}
+			},
+			{
+				"name": "ForEach Entity",
+				"type": "ForEach",
+				"dependsOn": [
+					{
+						"activity": "Filter Config Master Data to Load",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"userProperties": [],
+				"typeProperties": {
+					"items": {
+						"value": "@activity('Lookup Config File').output.value",
+						"type": "Expression"
+					},
+					"activities": [
+						{
+							"name": "Notebook Raw to Bronze",
+							"type": "DatabricksNotebook",
+							"dependsOn": [],
+							"policy": {
+								"timeout": "0.12:00:00",
+								"retry": 0,
+								"retryIntervalInSeconds": 30,
+								"secureOutput": false,
+								"secureInput": false
+							},
+							"userProperties": [],
+							"typeProperties": {
+								"notebookPath": "/Repos/mohit.awasthi04@gmail.com/DP203prep/databricks/1.0 -RawToBronze",
+								"baseParameters": {
+									"BusinessDate": {
+										"value": "@pipeline().TriggerTime",
+										"type": "Expression"
+									}
+								}
+							},
+							"linkedServiceName": {
+								"referenceName": "ls_dbks_dev",
+								"type": "LinkedServiceReference"
+							}
+						}
+					]
+				}
 			}
 		],
 		"parameters": {
@@ -79,7 +126,7 @@
 			}
 		},
 		"folder": {
-			"name": "2 -ToSilver"
+			"name": "2 -ToBronze"
 		},
 		"annotations": []
 	}
