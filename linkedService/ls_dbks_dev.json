@@ -1,0 +1,13 @@
+{
+	"name": "ls_dbks_dev",
+	"properties": {
+		"annotations": [],
+		"type": "AzureDatabricks",
+		"typeProperties": {
+			"domain": "https://adb-560776396829563.3.azuredatabricks.net",
+			"authentication": "MSI",
+			"workspaceResourceId": "/subscriptions/6a4c1741-e88c-44c0-8a38-22ac6269c95c/resourceGroups/rg-contoso-dev/providers/Microsoft.Databricks/workspaces/contoso-dbks-dev",
+			"existingClusterId": "0515-085234-gw7pqktj"
+		}
+	}
+}
