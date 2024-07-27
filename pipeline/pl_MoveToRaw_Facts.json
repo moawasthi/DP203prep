@@ -188,7 +188,7 @@
 				}
 			},
 			{
-				"name": "Filter1",
+				"name": "filtering all other tables",
 				"type": "Filter",
 				"dependsOn": [
 					{
@@ -211,11 +211,11 @@
 				}
 			},
 			{
-				"name": "ForEach2",
+				"name": "Loop and load",
 				"type": "ForEach",
 				"dependsOn": [
 					{
-						"activity": "Filter1",
+						"activity": "filtering all other tables",
 						"dependencyConditions": [
 							"Succeeded"
 						]
@@ -224,13 +224,13 @@
 				"userProperties": [],
 				"typeProperties": {
 					"items": {
-						"value": "@activity('Filter1').output.value",
+						"value": "@activity('filtering all other tables').output.value",
 						"type": "Expression"
 					},
 					"isSequential": true,
 					"activities": [
 						{
-							"name": "Copy data2",
+							"name": "Copy SQL to DL",
 							"type": "Copy",
 							"dependsOn": [],
 							"policy": {
