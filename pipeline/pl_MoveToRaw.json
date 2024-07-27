@@ -1,0 +1,147 @@
+{
+	"name": "pl_MoveToRaw",
+	"properties": {
+		"activities": [
+			{
+				"name": "Lookup Config File in DataLake",
+				"type": "Lookup",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "DelimitedTextSource",
+						"storeSettings": {
+							"type": "AzureBlobFSReadSettings",
+							"recursive": true,
+							"enablePartitionDiscovery": false
+						},
+						"formatSettings": {
+							"type": "DelimitedTextReadSettings"
+						}
+					},
+					"dataset": {
+						"referenceName": "ds_sink_dl",
+						"type": "DatasetReference",
+						"parameters": {
+							"containerName": "config",
+							"directoryPath": {
+								"value": "tsqlv6",
+								"type": "Expression"
+							},
+							"fileName": "config_tsqlv6.csv"
+						}
+					},
+					"firstRowOnly": false
+				}
+			},
+			{
+				"name": "Move to DataLake",
+				"description": "Loop over Config File and Move to DataLake",
+				"type": "ForEach",
+				"dependsOn": [
+					{
+						"activity": "Lookup Config File in DataLake",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"userProperties": [],
+				"typeProperties": {
+					"items": {
+						"value": "@activity('Lookup Config File in DataLake').output.value",
+						"type": "Expression"
+					},
+					"isSequential": true,
+					"activities": [
+						{
+							"name": "Copy To DataLake",
+							"description": "Read from Config File and move to Datalake",
+							"type": "Copy",
+							"dependsOn": [],
+							"policy": {
+								"timeout": "0.12:00:00",
+								"retry": 0,
+								"retryIntervalInSeconds": 30,
+								"secureOutput": false,
+								"secureInput": false
+							},
+							"userProperties": [],
+							"typeProperties": {
+								"source": {
+									"type": "AzureSqlSource",
+									"queryTimeout": "02:00:00",
+									"partitionOption": "None"
+								},
+								"sink": {
+									"type": "DelimitedTextSink",
+									"storeSettings": {
+										"type": "AzureBlobFSWriteSettings"
+									},
+									"formatSettings": {
+										"type": "DelimitedTextWriteSettings",
+										"quoteAllText": true,
+										"fileExtension": ".txt"
+									}
+								},
+								"enableStaging": false,
+								"translator": {
+									"type": "TabularTranslator",
+									"typeConversion": true,
+									"typeConversionSettings": {
+										"allowDataTruncation": true,
+										"treatBooleanAsNumber": false
+									}
+								}
+							},
+							"inputs": [
+								{
+									"referenceName": "ds_source_tbl",
+									"type": "DatasetReference",
+									"parameters": {
+										"schemaName": {
+											"value": "@item().schemaName",
+											"type": "Expression"
+										},
+										"tableName": {
+											"value": "@item().tableName",
+											"type": "Expression"
+										}
+									}
+								}
+							],
+							"outputs": [
+								{
+									"referenceName": "ds_sink_dl",
+									"type": "DatasetReference",
+									"parameters": {
+										"containerName": {
+											"value": "@item().containerName",
+											"type": "Expression"
+										},
+										"directoryPath": {
+											"value": "@item().directoryPath",
+											"type": "Expression"
+										},
+										"fileName": {
+											"value": "@item().fileName",
+											"type": "Expression"
+										}
+									}
+								}
+							]
+						}
+					]
+				}
+			}
+		],
+		"annotations": []
+	}
+}
