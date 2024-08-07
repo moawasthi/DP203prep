@@ -55,6 +55,8 @@ file_list = [
     if "/archive/" not in f.path
 ]
 
+bronze_path = "abfss://tsqlv6@sabicontosodev.dfs.core.windows.net/bronze/"
+
 if file_list:
     file_path = file_list[0].path
     file_name = file_list[0].name
@@ -67,15 +69,19 @@ if file_list:
     #check_no_duplicates(salesdata, primary_key)
     check_columns_exist(salesdata, columns_list)
     schema_defined = StructType( [StructField ("ASIN", StringType(), True ), 
-                          StructField ("Product Title", StringType(), True ), 
-                          StructField ("Ordered Revenue", StringType(), True ), 
-                          StructField ("Ordered Unit", StringType(), True ), 
-                          StructField ("Dispatched Revenue", StringType(), True ), 
-                          StructField("Dispatched COGS", StringType(), True),
-                          StructField("Dispatched Unit", StringType(), True)]
+                          StructField ("Product_Title", StringType(), True ), 
+                          StructField ("Ordered_Revenue", StringType(), True ), 
+                          StructField ("Ordered_Unit", StringType(), True ), 
+                          StructField ("Dispatched_Revenue", StringType(), True ), 
+                          StructField("Dispatched_COGS", StringType(), True),
+                          StructField("Dispatched_Unit", StringType(), True)]
                           )
     sales_bronze = spark.read.csv(file_path, header=True, schema=schema_defined)
     sales_bronze.write.mode("overwrite").format("delta").option("MergeSchema", True).saveAsTable("contosodev.sales.Sales_Retail")
+
+        #bronze promotion
+    dbutils.fs.mv(file_path, bronze_path + file_name )
+    #display(file_path + file_name)
 
 
 
