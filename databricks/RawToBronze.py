@@ -87,6 +87,5 @@ if file_list:
 
 # COMMAND ----------
 
-# MAGIC %environment
-# MAGIC "client": "1"
-# MAGIC "base_environment": ""
+# MAGIC %sql
+# MAGIC select * FROM contosodev.sales.Sales_Retail
