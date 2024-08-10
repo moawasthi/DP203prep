@@ -1,0 +1,9 @@
+{
+	"name": "adf-contoso-1008-dev",
+	"location": "southindia",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "2c215556-c436-47f3-abea-48dab8f14158",
+		"tenantId": "d4b3ee6c-57d2-4a98-9614-17c24476d63b"
+	}
+}
