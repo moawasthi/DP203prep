@@ -1,0 +1,110 @@
+{
+	"name": "01_pl_contoso_copyfromStagingToRaw",
+	"properties": {
+		"activities": [
+			{
+				"name": "From Staging to Raw",
+				"type": "Copy",
+				"dependsOn": [
+					{
+						"activity": "Set FileName",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "DelimitedTextSource",
+						"storeSettings": {
+							"type": "AzureBlobFSReadSettings",
+							"recursive": true,
+							"enablePartitionDiscovery": false
+						},
+						"formatSettings": {
+							"type": "DelimitedTextReadSettings"
+						}
+					},
+					"sink": {
+						"type": "DelimitedTextSink",
+						"storeSettings": {
+							"type": "AzureBlobFSWriteSettings"
+						},
+						"formatSettings": {
+							"type": "DelimitedTextWriteSettings",
+							"quoteAllText": true,
+							"fileExtension": ".txt"
+						}
+					},
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"typeConversion": true,
+						"typeConversionSettings": {
+							"allowDataTruncation": true,
+							"treatBooleanAsNumber": false
+						}
+					}
+				},
+				"inputs": [
+					{
+						"referenceName": "ds_Retail_source",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "ds_retail_sink",
+						"type": "DatasetReference",
+						"parameters": {
+							"File_Name": {
+								"value": "@variables('File_Name')",
+								"type": "Expression"
+							}
+						}
+					}
+				]
+			},
+			{
+				"name": "Set FileName",
+				"type": "SetVariable",
+				"dependsOn": [],
+				"policy": {
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"variableName": "File_Name",
+					"value": {
+						"value": "@concat(formatDateTime(pipeline().TriggerTime, 'dd-MMM-yyyy hh:mm:ss tt'),'Retail_Sales.csv')",
+						"type": "Expression"
+					}
+				}
+			}
+		],
+		"parameters": {
+			"FileNamePipeline": {
+				"type": "String"
+			}
+		},
+		"variables": {
+			"File_Name": {
+				"type": "String",
+				"defaultValue": "Retail_Sales.csv"
+			}
+		},
+		"folder": {
+			"name": "Demo_1"
+		},
+		"annotations": []
+	}
+}

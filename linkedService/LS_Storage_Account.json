@@ -1,0 +1,10 @@
+{
+	"name": "LS_Storage_Account",
+	"properties": {
+		"annotations": [],
+		"type": "AzureBlobFS",
+		"typeProperties": {
+			"url": "https://sabicontosodev.dfs.core.windows.net/"
+		}
+	}
+}

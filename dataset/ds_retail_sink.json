@@ -1,0 +1,61 @@
+{
+	"name": "ds_retail_sink",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_Storage_Account",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"File_Name": {
+				"type": "String"
+			}
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": {
+					"value": "@dataset().File_Name",
+					"type": "Expression"
+				},
+				"folderPath": "raw",
+				"fileSystem": "tsqlv6"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "ASIN",
+				"type": "String"
+			},
+			{
+				"name": "Product Title",
+				"type": "String"
+			},
+			{
+				"name": "Ordered Revenue",
+				"type": "String"
+			},
+			{
+				"name": "Ordered Unit",
+				"type": "String"
+			},
+			{
+				"name": "Dispatched Revenue",
+				"type": "String"
+			},
+			{
+				"name": "Dispatched COGS",
+				"type": "String"
+			},
+			{
+				"name": "Dispatched Unit",
+				"type": "String"
+			}
+		]
+	}
+}
