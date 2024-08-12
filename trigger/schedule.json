@@ -1,0 +1,27 @@
+{
+	"name": "schedule",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Started",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "01_pl_contoso_copyfromStagingToRaw",
+					"type": "PipelineReference"
+				},
+				"parameters": {
+					"FileNamePipeline": "t"
+				}
+			}
+		],
+		"type": "ScheduleTrigger",
+		"typeProperties": {
+			"recurrence": {
+				"frequency": "Day",
+				"interval": 1,
+				"startTime": "2024-08-13T22:56:00",
+				"timeZone": "India Standard Time"
+			}
+		}
+	}
+}

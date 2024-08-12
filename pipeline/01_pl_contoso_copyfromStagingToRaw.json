@@ -65,10 +65,7 @@
 						"referenceName": "ds_retail_sink",
 						"type": "DatasetReference",
 						"parameters": {
-							"File_Name": {
-								"value": "@variables('File_Name')",
-								"type": "Expression"
-							}
+							"File_Name": "t"
 						}
 					}
 				]
