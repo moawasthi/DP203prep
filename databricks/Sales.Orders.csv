@@ -1,0 +1,831 @@
+orderid,custid,empid,orderdate,requireddate,shippeddate,shipperid,freight,shipname,shipaddress,shipcity,shipregion,shippostalcode,shipcountry
+10248,85,5,2020-07-04,2020-08-01,2020-07-16,3,32.3800,Ship to 85-B,6789 rue de l'Abbaye,Reims,,10345,France
+10249,79,6,2020-07-05,2020-08-16,2020-07-10,1,11.6100,Ship to 79-C,Luisenstr. 9012,Münster,,10328,Germany
+10250,34,4,2020-07-08,2020-08-05,2020-07-12,2,65.8300,Destination SCQXA,"Rua do Paço, 7890",Rio de Janeiro,RJ,10195,Brazil
+10251,84,3,2020-07-08,2020-08-05,2020-07-15,1,41.3400,Ship to 84-A,"3456, rue du Commerce",Lyon,,10342,France
+10252,76,4,2020-07-09,2020-08-06,2020-07-11,2,51.3000,Ship to 76-B,"Boulevard Tirou, 9012",Charleroi,,10318,Belgium
+10253,34,3,2020-07-10,2020-07-24,2020-07-16,2,58.1700,Destination JPAIY,"Rua do Paço, 8901",Rio de Janeiro,RJ,10196,Brazil
+10254,14,5,2020-07-11,2020-08-08,2020-07-23,2,22.9800,Destination YUJRD,Hauptstr. 1234,Bern,,10139,Switzerland
+10255,68,9,2020-07-12,2020-08-09,2020-07-15,3,148.3300,Ship to 68-A,Starenweg 6789,Genève,,10294,Switzerland
+10256,88,3,2020-07-15,2020-08-12,2020-07-17,2,13.9700,Ship to 88-B,"Rua do Mercado, 5678",Resende,SP,10354,Brazil
+10257,35,4,2020-07-16,2020-08-13,2020-07-22,3,81.9100,Destination JYDLM,Carrera1234 con Ave. Carlos Soublette #8-35,San Cristóbal,Táchira,10199,Venezuela
+10258,20,1,2020-07-17,2020-08-14,2020-07-23,1,140.5100,Destination RVDMF,Kirchgasse 9012,Graz,,10157,Austria
+10259,13,4,2020-07-18,2020-08-15,2020-07-25,3,3.2500,Destination LGGCH,Sierras de Granada 9012,México D.F.,,10137,Mexico
+10260,56,4,2020-07-19,2020-08-16,2020-07-29,1,55.0900,Ship to 56-A,Mehrheimerstr. 0123,Köln,,10258,Germany
+10261,61,4,2020-07-19,2020-08-16,2020-07-30,2,3.0500,Ship to 61-B,"Rua da Panificadora, 6789",Rio de Janeiro,RJ,10274,Brazil
+10262,65,8,2020-07-22,2020-08-19,2020-07-25,3,48.2900,Ship to 65-B,8901 Milton Dr.,Albuquerque,NM,10286,USA
+10263,20,9,2020-07-23,2020-08-20,2020-07-31,3,146.0600,Destination FFXKT,Kirchgasse 0123,Graz,,10158,Austria
+10264,24,6,2020-07-24,2020-08-21,2020-08-23,3,3.6700,Destination KBSBN,Åkergatan 9012,Bräcke,,10167,Sweden
+10265,7,2,2020-07-25,2020-08-22,2020-08-12,1,55.2800,Ship to 7-A,"0123, place Kléber",Strasbourg,,10329,France
+10266,87,3,2020-07-26,2020-09-06,2020-07-31,3,25.7300,Ship to 87-B,Torikatu 2345,Oulu,,10351,Finland
+10267,25,4,2020-07-29,2020-08-26,2020-08-06,1,208.5800,Destination VAPXU,Berliner Platz 0123,München,,10168,Germany
+10268,33,8,2020-07-30,2020-08-27,2020-08-02,3,66.2900,Destination QJVQH,5ª Ave. Los Palos Grandes 5678,Caracas,DF,10193,Venezuela
+10269,89,5,2020-07-31,2020-08-14,2020-08-09,1,4.5600,Ship to 89-B,8901 - 12th Ave. S.,Seattle,WA,10357,USA
+10270,87,1,2020-08-01,2020-08-29,2020-08-02,1,136.5400,Ship to 87-B,Torikatu 2345,Oulu,,10351,Finland
+10271,75,6,2020-08-01,2020-08-29,2020-08-30,2,4.5400,Ship to 75-C,P.O. Box 7890,Lander,WY,10316,USA
+10272,65,6,2020-08-02,2020-08-30,2020-08-06,2,98.0300,Ship to 65-A,7890 Milton Dr.,Albuquerque,NM,10285,USA
+10273,63,3,2020-08-05,2020-09-02,2020-08-12,3,76.0700,Ship to 63-A,Taucherstraße 1234,Cunewalde,,10279,Germany
+10274,85,6,2020-08-06,2020-09-03,2020-08-16,1,6.0100,Ship to 85-B,6789 rue de l'Abbaye,Reims,,10345,France
+10275,49,1,2020-08-07,2020-09-04,2020-08-09,1,26.9300,Ship to 49-A,Via Ludovico il Moro 8901,Bergamo,,10235,Italy
+10276,80,8,2020-08-08,2020-08-22,2020-08-14,3,13.8400,Ship to 80-C,Avda. Azteca 5678,México D.F.,,10334,Mexico
+10277,52,2,2020-08-09,2020-09-06,2020-08-13,3,125.7700,Ship to 52-A,Heerstr. 9012,Leipzig,,10247,Germany
+10278,5,8,2020-08-12,2020-09-09,2020-08-16,2,92.6900,Ship to 5-C,Berguvsvägen  1234,Luleå,,10269,Sweden
+10279,44,8,2020-08-13,2020-09-10,2020-08-16,2,25.8300,Ship to 44-A,Magazinweg 4567,Frankfurt a.M.,,10222,Germany
+10280,5,2,2020-08-14,2020-09-11,2020-09-12,1,8.9800,Ship to 5-B,Berguvsvägen  0123,Luleå,,10268,Sweden
+10281,69,4,2020-08-14,2020-08-28,2020-08-21,1,2.9400,Ship to 69-A,"Gran Vía, 9012",Madrid,,10297,Spain
+10282,69,4,2020-08-15,2020-09-12,2020-08-21,1,12.6900,Ship to 69-B,"Gran Vía, 0123",Madrid,,10298,Spain
+10283,46,3,2020-08-16,2020-09-13,2020-08-23,3,84.8100,Ship to 46-A,Carrera 0123 con Ave. Bolívar #65-98 Llano Largo,Barquisimeto,Lara,10227,Venezuela
+10284,44,4,2020-08-19,2020-09-16,2020-08-27,1,76.5600,Ship to 44-A,Magazinweg 4567,Frankfurt a.M.,,10222,Germany
+10285,63,1,2020-08-20,2020-09-17,2020-08-26,2,76.8300,Ship to 63-B,Taucherstraße 2345,Cunewalde,,10280,Germany
+10286,63,8,2020-08-21,2020-09-18,2020-08-30,3,229.2400,Ship to 63-B,Taucherstraße 2345,Cunewalde,,10280,Germany
+10287,67,8,2020-08-22,2020-09-19,2020-08-28,3,12.7600,Ship to 67-A,"Av. Copacabana, 3456",Rio de Janeiro,RJ,10291,Brazil
+10288,66,4,2020-08-23,2020-09-20,2020-09-03,1,7.4500,Ship to 66-C,Strada Provinciale 2345,Reggio Emilia,,10290,Italy
+10289,11,7,2020-08-26,2020-09-23,2020-08-28,3,22.7700,Destination DLEUN,Fauntleroy Circus 4567,London,,10132,UK
+10290,15,8,2020-08-27,2020-09-24,2020-09-03,1,79.7000,Destination HQZHO,"Av. dos Lusíadas, 4567",Sao Paulo,SP,10142,Brazil
+10291,61,6,2020-08-27,2020-09-24,2020-09-04,2,6.4000,Ship to 61-A,"Rua da Panificadora, 5678",Rio de Janeiro,RJ,10273,Brazil
+10292,81,1,2020-08-28,2020-09-25,2020-09-02,2,1.3500,Ship to 81-A,"Av. Inês de Castro, 6789",Sao Paulo,SP,10335,Brazil
+10293,80,1,2020-08-29,2020-09-26,2020-09-11,3,21.1800,Ship to 80-B,Avda. Azteca 4567,México D.F.,,10333,Mexico
+10294,65,4,2020-08-30,2020-09-27,2020-09-05,2,147.2600,Ship to 65-A,7890 Milton Dr.,Albuquerque,NM,10285,USA
+10295,85,2,2020-09-02,2020-09-30,2020-09-10,2,1.1500,Ship to 85-C,7890 rue de l'Abbaye,Reims,,10346,France
+10296,46,6,2020-09-03,2020-10-01,2020-09-11,1,0.1200,Ship to 46-C,Carrera 2345 con Ave. Bolívar #65-98 Llano Largo,Barquisimeto,Lara,10229,Venezuela
+10297,7,5,2020-09-04,2020-10-16,2020-09-10,2,5.7400,Ship to 7-C,"2345, place Kléber",Strasbourg,,10331,France
+10298,37,6,2020-09-05,2020-10-03,2020-09-11,2,168.2200,Destination ATSOA,4567 Johnstown Road,Cork,Co. Cork,10202,Ireland
+10299,67,4,2020-09-06,2020-10-04,2020-09-13,2,29.7600,Ship to 67-A,"Av. Copacabana, 3456",Rio de Janeiro,RJ,10291,Brazil
+10300,49,2,2020-09-09,2020-10-07,2020-09-18,2,17.6800,Ship to 49-A,Via Ludovico il Moro 8901,Bergamo,,10235,Italy
+10301,86,8,2020-09-09,2020-10-07,2020-09-17,2,45.0800,Ship to 86-A,Adenauerallee 8901,Stuttgart,,10347,Germany
+10302,76,4,2020-09-10,2020-10-08,2020-10-09,2,6.2700,Ship to 76-B,"Boulevard Tirou, 9012",Charleroi,,10318,Belgium
+10303,30,7,2020-09-11,2020-10-09,2020-09-18,2,107.8300,Destination IIYDD,"C/ Romero, 5678",Sevilla,,10183,Spain
+10304,80,1,2020-09-12,2020-10-10,2020-09-17,2,63.7900,Ship to 80-C,Avda. Azteca 5678,México D.F.,,10334,Mexico
+10305,55,8,2020-09-13,2020-10-11,2020-10-09,3,257.6200,Ship to 55-B,8901 Bering St.,Anchorage,AK,10256,USA
+10306,69,1,2020-09-16,2020-10-14,2020-09-23,3,7.5600,Ship to 69-B,"Gran Vía, 0123",Madrid,,10298,Spain
+10307,48,2,2020-09-17,2020-10-15,2020-09-25,2,0.5600,Ship to 48-B,6789 Chiaroscuro Rd.,Portland,OR,10233,USA
+10308,2,7,2020-09-18,2020-10-16,2020-09-24,3,1.6100,Destination QMVCI,Avda. de la Constitución 2345,México D.F.,,10180,Mexico
+10309,37,3,2020-09-19,2020-10-17,2020-10-23,1,47.3000,Destination ATSOA,4567 Johnstown Road,Cork,Co. Cork,10202,Ireland
+10310,77,8,2020-09-20,2020-10-18,2020-09-27,2,17.5200,Ship to 77-B,2345 Jefferson Way Suite 2,Portland,OR,10321,USA
+10311,18,1,2020-09-20,2020-10-04,2020-09-26,3,24.6900,Destination SNPXM,"0123, rue des Cinquante Otages",Nantes,,10148,France
+10312,86,2,2020-09-23,2020-10-21,2020-10-03,2,40.2600,Ship to 86-B,Adenauerallee 9012,Stuttgart,,10348,Germany
+10313,63,2,2020-09-24,2020-10-22,2020-10-04,2,1.9600,Ship to 63-A,Taucherstraße 1234,Cunewalde,,10279,Germany
+10314,65,1,2020-09-25,2020-10-23,2020-10-04,2,74.1600,Ship to 65-A,7890 Milton Dr.,Albuquerque,NM,10285,USA
+10315,38,4,2020-09-26,2020-10-24,2020-10-03,2,41.7600,Destination AXVHD,Garden House Crowther Way 9012,Cowes,Isle of Wight,10207,UK
+10316,65,1,2020-09-27,2020-10-25,2020-10-08,3,150.1500,Ship to 65-B,8901 Milton Dr.,Albuquerque,NM,10286,USA
+10317,48,6,2020-09-30,2020-10-28,2020-10-10,1,12.6900,Ship to 48-B,6789 Chiaroscuro Rd.,Portland,OR,10233,USA
+10318,38,8,2020-10-01,2020-10-29,2020-10-04,2,4.7300,Destination AXVHD,Garden House Crowther Way 9012,Cowes,Isle of Wight,10207,UK
+10319,80,7,2020-10-02,2020-10-30,2020-10-11,3,64.5000,Ship to 80-B,Avda. Azteca 4567,México D.F.,,10333,Mexico
+10320,87,5,2020-10-03,2020-10-17,2020-10-18,3,34.5700,Ship to 87-A,Torikatu 1234,Oulu,,10350,Finland
+10321,38,3,2020-10-03,2020-10-31,2020-10-11,2,3.4300,Destination LMVGS,Garden House Crowther Way 8901,Cowes,Isle of Wight,10206,UK
+10322,58,7,2020-10-04,2020-11-01,2020-10-23,3,0.4000,Ship to 58-A,Calle Dr. Jorge Cash 3456,México D.F.,,10261,Mexico
+10323,39,4,2020-10-07,2020-11-04,2020-10-14,1,4.8800,Destination RMBHM,Maubelstr. 1234,Brandenburg,,10209,Germany
+10324,71,9,2020-10-08,2020-11-05,2020-10-10,1,214.2700,Ship to 71-C,9012 Suffolk Ln.,Boise,ID,10307,USA
+10325,39,1,2020-10-09,2020-10-23,2020-10-14,3,64.8600,Destination RMBHM,Maubelstr. 1234,Brandenburg,,10209,Germany
+10326,8,4,2020-10-10,2020-11-07,2020-10-14,2,77.9200,Ship to 8-A,"C/ Araquil, 0123",Madrid,,10359,Spain
+10327,24,2,2020-10-11,2020-11-08,2020-10-14,1,63.3600,Destination NCKKO,Åkergatan 7890,Bräcke,,10165,Sweden
+10328,28,4,2020-10-14,2020-11-11,2020-10-17,3,87.0300,Destination CIRQO,Jardim das rosas n. 8901,Lisboa,,10176,Portugal
+10329,75,4,2020-10-15,2020-11-26,2020-10-23,2,191.6700,Ship to 75-C,P.O. Box 7890,Lander,WY,10316,USA
+10330,46,3,2020-10-16,2020-11-13,2020-10-28,1,12.7500,Ship to 46-A,Carrera 0123 con Ave. Bolívar #65-98 Llano Largo,Barquisimeto,Lara,10227,Venezuela
+10331,9,9,2020-10-16,2020-11-27,2020-10-21,1,10.1900,Ship to 9-C,"0123, rue des Bouchers",Marseille,,10369,France
+10332,51,3,2020-10-17,2020-11-28,2020-10-21,2,52.8400,Ship to 51-B,7890 rue St. Laurent,Montréal,Québec,10245,Canada
+10333,87,5,2020-10-18,2020-11-15,2020-10-25,3,0.5900,Ship to 87-C,Torikatu 3456,Oulu,,10352,Finland
+10334,84,8,2020-10-21,2020-11-18,2020-10-28,2,8.5600,Ship to 84-B,"4567, rue du Commerce",Lyon,,10343,France
+10335,37,7,2020-10-22,2020-11-19,2020-10-24,2,42.1100,Destination ATSOA,4567 Johnstown Road,Cork,Co. Cork,10202,Ireland
+10336,60,7,2020-10-23,2020-11-20,2020-10-25,2,15.5100,Ship to 60-B,Estrada da saúde n. 3456,Lisboa,,10271,Portugal
+10337,25,4,2020-10-24,2020-11-21,2020-10-29,3,108.2600,Destination QOCBL,Berliner Platz 1234,München,,10169,Germany
+10338,55,4,2020-10-25,2020-11-22,2020-10-29,3,84.2100,Ship to 55-C,9012 Bering St.,Anchorage,AK,10257,USA
+10339,51,2,2020-10-28,2020-11-25,2020-11-04,2,15.6600,Ship to 51-C,8901 rue St. Laurent,Montréal,Québec,10246,Canada
+10340,9,1,2020-10-29,2020-11-26,2020-11-08,3,166.3100,Ship to 9-A,"8901, rue des Bouchers",Marseille,,10367,France
+10341,73,7,2020-10-29,2020-11-26,2020-11-05,3,26.7800,Ship to 73-A,Vinbæltet 1234,Kobenhavn,,10310,Denmark
+10342,25,4,2020-10-30,2020-11-13,2020-11-04,2,54.8300,Destination VAPXU,Berliner Platz 0123,München,,10168,Germany
+10343,44,4,2020-10-31,2020-11-28,2020-11-06,1,110.3700,Ship to 44-A,Magazinweg 4567,Frankfurt a.M.,,10222,Germany
+10344,89,4,2020-11-01,2020-11-29,2020-11-05,2,23.2900,Ship to 89-A,7890 - 12th Ave. S.,Seattle,WA,10356,USA
+10345,63,2,2020-11-04,2020-12-02,2020-11-11,2,249.0600,Ship to 63-B,Taucherstraße 2345,Cunewalde,,10280,Germany
+10346,65,3,2020-11-05,2020-12-17,2020-11-08,3,142.0800,Ship to 65-A,7890 Milton Dr.,Albuquerque,NM,10285,USA
+10347,21,4,2020-11-06,2020-12-04,2020-11-08,3,3.1000,Destination KKELL,"Rua Orós, 4567",Sao Paulo,SP,10162,Brazil
+10348,86,4,2020-11-07,2020-12-05,2020-11-15,2,0.7800,Ship to 86-B,Adenauerallee 9012,Stuttgart,,10348,Germany
+10349,75,7,2020-11-08,2020-12-06,2020-11-15,1,8.6300,Ship to 75-C,P.O. Box 7890,Lander,WY,10316,USA
+10350,41,6,2020-11-11,2020-12-09,2020-12-03,2,64.1900,Destination DWJIO,9012 rue Alsace-Lorraine,Toulouse,,10217,France
+10351,20,1,2020-11-11,2020-12-09,2020-11-20,1,162.3300,Destination RVDMF,Kirchgasse 9012,Graz,,10157,Austria
+10352,28,3,2020-11-12,2020-11-26,2020-11-18,3,1.3000,Destination OTSWR,Jardim das rosas n. 9012,Lisboa,,10177,Portugal
+10353,59,7,2020-11-13,2020-12-11,2020-11-25,3,360.6300,Ship to 59-B,Geislweg 7890,Salzburg,,10265,Austria
+10354,58,8,2020-11-14,2020-12-12,2020-11-20,3,53.8000,Ship to 58-C,Calle Dr. Jorge Cash 5678,México D.F.,,10263,Mexico
+10355,4,6,2020-11-15,2020-12-13,2020-11-20,1,41.9500,Ship to 4-A,Brook Farm Stratford St. Mary 0123,Colchester,Essex,10238,UK
+10356,86,6,2020-11-18,2020-12-16,2020-11-27,2,36.7100,Ship to 86-A,Adenauerallee 8901,Stuttgart,,10347,Germany
+10357,46,1,2020-11-19,2020-12-17,2020-12-02,3,34.8800,Ship to 46-B,Carrera 1234 con Ave. Bolívar #65-98 Llano Largo,Barquisimeto,Lara,10228,Venezuela
+10358,41,5,2020-11-20,2020-12-18,2020-11-27,1,19.6400,Ship to 41-C,0123 rue Alsace-Lorraine,Toulouse,,10218,France
+10359,72,5,2020-11-21,2020-12-19,2020-11-26,3,288.4300,Ship to 72-C,1234 Wadhurst Rd.,London,,10309,UK
+10360,7,4,2020-11-22,2020-12-20,2020-12-02,3,131.7000,Ship to 7-C,"2345, place Kléber",Strasbourg,,10331,France
+10361,63,1,2020-11-22,2020-12-20,2020-12-03,2,183.1700,Ship to 63-C,Taucherstraße 3456,Cunewalde,,10281,Germany
+10362,9,3,2020-11-25,2020-12-23,2020-11-28,1,96.0400,Ship to 9-B,"9012, rue des Bouchers",Marseille,,10368,France
+10363,17,4,2020-11-26,2020-12-24,2020-12-04,3,30.5400,Destination BJCXA,Walserweg 7890,Aachen,,10145,Germany
+10364,19,1,2020-11-26,2021-01-07,2020-12-04,1,71.9700,Destination QTKCU,3456 King George,London,,10151,UK
+10365,3,3,2020-11-27,2020-12-25,2020-12-02,2,22.0000,Destination FQFLS,Mataderos  3456,México D.F.,,10211,Mexico
+10366,29,8,2020-11-28,2021-01-09,2020-12-30,2,10.1400,Destination VPNNG,"Rambla de Cataluña, 0123",Barcelona,,10178,Spain
+10367,83,7,2020-11-28,2020-12-26,2020-12-02,3,13.5500,Ship to 83-B,Smagsloget 1234,Århus,,10340,Denmark
+10368,20,2,2020-11-29,2020-12-27,2020-12-02,2,101.9500,Destination RVDMF,Kirchgasse 9012,Graz,,10157,Austria
+10369,75,8,2020-12-02,2020-12-30,2020-12-09,2,195.6800,Ship to 75-C,P.O. Box 7890,Lander,WY,10316,USA
+10370,14,6,2020-12-03,2020-12-31,2020-12-27,2,1.1700,Destination YUJRD,Hauptstr. 1234,Bern,,10139,Switzerland
+10371,41,1,2020-12-03,2020-12-31,2020-12-24,1,0.4500,Ship to 41-C,0123 rue Alsace-Lorraine,Toulouse,,10218,France
+10372,62,5,2020-12-04,2021-01-01,2020-12-09,2,890.7800,Ship to 62-A,"Alameda dos Canàrios, 8901",Sao Paulo,SP,10276,Brazil
+10373,37,4,2020-12-05,2021-01-02,2020-12-11,3,124.1200,Destination KPVYJ,5678 Johnstown Road,Cork,Co. Cork,10203,Ireland
+10374,91,1,2020-12-05,2021-01-02,2020-12-09,3,3.9400,Ship to 91-A,ul. Filtrowa 5678,Warszawa,,10364,Poland
+10375,36,3,2020-12-06,2021-01-03,2020-12-09,2,20.1200,Destination HOHCR,City Center Plaza 3456 Main St.,Elgin,OR,10201,USA
+10376,51,1,2020-12-09,2021-01-06,2020-12-13,2,20.3900,Ship to 51-B,7890 rue St. Laurent,Montréal,Québec,10245,Canada
+10377,72,1,2020-12-09,2021-01-06,2020-12-13,3,22.2100,Ship to 72-C,1234 Wadhurst Rd.,London,,10309,UK
+10378,24,5,2020-12-10,2021-01-07,2020-12-19,3,5.4400,Destination KBSBN,Åkergatan 9012,Bräcke,,10167,Sweden
+10379,61,2,2020-12-11,2021-01-08,2020-12-13,1,45.0300,Ship to 61-B,"Rua da Panificadora, 6789",Rio de Janeiro,RJ,10274,Brazil
+10380,37,8,2020-12-12,2021-01-09,2021-01-16,3,35.0300,Destination KPVYJ,5678 Johnstown Road,Cork,Co. Cork,10203,Ireland
+10381,46,3,2020-12-12,2021-01-09,2020-12-13,3,7.9900,Ship to 46-C,Carrera 2345 con Ave. Bolívar #65-98 Llano Largo,Barquisimeto,Lara,10229,Venezuela
+10382,20,4,2020-12-13,2021-01-10,2020-12-16,1,94.7700,Destination FFXKT,Kirchgasse 0123,Graz,,10158,Austria
+10383,4,8,2020-12-16,2021-01-13,2020-12-18,3,34.2400,Ship to 4-B,Brook Farm Stratford St. Mary 1234,Colchester,Essex,10239,UK
+10384,5,3,2020-12-16,2021-01-13,2020-12-20,3,168.6400,Ship to 5-C,Berguvsvägen  1234,Luleå,,10269,Sweden
+10385,75,1,2020-12-17,2021-01-14,2020-12-23,2,30.9600,Ship to 75-B,P.O. Box 6789,Lander,WY,10315,USA
+10386,21,9,2020-12-18,2021-01-01,2020-12-25,3,13.9900,Destination RNSMS,"Rua Orós, 2345",Sao Paulo,SP,10160,Brazil
+10387,70,1,2020-12-18,2021-01-15,2020-12-20,2,93.6300,Ship to 70-B,Erling Skakkes gate 5678,Stavern,,10303,Norway
+10388,72,2,2020-12-19,2021-01-16,2020-12-20,1,34.8600,Ship to 72-C,1234 Wadhurst Rd.,London,,10309,UK
+10389,10,4,2020-12-20,2021-01-17,2020-12-24,2,47.4200,Destination OLSSJ,2345 Tsawassen Blvd.,Tsawassen,BC,10130,Canada
+10390,20,6,2020-12-23,2021-01-20,2020-12-26,1,126.3800,Destination RVDMF,Kirchgasse 9012,Graz,,10157,Austria
+10391,17,3,2020-12-23,2021-01-20,2020-12-31,3,5.4500,Destination AJTHX,Walserweg 9012,Aachen,,10147,Germany
+10392,59,2,2020-12-24,2021-01-21,2021-01-01,3,122.4600,Ship to 59-A,Geislweg 6789,Salzburg,,10264,Austria
+10393,71,1,2020-12-25,2021-01-22,2021-01-03,3,126.5600,Ship to 71-B,8901 Suffolk Ln.,Boise,ID,10306,USA
+10394,36,1,2020-12-25,2021-01-22,2021-01-03,3,30.3400,Destination AWPJG,City Center Plaza 2345 Main St.,Elgin,OR,10200,USA
+10395,35,6,2020-12-26,2021-01-23,2021-01-03,1,184.4100,Destination JYDLM,Carrera1234 con Ave. Carlos Soublette #8-35,San Cristóbal,Táchira,10199,Venezuela
+10396,25,1,2020-12-27,2021-01-10,2021-01-06,3,135.3500,Destination VAPXU,Berliner Platz 0123,München,,10168,Germany
+10397,60,5,2020-12-27,2021-01-24,2021-01-02,1,60.2600,Ship to 60-A,Estrada da saúde n. 2345,Lisboa,,10270,Portugal
+10398,71,2,2020-12-30,2021-01-27,2021-01-09,3,89.1600,Ship to 71-C,9012 Suffolk Ln.,Boise,ID,10307,USA
+10399,83,8,2020-12-31,2021-01-14,2021-01-08,3,27.3600,Ship to 83-C,Smagsloget 2345,Århus,,10341,Denmark
+10400,19,1,2021-01-01,2021-01-29,2021-01-16,3,83.9300,Destination BBMRT,4567 King George,London,,10152,UK
+10401,65,1,2021-01-01,2021-01-29,2021-01-10,1,12.5100,Ship to 65-A,7890 Milton Dr.,Albuquerque,NM,10285,USA
+10402,20,8,2021-01-02,2021-02-13,2021-01-10,2,67.8800,Destination FFXKT,Kirchgasse 0123,Graz,,10158,Austria
+10403,20,4,2021-01-03,2021-01-31,2021-01-09,3,73.7900,Destination RVDMF,Kirchgasse 9012,Graz,,10157,Austria
+10404,49,2,2021-01-03,2021-01-31,2021-01-08,1,155.9700,Ship to 49-B,Via Ludovico il Moro 9012,Bergamo,,10236,Italy
+10405,47,1,2021-01-06,2021-02-03,2021-01-22,1,34.8200,Ship to 47-B,Ave. 5 de Mayo Porlamar 4567,I. de Margarita,Nueva Esparta,10231,Venezuela
+10406,62,7,2021-01-07,2021-02-18,2021-01-13,1,108.0400,Ship to 62-A,"Alameda dos Canàrios, 8901",Sao Paulo,SP,10276,Brazil
+10407,56,2,2021-01-07,2021-02-04,2021-01-30,2,91.4800,Ship to 56-B,Mehrheimerstr. 1234,Köln,,10259,Germany
+10408,23,8,2021-01-08,2021-02-05,2021-01-14,1,11.2600,Destination PXQRR,"5678, chaussée de Tournai",Lille,,10163,France
+10409,54,3,2021-01-09,2021-02-06,2021-01-14,1,29.8300,Ship to 54-C,Ing. Gustavo Moncada 6789 Piso 20-A,Buenos Aires,,10254,Argentina
+10410,10,3,2021-01-10,2021-02-07,2021-01-15,3,2.4000,Destination OLSSJ,2345 Tsawassen Blvd.,Tsawassen,BC,10130,Canada
+10411,10,9,2021-01-10,2021-02-07,2021-01-21,3,23.6500,Destination XJIBQ,1234 Tsawassen Blvd.,Tsawassen,BC,10129,Canada
+10412,87,8,2021-01-13,2021-02-10,2021-01-15,2,3.7700,Ship to 87-C,Torikatu 3456,Oulu,,10352,Finland
+10413,41,3,2021-01-14,2021-02-11,2021-01-16,2,95.6600,Destination DWJIO,9012 rue Alsace-Lorraine,Toulouse,,10217,France
+10414,21,2,2021-01-14,2021-02-11,2021-01-17,3,21.4800,Destination SSYXZ,"Rua Orós, 3456",Sao Paulo,SP,10161,Brazil
+10415,36,3,2021-01-15,2021-02-12,2021-01-24,1,0.2000,Destination AWPJG,City Center Plaza 2345 Main St.,Elgin,OR,10200,USA
+10416,87,8,2021-01-16,2021-02-13,2021-01-27,3,22.7200,Ship to 87-A,Torikatu 1234,Oulu,,10350,Finland
+10417,73,4,2021-01-16,2021-02-13,2021-01-28,3,70.2900,Ship to 73-C,Vinbæltet 2345,Kobenhavn,,10311,Denmark
+10418,63,4,2021-01-17,2021-02-14,2021-01-24,1,17.5500,Ship to 63-B,Taucherstraße 2345,Cunewalde,,10280,Germany
+10419,68,4,2021-01-20,2021-02-17,2021-01-30,2,137.3500,Ship to 68-A,Starenweg 6789,Genève,,10294,Switzerland
+10420,88,3,2021-01-21,2021-02-18,2021-01-27,1,44.1200,Ship to 88-C,"Rua do Mercado, 6789",Resende,SP,10355,Brazil
+10421,61,8,2021-01-21,2021-03-04,2021-01-27,1,99.2300,Ship to 61-C,"Rua da Panificadora, 7890",Rio de Janeiro,RJ,10275,Brazil
+10422,27,2,2021-01-22,2021-02-19,2021-01-31,1,3.0200,Destination FFLQT,Via Monte Bianco 6789,Torino,,10174,Italy
+10423,31,6,2021-01-23,2021-02-06,2021-02-24,3,24.5000,Destination VNIAG,"Av. Brasil, 9012",Campinas,SP,10187,Brazil
+10424,51,7,2021-01-23,2021-02-20,2021-01-27,2,370.6100,Ship to 51-C,8901 rue St. Laurent,Montréal,Québec,10246,Canada
+10425,41,6,2021-01-24,2021-02-21,2021-02-14,2,7.9300,Destination DWJIO,9012 rue Alsace-Lorraine,Toulouse,,10217,France
+10426,29,4,2021-01-27,2021-02-24,2021-02-06,1,18.6900,Destination WOFLH,"Rambla de Cataluña, 1234",Barcelona,,10179,Spain
+10427,59,4,2021-01-27,2021-02-24,2021-03-03,2,31.2900,Ship to 59-C,Geislweg 8901,Salzburg,,10266,Austria
+10428,66,7,2021-01-28,2021-02-25,2021-02-04,1,11.0900,Ship to 66-C,Strada Provinciale 2345,Reggio Emilia,,10290,Italy
+10429,37,3,2021-01-29,2021-03-12,2021-02-07,2,56.6300,Destination DGKOU,6789 Johnstown Road,Cork,Co. Cork,10204,Ireland
+10430,20,4,2021-01-30,2021-02-13,2021-02-03,1,458.7800,Destination CUVPF,Kirchgasse 1234,Graz,,10159,Austria
+10431,10,4,2021-01-30,2021-02-13,2021-02-07,2,44.1700,Destination OLSSJ,2345 Tsawassen Blvd.,Tsawassen,BC,10130,Canada
+10432,75,3,2021-01-31,2021-02-14,2021-02-07,2,4.3400,Ship to 75-A,P.O. Box 5678,Lander,WY,10314,USA
+10433,60,3,2021-02-03,2021-03-03,2021-03-04,3,73.8300,Ship to 60-A,Estrada da saúde n. 2345,Lisboa,,10270,Portugal
+10434,24,3,2021-02-03,2021-03-03,2021-02-13,2,17.9200,Destination NCKKO,Åkergatan 7890,Bräcke,,10165,Sweden
+10435,16,8,2021-02-04,2021-03-18,2021-02-07,2,9.2100,Destination QKQNB,Berkeley Gardens 5678  Brewery,London,,10143,UK
+10436,7,3,2021-02-05,2021-03-05,2021-02-11,2,156.6600,Ship to 7-C,"2345, place Kléber",Strasbourg,,10331,France
+10437,87,8,2021-02-05,2021-03-05,2021-02-12,1,19.9700,Ship to 87-A,Torikatu 1234,Oulu,,10350,Finland
+10438,79,3,2021-02-06,2021-03-06,2021-02-14,2,8.2400,Ship to 79-A,Luisenstr. 7890,Münster,,10326,Germany
+10439,51,6,2021-02-07,2021-03-07,2021-02-10,3,4.0700,Ship to 51-C,8901 rue St. Laurent,Montréal,Québec,10246,Canada
+10440,71,4,2021-02-10,2021-03-10,2021-02-28,2,86.5300,Ship to 71-B,8901 Suffolk Ln.,Boise,ID,10306,USA
+10441,55,3,2021-02-10,2021-03-24,2021-03-14,2,73.0200,Ship to 55-C,9012 Bering St.,Anchorage,AK,10257,USA
+10442,20,3,2021-02-11,2021-03-11,2021-02-18,2,47.9400,Destination RVDMF,Kirchgasse 9012,Graz,,10157,Austria
+10443,66,8,2021-02-12,2021-03-12,2021-02-14,1,13.9500,Ship to 66-C,Strada Provinciale 2345,Reggio Emilia,,10290,Italy
+10444,5,3,2021-02-12,2021-03-12,2021-02-21,3,3.5000,Ship to 5-B,Berguvsvägen  0123,Luleå,,10268,Sweden
+10445,5,3,2021-02-13,2021-03-13,2021-02-20,1,9.3000,Ship to 5-A,Berguvsvägen  9012,Luleå,,10267,Sweden
+10446,79,6,2021-02-14,2021-03-14,2021-02-19,1,14.6800,Ship to 79-C,Luisenstr. 9012,Münster,,10328,Germany
+10447,67,4,2021-02-14,2021-03-14,2021-03-07,2,68.6600,Ship to 67-C,"Av. Copacabana, 5678",Rio de Janeiro,RJ,10293,Brazil
+10448,64,4,2021-02-17,2021-03-17,2021-02-24,2,38.8200,Ship to 64-A,Av. del Libertador 4567,Buenos Aires,,10282,Argentina
+10449,7,3,2021-02-18,2021-03-18,2021-02-27,2,53.3000,Ship to 7-C,"2345, place Kléber",Strasbourg,,10331,France
+10450,84,8,2021-02-19,2021-03-19,2021-03-11,2,7.2300,Ship to 84-C,"5678, rue du Commerce",Lyon,,10344,France
+10451,63,4,2021-02-19,2021-03-05,2021-03-12,3,189.0900,Ship to 63-C,Taucherstraße 3456,Cunewalde,,10281,Germany
+10452,71,8,2021-02-20,2021-03-20,2021-02-26,1,140.2600,Ship to 71-B,8901 Suffolk Ln.,Boise,ID,10306,USA
+10453,4,1,2021-02-21,2021-03-21,2021-02-26,2,25.3600,Ship to 4-C,Brook Farm Stratford St. Mary 2345,Colchester,Essex,10240,UK
+10454,41,4,2021-02-21,2021-03-21,2021-02-25,3,2.7400,Ship to 41-C,0123 rue Alsace-Lorraine,Toulouse,,10218,France
+10455,87,8,2021-02-24,2021-04-07,2021-03-03,2,180.4500,Ship to 87-B,Torikatu 2345,Oulu,,10351,Finland
+10456,39,8,2021-02-25,2021-04-08,2021-02-28,2,8.1200,Destination DKMQA,Maubelstr. 0123,Brandenburg,,10208,Germany
+10457,39,2,2021-02-25,2021-03-25,2021-03-03,1,11.5700,Destination RMBHM,Maubelstr. 1234,Brandenburg,,10209,Germany
+10458,76,7,2021-02-26,2021-03-26,2021-03-04,3,147.0600,Ship to 76-A,"Boulevard Tirou, 8901",Charleroi,,10317,Belgium
+10459,84,4,2021-02-27,2021-03-27,2021-02-28,2,25.0900,Ship to 84-B,"4567, rue du Commerce",Lyon,,10343,France
+10460,24,8,2021-02-28,2021-03-28,2021-03-03,1,16.2700,Destination YCMPK,Åkergatan 8901,Bräcke,,10166,Sweden
+10461,46,1,2021-02-28,2021-03-28,2021-03-05,3,148.6100,Ship to 46-A,Carrera 0123 con Ave. Bolívar #65-98 Llano Largo,Barquisimeto,Lara,10227,Venezuela
+10462,16,2,2021-03-03,2021-03-31,2021-03-18,1,6.1700,Destination ARRMM,Berkeley Gardens 6789  Brewery,London,,10144,UK
+10463,76,5,2021-03-04,2021-04-01,2021-03-06,3,14.7800,Ship to 76-B,"Boulevard Tirou, 9012",Charleroi,,10318,Belgium
+10464,28,4,2021-03-04,2021-04-01,2021-03-14,2,89.0000,Destination OTSWR,Jardim das rosas n. 9012,Lisboa,,10177,Portugal
+10465,83,1,2021-03-05,2021-04-02,2021-03-14,3,145.0400,Ship to 83-A,Smagsloget 0123,Århus,,10339,Denmark
+10466,15,4,2021-03-06,2021-04-03,2021-03-13,1,11.9300,Destination GGSQD,"Av. dos Lusíadas, 2345",Sao Paulo,SP,10140,Brazil
+10467,49,8,2021-03-06,2021-04-03,2021-03-11,2,4.9300,Ship to 49-C,Via Ludovico il Moro 0123,Bergamo,,10237,Italy
+10468,39,3,2021-03-07,2021-04-04,2021-03-12,3,44.1200,Destination RMBHM,Maubelstr. 1234,Brandenburg,,10209,Germany
+10469,89,1,2021-03-10,2021-04-07,2021-03-14,1,60.1800,Ship to 89-C,9012 - 12th Ave. S.,Seattle,WA,10358,USA
+10470,9,4,2021-03-11,2021-04-08,2021-03-14,2,64.5600,Ship to 9-C,"0123, rue des Bouchers",Marseille,,10369,France
+10471,11,2,2021-03-11,2021-04-08,2021-03-18,3,45.5900,Destination NZASL,Fauntleroy Circus 5678,London,,10133,UK
+10472,72,8,2021-03-12,2021-04-09,2021-03-19,1,4.2000,Ship to 72-A,0123 Wadhurst Rd.,London,,10308,UK
+10473,38,1,2021-03-13,2021-03-27,2021-03-21,3,16.3700,Destination AXVHD,Garden House Crowther Way 9012,Cowes,Isle of Wight,10207,UK
+10474,58,5,2021-03-13,2021-04-10,2021-03-21,2,83.4900,Ship to 58-C,Calle Dr. Jorge Cash 5678,México D.F.,,10263,Mexico
+10475,76,9,2021-03-14,2021-04-11,2021-04-04,1,68.5200,Ship to 76-C,"Boulevard Tirou, 0123",Charleroi,,10319,Belgium
+10476,35,8,2021-03-17,2021-04-14,2021-03-24,3,4.4100,Destination SXYQX,Carrera 0123 con Ave. Carlos Soublette #8-35,San Cristóbal,Táchira,10198,Venezuela
+10477,60,5,2021-03-17,2021-04-14,2021-03-25,2,13.0200,Ship to 60-A,Estrada da saúde n. 2345,Lisboa,,10270,Portugal
+10478,84,2,2021-03-18,2021-04-01,2021-03-26,3,4.8100,Ship to 84-C,"5678, rue du Commerce",Lyon,,10344,France
+10479,65,3,2021-03-19,2021-04-16,2021-03-21,3,708.9500,Ship to 65-C,9012 Milton Dr.,Albuquerque,NM,10287,USA
+10480,23,6,2021-03-20,2021-04-17,2021-03-24,2,1.3500,Destination AGPCO,"6789, chaussée de Tournai",Lille,,10164,France
+10481,67,8,2021-03-20,2021-04-17,2021-03-25,2,64.3300,Ship to 67-A,"Av. Copacabana, 3456",Rio de Janeiro,RJ,10291,Brazil
+10482,43,1,2021-03-21,2021-04-18,2021-04-10,3,7.4800,Ship to 43-B,3456 Orchestra Terrace,Walla Walla,WA,10221,USA
+10483,89,7,2021-03-24,2021-04-21,2021-04-25,2,15.2800,Ship to 89-A,7890 - 12th Ave. S.,Seattle,WA,10356,USA
+10484,11,3,2021-03-24,2021-04-21,2021-04-01,3,6.8800,Destination DLEUN,Fauntleroy Circus 4567,London,,10132,UK
+10485,47,4,2021-03-25,2021-04-08,2021-03-31,2,64.4500,Ship to 47-B,Ave. 5 de Mayo Porlamar 4567,I. de Margarita,Nueva Esparta,10231,Venezuela
+10486,35,1,2021-03-26,2021-04-23,2021-04-02,2,30.5300,Destination UOUWK,Carrera 9012 con Ave. Carlos Soublette #8-35,San Cristóbal,Táchira,10197,Venezuela
+10487,62,2,2021-03-26,2021-04-23,2021-03-28,2,71.0700,Ship to 62-B,"Alameda dos Canàrios, 9012",Sao Paulo,SP,10277,Brazil
+10488,25,8,2021-03-27,2021-04-24,2021-04-02,2,4.9300,Destination VAPXU,Berliner Platz 0123,München,,10168,Germany
+10489,59,6,2021-03-28,2021-04-25,2021-04-09,2,5.2900,Ship to 59-C,Geislweg 8901,Salzburg,,10266,Austria
+10490,35,7,2021-03-31,2021-04-28,2021-04-03,2,210.1900,Destination JYDLM,Carrera1234 con Ave. Carlos Soublette #8-35,San Cristóbal,Táchira,10199,Venezuela
+10491,28,8,2021-03-31,2021-04-28,2021-04-08,3,16.9600,Destination OTSWR,Jardim das rosas n. 9012,Lisboa,,10177,Portugal
+10492,10,3,2021-04-01,2021-04-29,2021-04-11,1,62.8900,Destination XJIBQ,1234 Tsawassen Blvd.,Tsawassen,BC,10129,Canada
+10493,41,4,2021-04-02,2021-04-30,2021-04-10,3,10.6400,Destination OLJND,8901 rue Alsace-Lorraine,Toulouse,,10216,France
+10494,15,4,2021-04-02,2021-04-30,2021-04-09,2,65.9900,Destination EVHYA,"Av. dos Lusíadas, 3456",Sao Paulo,SP,10141,Brazil
+10495,42,3,2021-04-03,2021-05-01,2021-04-11,3,4.6500,Ship to 42-C,2345 Elm St.,Vancouver,BC,10220,Canada
+10496,81,7,2021-04-04,2021-05-02,2021-04-07,2,46.7700,Ship to 81-C,"Av. Inês de Castro, 7890",Sao Paulo,SP,10336,Brazil
+10497,44,7,2021-04-04,2021-05-02,2021-04-07,1,36.2100,Ship to 44-A,Magazinweg 4567,Frankfurt a.M.,,10222,Germany
+10498,35,8,2021-04-07,2021-05-05,2021-04-11,2,29.7500,Destination SXYQX,Carrera 0123 con Ave. Carlos Soublette #8-35,San Cristóbal,Táchira,10198,Venezuela
+10499,46,4,2021-04-08,2021-05-06,2021-04-16,2,102.0200,Ship to 46-C,Carrera 2345 con Ave. Bolívar #65-98 Llano Largo,Barquisimeto,Lara,10229,Venezuela
+10500,41,6,2021-04-09,2021-05-07,2021-04-17,1,42.6800,Destination OLJND,8901 rue Alsace-Lorraine,Toulouse,,10216,France
+10501,6,9,2021-04-09,2021-05-07,2021-04-16,3,8.8500,Ship to 6-C,Forsterstr. 4567,Mannheim,,10302,Germany
+10502,58,2,2021-04-10,2021-05-08,2021-04-29,1,69.3200,Ship to 58-B,Calle Dr. Jorge Cash 4567,México D.F.,,10262,Mexico
+10503,37,6,2021-04-11,2021-05-09,2021-04-16,2,16.7400,Destination ATSOA,4567 Johnstown Road,Cork,Co. Cork,10202,Ireland
+10504,89,4,2021-04-11,2021-05-09,2021-04-18,3,59.1300,Ship to 89-B,8901 - 12th Ave. S.,Seattle,WA,10357,USA
+10505,51,3,2021-04-14,2021-05-12,2021-04-21,3,7.1300,Ship to 51-B,7890 rue St. Laurent,Montréal,Québec,10245,Canada
+10506,39,9,2021-04-15,2021-05-13,2021-05-02,2,21.1900,Destination DKMQA,Maubelstr. 0123,Brandenburg,,10208,Germany
+10507,3,7,2021-04-15,2021-05-13,2021-04-22,1,47.4500,Destination FQFLS,Mataderos  3456,México D.F.,,10211,Mexico
+10508,56,1,2021-04-16,2021-05-14,2021-05-13,2,4.9900,Ship to 56-C,Mehrheimerstr. 2345,Köln,,10260,Germany
+10509,6,4,2021-04-17,2021-05-15,2021-04-29,1,0.1500,Ship to 6-A,Forsterstr. 2345,Mannheim,,10300,Germany
+10510,71,6,2021-04-18,2021-05-16,2021-04-28,3,367.6300,Ship to 71-A,7890 Suffolk Ln.,Boise,ID,10305,USA
+10511,9,4,2021-04-18,2021-05-16,2021-04-21,3,350.6400,Ship to 9-B,"9012, rue des Bouchers",Marseille,,10368,France
+10512,21,7,2021-04-21,2021-05-19,2021-04-24,2,3.5300,Destination RNSMS,"Rua Orós, 2345",Sao Paulo,SP,10160,Brazil
+10513,86,7,2021-04-22,2021-06-03,2021-04-28,1,105.6500,Ship to 86-A,Adenauerallee 8901,Stuttgart,,10347,Germany
+10514,20,3,2021-04-22,2021-05-20,2021-05-16,2,789.9500,Destination CUVPF,Kirchgasse 1234,Graz,,10159,Austria
+10515,63,2,2021-04-23,2021-05-07,2021-05-23,1,204.4700,Ship to 63-B,Taucherstraße 2345,Cunewalde,,10280,Germany
+10516,37,2,2021-04-24,2021-05-22,2021-05-01,3,62.7800,Destination DGKOU,6789 Johnstown Road,Cork,Co. Cork,10204,Ireland
+10517,53,3,2021-04-24,2021-05-22,2021-04-29,3,32.0700,Ship to 53-A,South House 2345 Queensbridge,London,,10250,UK
+10518,80,4,2021-04-25,2021-05-09,2021-05-05,2,218.1500,Ship to 80-B,Avda. Azteca 4567,México D.F.,,10333,Mexico
+10519,14,6,2021-04-28,2021-05-26,2021-05-01,3,91.7600,Destination NRTZZ,Hauptstr. 0123,Bern,,10138,Switzerland
+10520,70,7,2021-04-29,2021-05-27,2021-05-01,1,13.3700,Ship to 70-B,Erling Skakkes gate 5678,Stavern,,10303,Norway
+10521,12,8,2021-04-29,2021-05-27,2021-05-02,2,17.2200,Destination QTHBC,Cerrito 6789,Buenos Aires,,10134,Argentina
+10522,44,4,2021-04-30,2021-05-28,2021-05-06,1,45.3300,Ship to 44-A,Magazinweg 4567,Frankfurt a.M.,,10222,Germany
+10523,72,7,2021-05-01,2021-05-29,2021-05-30,2,77.6300,Ship to 72-C,1234 Wadhurst Rd.,London,,10309,UK
+10524,5,1,2021-05-01,2021-05-29,2021-05-07,2,244.7900,Ship to 5-A,Berguvsvägen  9012,Luleå,,10267,Sweden
+10525,9,1,2021-05-02,2021-05-30,2021-05-23,2,11.0600,Ship to 9-B,"9012, rue des Bouchers",Marseille,,10368,France
+10526,87,4,2021-05-05,2021-06-02,2021-05-15,2,58.5900,Ship to 87-C,Torikatu 3456,Oulu,,10352,Finland
+10527,63,7,2021-05-05,2021-06-02,2021-05-07,1,41.9000,Ship to 63-B,Taucherstraße 2345,Cunewalde,,10280,Germany
+10528,32,6,2021-05-06,2021-05-20,2021-05-09,2,3.3500,Destination LLUXZ,1234 Baker Blvd.,Eugene,OR,10189,USA
+10529,50,5,2021-05-07,2021-06-04,2021-05-09,2,66.6900,Ship to 50-B,Rue Joseph-Bens 4567,Bruxelles,,10242,Belgium
+10530,59,3,2021-05-08,2021-06-05,2021-05-12,2,339.2200,Ship to 59-C,Geislweg 8901,Salzburg,,10266,Austria
+10531,54,7,2021-05-08,2021-06-05,2021-05-19,1,8.1200,Ship to 54-A,Ing. Gustavo Moncada 4567 Piso 20-A,Buenos Aires,,10252,Argentina
+10532,19,7,2021-05-09,2021-06-06,2021-05-12,3,74.4600,Destination QTKCU,3456 King George,London,,10151,UK
+10533,24,8,2021-05-12,2021-06-09,2021-05-22,1,188.0400,Destination KBSBN,Åkergatan 9012,Bräcke,,10167,Sweden
+10534,44,8,2021-05-12,2021-06-09,2021-05-14,2,27.9400,Ship to 44-A,Magazinweg 4567,Frankfurt a.M.,,10222,Germany
+10535,3,4,2021-05-13,2021-06-10,2021-05-21,1,15.6400,Destination FQFLS,Mataderos  3456,México D.F.,,10211,Mexico
+10536,44,3,2021-05-14,2021-06-11,2021-06-06,2,58.8800,Ship to 44-B,Magazinweg 5678,Frankfurt a.M.,,10223,Germany
+10537,68,1,2021-05-14,2021-05-28,2021-05-19,1,78.8500,Ship to 68-B,Starenweg 7890,Genève,,10295,Switzerland
+10538,11,9,2021-05-15,2021-06-12,2021-05-16,3,4.8700,Destination DLEUN,Fauntleroy Circus 4567,London,,10132,UK
+10539,11,6,2021-05-16,2021-06-13,2021-05-23,3,12.3600,Destination DLEUN,Fauntleroy Circus 4567,London,,10132,UK
+10540,63,3,2021-05-19,2021-06-16,2021-06-13,3,1007.6400,Ship to 63-C,Taucherstraße 3456,Cunewalde,,10281,Germany
+10541,34,2,2021-05-19,2021-06-16,2021-05-29,1,68.6500,Destination SCQXA,"Rua do Paço, 7890",Rio de Janeiro,RJ,10195,Brazil
+10542,39,1,2021-05-20,2021-06-17,2021-05-26,3,10.9500,Destination DKMQA,Maubelstr. 0123,Brandenburg,,10208,Germany
+10543,46,8,2021-05-21,2021-06-18,2021-05-23,2,48.1700,Ship to 46-B,Carrera 1234 con Ave. Bolívar #65-98 Llano Largo,Barquisimeto,Lara,10228,Venezuela
+10544,48,4,2021-05-21,2021-06-18,2021-05-30,1,24.9100,Ship to 48-C,7890 Chiaroscuro Rd.,Portland,OR,10234,USA
+10545,43,8,2021-05-22,2021-06-19,2021-06-26,2,11.9200,Ship to 43-B,3456 Orchestra Terrace,Walla Walla,WA,10221,USA
+10546,84,1,2021-05-23,2021-06-20,2021-05-27,3,194.7200,Ship to 84-C,"5678, rue du Commerce",Lyon,,10344,France
+10547,72,3,2021-05-23,2021-06-20,2021-06-02,2,178.4300,Ship to 72-C,1234 Wadhurst Rd.,London,,10309,UK
+10548,79,3,2021-05-26,2021-06-23,2021-06-02,2,1.4300,Ship to 79-A,Luisenstr. 7890,Münster,,10326,Germany
+10549,63,5,2021-05-27,2021-06-10,2021-05-30,1,171.2400,Ship to 63-C,Taucherstraße 3456,Cunewalde,,10281,Germany
+10550,30,7,2021-05-28,2021-06-25,2021-06-06,3,4.3200,Destination GGQIR,"C/ Romero, 6789",Sevilla,,10184,Spain
+10551,28,4,2021-05-28,2021-07-09,2021-06-06,3,72.9500,Destination OTSWR,Jardim das rosas n. 9012,Lisboa,,10177,Portugal
+10552,35,2,2021-05-29,2021-06-26,2021-06-05,1,83.2200,Destination UOUWK,Carrera 9012 con Ave. Carlos Soublette #8-35,San Cristóbal,Táchira,10197,Venezuela
+10553,87,2,2021-05-30,2021-06-27,2021-06-03,2,149.4900,Ship to 87-B,Torikatu 2345,Oulu,,10351,Finland
+10554,56,4,2021-05-30,2021-06-27,2021-06-05,3,120.9700,Ship to 56-C,Mehrheimerstr. 2345,Köln,,10260,Germany
+10555,71,6,2021-06-02,2021-06-30,2021-06-04,3,252.4900,Ship to 71-B,8901 Suffolk Ln.,Boise,ID,10306,USA
+10556,73,2,2021-06-03,2021-07-15,2021-06-13,1,9.8000,Ship to 73-A,Vinbæltet 1234,Kobenhavn,,10310,Denmark
+10557,44,9,2021-06-03,2021-06-17,2021-06-06,2,96.7200,Ship to 44-C,Magazinweg 6789,Frankfurt a.M.,,10224,Germany
+10558,4,1,2021-06-04,2021-07-02,2021-06-10,2,72.9700,Ship to 4-B,Brook Farm Stratford St. Mary 1234,Colchester,Essex,10239,UK
+10559,7,6,2021-06-05,2021-07-03,2021-06-13,1,8.0500,Ship to 7-B,"1234, place Kléber",Strasbourg,,10330,France
+10560,25,8,2021-06-06,2021-07-04,2021-06-09,1,36.6500,Destination QOCBL,Berliner Platz 1234,München,,10169,Germany
+10561,24,2,2021-06-06,2021-07-04,2021-06-09,2,242.2100,Destination YCMPK,Åkergatan 8901,Bräcke,,10166,Sweden
+10562,66,1,2021-06-09,2021-07-07,2021-06-12,1,22.9500,Ship to 66-B,Strada Provinciale 1234,Reggio Emilia,,10289,Italy
+10563,67,2,2021-06-10,2021-07-22,2021-06-24,2,60.4300,Ship to 67-B,"Av. Copacabana, 4567",Rio de Janeiro,RJ,10292,Brazil
+10564,65,4,2021-06-10,2021-07-08,2021-06-16,3,13.7500,Ship to 65-B,8901 Milton Dr.,Albuquerque,NM,10286,USA
+10565,51,8,2021-06-11,2021-07-09,2021-06-18,2,7.1500,Ship to 51-C,8901 rue St. Laurent,Montréal,Québec,10246,Canada
+10566,7,9,2021-06-12,2021-07-10,2021-06-18,1,88.4000,Ship to 7-C,"2345, place Kléber",Strasbourg,,10331,France
+10567,37,1,2021-06-12,2021-07-10,2021-06-17,1,33.9700,Destination DGKOU,6789 Johnstown Road,Cork,Co. Cork,10204,Ireland
+10568,29,3,2021-06-13,2021-07-11,2021-07-09,3,6.5400,Destination VPNNG,"Rambla de Cataluña, 0123",Barcelona,,10178,Spain
+10569,65,5,2021-06-16,2021-07-14,2021-07-11,1,58.9800,Ship to 65-B,8901 Milton Dr.,Albuquerque,NM,10286,USA
+10570,51,3,2021-06-17,2021-07-15,2021-06-19,3,188.9900,Ship to 51-C,8901 rue St. Laurent,Montréal,Québec,10246,Canada
+10571,20,8,2021-06-17,2021-07-29,2021-07-04,3,26.0600,Destination RVDMF,Kirchgasse 9012,Graz,,10157,Austria
+10572,5,3,2021-06-18,2021-07-16,2021-06-25,2,116.4300,Ship to 5-B,Berguvsvägen  0123,Luleå,,10268,Sweden
+10573,3,7,2021-06-19,2021-07-17,2021-06-20,3,84.8400,Destination LANNN,Mataderos  4567,México D.F.,,10212,Mexico
+10574,82,4,2021-06-19,2021-07-17,2021-06-30,2,37.6000,Ship to 82-A,8901 DaVinci Blvd.,Kirkland,WA,10337,USA
+10575,52,5,2021-06-20,2021-07-04,2021-06-30,1,127.3400,Ship to 52-C,Heerstr. 1234,Leipzig,,10249,Germany
+10576,80,3,2021-06-23,2021-07-07,2021-06-30,3,18.5600,Ship to 80-C,Avda. Azteca 5678,México D.F.,,10334,Mexico
+10577,82,9,2021-06-23,2021-08-04,2021-06-30,2,25.4100,Ship to 82-B,9012 DaVinci Blvd.,Kirkland,WA,10338,USA
+10578,11,4,2021-06-24,2021-07-22,2021-07-25,3,29.6000,Destination NZASL,Fauntleroy Circus 5678,London,,10133,UK
+10579,45,1,2021-06-25,2021-07-23,2021-07-04,2,13.7300,Ship to 45-C,9012 Polk St. Suite 5,San Francisco,CA,10226,USA
+10580,56,4,2021-06-26,2021-07-24,2021-07-01,3,75.8900,Ship to 56-C,Mehrheimerstr. 2345,Köln,,10260,Germany
+10581,21,3,2021-06-26,2021-07-24,2021-07-02,1,3.0100,Destination SSYXZ,"Rua Orós, 3456",Sao Paulo,SP,10161,Brazil
+10582,6,3,2021-06-27,2021-07-25,2021-07-14,2,27.7100,Ship to 6-A,Forsterstr. 2345,Mannheim,,10300,Germany
+10583,87,2,2021-06-30,2021-07-28,2021-07-04,2,7.2800,Ship to 87-C,Torikatu 3456,Oulu,,10352,Finland
+10584,7,4,2021-06-30,2021-07-28,2021-07-04,1,59.1400,Ship to 7-B,"1234, place Kléber",Strasbourg,,10330,France
+10585,88,7,2021-07-01,2021-07-29,2021-07-10,1,13.4100,Ship to 88-A,"Rua do Mercado, 4567",Resende,SP,10353,Brazil
+10586,66,9,2021-07-02,2021-07-30,2021-07-09,1,0.4800,Ship to 66-B,Strada Provinciale 1234,Reggio Emilia,,10289,Italy
+10587,61,1,2021-07-02,2021-07-30,2021-07-09,1,62.5200,Ship to 61-C,"Rua da Panificadora, 7890",Rio de Janeiro,RJ,10275,Brazil
+10588,63,2,2021-07-03,2021-07-31,2021-07-10,3,194.6700,Ship to 63-A,Taucherstraße 1234,Cunewalde,,10279,Germany
+10589,32,8,2021-07-04,2021-08-01,2021-07-14,2,4.4200,Destination AVQUS,2345 Baker Blvd.,Eugene,OR,10190,USA
+10590,51,4,2021-07-07,2021-08-04,2021-07-14,3,44.7700,Ship to 51-B,7890 rue St. Laurent,Montréal,Québec,10245,Canada
+10591,83,1,2021-07-07,2021-07-21,2021-07-16,1,55.9200,Ship to 83-A,Smagsloget 0123,Århus,,10339,Denmark
+10592,44,3,2021-07-08,2021-08-05,2021-07-16,1,32.1000,Ship to 44-B,Magazinweg 5678,Frankfurt a.M.,,10223,Germany
+10593,44,7,2021-07-09,2021-08-06,2021-08-13,2,174.2000,Ship to 44-C,Magazinweg 6789,Frankfurt a.M.,,10224,Germany
+10594,55,3,2021-07-09,2021-08-06,2021-07-16,2,5.2400,Ship to 55-B,8901 Bering St.,Anchorage,AK,10256,USA
+10595,20,2,2021-07-10,2021-08-07,2021-07-14,1,96.7800,Destination CUVPF,Kirchgasse 1234,Graz,,10159,Austria
+10596,89,8,2021-07-11,2021-08-08,2021-08-12,1,16.3400,Ship to 89-C,9012 - 12th Ave. S.,Seattle,WA,10358,USA
+10597,59,7,2021-07-11,2021-08-08,2021-07-18,3,35.1200,Ship to 59-B,Geislweg 7890,Salzburg,,10265,Austria
+10598,65,1,2021-07-14,2021-08-11,2021-07-18,3,44.4200,Ship to 65-C,9012 Milton Dr.,Albuquerque,NM,10287,USA
+10599,11,6,2021-07-15,2021-08-26,2021-07-21,3,29.9800,Destination DLEUN,Fauntleroy Circus 4567,London,,10132,UK
+10600,36,4,2021-07-16,2021-08-13,2021-07-21,1,45.1300,Destination HOHCR,City Center Plaza 3456 Main St.,Elgin,OR,10201,USA
+10601,35,7,2021-07-16,2021-08-27,2021-07-22,1,58.3000,Destination UOUWK,Carrera 9012 con Ave. Carlos Soublette #8-35,San Cristóbal,Táchira,10197,Venezuela
+10602,83,8,2021-07-17,2021-08-14,2021-07-22,2,2.9200,Ship to 83-A,Smagsloget 0123,Århus,,10339,Denmark
+10603,71,8,2021-07-18,2021-08-15,2021-08-08,2,48.7700,Ship to 71-C,9012 Suffolk Ln.,Boise,ID,10307,USA
+10604,28,1,2021-07-18,2021-08-15,2021-07-29,1,7.4600,Destination CIRQO,Jardim das rosas n. 8901,Lisboa,,10176,Portugal
+10605,51,1,2021-07-21,2021-08-18,2021-07-29,2,379.1300,Ship to 51-B,7890 rue St. Laurent,Montréal,Québec,10245,Canada
+10606,81,4,2021-07-22,2021-08-19,2021-07-31,3,79.4000,Ship to 81-C,"Av. Inês de Castro, 7890",Sao Paulo,SP,10336,Brazil
+10607,71,5,2021-07-22,2021-08-19,2021-07-25,1,200.2400,Ship to 71-C,9012 Suffolk Ln.,Boise,ID,10307,USA
+10608,79,4,2021-07-23,2021-08-20,2021-08-01,2,27.7900,Ship to 79-C,Luisenstr. 9012,Münster,,10328,Germany
+10609,18,7,2021-07-24,2021-08-21,2021-07-30,2,1.8500,Destination SNPXM,"0123, rue des Cinquante Otages",Nantes,,10148,France
+10610,41,8,2021-07-25,2021-08-22,2021-08-06,1,26.7800,Ship to 41-C,0123 rue Alsace-Lorraine,Toulouse,,10218,France
+10611,91,6,2021-07-25,2021-08-22,2021-08-01,2,80.6500,Ship to 91-B,ul. Filtrowa 6789,Warszawa,,10365,Poland
+10612,71,1,2021-07-28,2021-08-25,2021-08-01,2,544.0800,Ship to 71-A,7890 Suffolk Ln.,Boise,ID,10305,USA
+10613,35,4,2021-07-29,2021-08-26,2021-08-01,2,8.1100,Destination JYDLM,Carrera1234 con Ave. Carlos Soublette #8-35,San Cristóbal,Táchira,10199,Venezuela
+10614,6,8,2021-07-29,2021-08-26,2021-08-01,3,1.9300,Ship to 6-A,Forsterstr. 2345,Mannheim,,10300,Germany
+10615,90,2,2021-07-30,2021-08-27,2021-08-06,3,0.7500,Ship to 90-B,Keskuskatu 3456,Helsinki,,10362,Finland
+10616,32,1,2021-07-31,2021-08-28,2021-08-05,2,116.5300,Destination LLUXZ,1234 Baker Blvd.,Eugene,OR,10189,USA
+10617,32,4,2021-07-31,2021-08-28,2021-08-04,2,18.5300,Destination AVQUS,2345 Baker Blvd.,Eugene,OR,10190,USA
+10618,51,1,2021-08-01,2021-09-12,2021-08-08,1,154.6800,Ship to 51-C,8901 rue St. Laurent,Montréal,Québec,10246,Canada
+10619,51,3,2021-08-04,2021-09-01,2021-08-07,3,91.0500,Ship to 51-B,7890 rue St. Laurent,Montréal,Québec,10245,Canada
+10620,42,2,2021-08-05,2021-09-02,2021-08-14,3,0.9400,Ship to 42-A,1234 Elm St.,Vancouver,BC,10219,Canada
+10621,38,4,2021-08-05,2021-09-02,2021-08-11,2,23.7300,Destination LMVGS,Garden House Crowther Way 8901,Cowes,Isle of Wight,10206,UK
+10622,67,4,2021-08-06,2021-09-03,2021-08-11,3,50.9700,Ship to 67-A,"Av. Copacabana, 3456",Rio de Janeiro,RJ,10291,Brazil
+10623,25,8,2021-08-07,2021-09-04,2021-08-12,2,97.1800,Destination VAPXU,Berliner Platz 0123,München,,10168,Germany
+10624,78,4,2021-08-07,2021-09-04,2021-08-19,2,94.8000,Ship to 78-C,6789 Grizzly Peak Rd.,Butte,MT,10325,USA
+10625,2,3,2021-08-08,2021-09-05,2021-08-14,1,43.9000,Destination QOTQA,Avda. de la Constitución 3456,México D.F.,,10181,Mexico
+10626,5,1,2021-08-11,2021-09-08,2021-08-20,2,138.6900,Ship to 5-A,Berguvsvägen  9012,Luleå,,10267,Sweden
+10627,71,8,2021-08-11,2021-09-22,2021-08-21,3,107.4600,Ship to 71-B,8901 Suffolk Ln.,Boise,ID,10306,USA
+10628,7,4,2021-08-12,2021-09-09,2021-08-20,3,30.3600,Ship to 7-B,"1234, place Kléber",Strasbourg,,10330,France
+10629,30,4,2021-08-12,2021-09-09,2021-08-20,3,85.4600,Destination IIYDD,"C/ Romero, 5678",Sevilla,,10183,Spain
+10630,39,1,2021-08-13,2021-09-10,2021-08-19,2,32.3500,Destination RMBHM,Maubelstr. 1234,Brandenburg,,10209,Germany
+10631,41,8,2021-08-14,2021-09-11,2021-08-15,1,0.8700,Destination OLJND,8901 rue Alsace-Lorraine,Toulouse,,10216,France
+10632,86,8,2021-08-14,2021-09-11,2021-08-19,1,41.3800,Ship to 86-C,Adenauerallee 0123,Stuttgart,,10349,Germany
+10633,20,7,2021-08-15,2021-09-12,2021-08-18,3,477.9000,Destination FFXKT,Kirchgasse 0123,Graz,,10158,Austria
+10634,23,4,2021-08-15,2021-09-12,2021-08-21,3,487.3800,Destination AGPCO,"6789, chaussée de Tournai",Lille,,10164,France
+10635,49,8,2021-08-18,2021-09-15,2021-08-21,3,47.4600,Ship to 49-A,Via Ludovico il Moro 8901,Bergamo,,10235,Italy
+10636,87,4,2021-08-19,2021-09-16,2021-08-26,1,1.1500,Ship to 87-A,Torikatu 1234,Oulu,,10350,Finland
+10637,62,6,2021-08-19,2021-09-16,2021-08-26,1,201.2900,Ship to 62-C,"Alameda dos Canàrios, 0123",Sao Paulo,SP,10278,Brazil
+10638,47,3,2021-08-20,2021-09-17,2021-09-01,1,158.4400,Ship to 47-B,Ave. 5 de Mayo Porlamar 4567,I. de Margarita,Nueva Esparta,10231,Venezuela
+10639,70,7,2021-08-20,2021-09-17,2021-08-27,3,38.6400,Ship to 70-B,Erling Skakkes gate 5678,Stavern,,10303,Norway
+10640,86,4,2021-08-21,2021-09-18,2021-08-28,1,23.5500,Ship to 86-A,Adenauerallee 8901,Stuttgart,,10347,Germany
+10641,35,4,2021-08-22,2021-09-19,2021-08-26,2,179.6100,Destination JYDLM,Carrera1234 con Ave. Carlos Soublette #8-35,San Cristóbal,Táchira,10199,Venezuela
+10642,73,7,2021-08-22,2021-09-19,2021-09-05,3,41.8900,Ship to 73-C,Vinbæltet 2345,Kobenhavn,,10311,Denmark
+10643,1,6,2021-08-25,2021-09-22,2021-09-02,1,29.4600,Destination LOUIE,Obere Str. 6789,Berlin,,10154,Germany
+10644,88,3,2021-08-25,2021-09-22,2021-09-01,2,0.1400,Ship to 88-A,"Rua do Mercado, 4567",Resende,SP,10353,Brazil
+10645,34,4,2021-08-26,2021-09-23,2021-09-02,1,12.4100,Destination DPCVR,"Rua do Paço, 6789",Rio de Janeiro,RJ,10194,Brazil
+10646,37,9,2021-08-27,2021-10-08,2021-09-03,3,142.3300,Destination ATSOA,4567 Johnstown Road,Cork,Co. Cork,10202,Ireland
+10647,61,4,2021-08-27,2021-09-10,2021-09-03,2,45.5400,Ship to 61-B,"Rua da Panificadora, 6789",Rio de Janeiro,RJ,10274,Brazil
+10648,67,5,2021-08-28,2021-10-09,2021-09-09,2,14.2500,Ship to 67-C,"Av. Copacabana, 5678",Rio de Janeiro,RJ,10293,Brazil
+10649,50,5,2021-08-28,2021-09-25,2021-08-29,3,6.2000,Ship to 50-B,Rue Joseph-Bens 4567,Bruxelles,,10242,Belgium
+10650,21,5,2021-08-29,2021-09-26,2021-09-03,3,176.8100,Destination SSYXZ,"Rua Orós, 3456",Sao Paulo,SP,10161,Brazil
+10651,86,8,2021-09-01,2021-09-29,2021-09-11,2,20.6000,Ship to 86-A,Adenauerallee 8901,Stuttgart,,10347,Germany
+10652,31,4,2021-09-01,2021-09-29,2021-09-08,2,7.1400,Destination VNIAG,"Av. Brasil, 9012",Campinas,SP,10187,Brazil
+10653,25,1,2021-09-02,2021-09-30,2021-09-19,1,93.2500,Destination QOCBL,Berliner Platz 1234,München,,10169,Germany
+10654,5,5,2021-09-02,2021-09-30,2021-09-11,1,55.2600,Ship to 5-C,Berguvsvägen  1234,Luleå,,10269,Sweden
+10655,66,1,2021-09-03,2021-10-01,2021-09-11,2,4.4100,Ship to 66-B,Strada Provinciale 1234,Reggio Emilia,,10289,Italy
+10656,32,6,2021-09-04,2021-10-02,2021-09-10,1,57.1500,Destination AVQUS,2345 Baker Blvd.,Eugene,OR,10190,USA
+10657,71,2,2021-09-04,2021-10-02,2021-09-15,2,352.6900,Ship to 71-A,7890 Suffolk Ln.,Boise,ID,10305,USA
+10658,63,4,2021-09-05,2021-10-03,2021-09-08,1,364.1500,Ship to 63-C,Taucherstraße 3456,Cunewalde,,10281,Germany
+10659,62,7,2021-09-05,2021-10-03,2021-09-10,2,105.8100,Ship to 62-B,"Alameda dos Canàrios, 9012",Sao Paulo,SP,10277,Brazil
+10660,36,8,2021-09-08,2021-10-06,2021-10-15,1,111.2900,Destination HOHCR,City Center Plaza 3456 Main St.,Elgin,OR,10201,USA
+10661,37,7,2021-09-09,2021-10-07,2021-09-15,3,17.5500,Destination ATSOA,4567 Johnstown Road,Cork,Co. Cork,10202,Ireland
+10662,48,3,2021-09-09,2021-10-07,2021-09-18,2,1.2800,Ship to 48-C,7890 Chiaroscuro Rd.,Portland,OR,10234,USA
+10663,9,2,2021-09-10,2021-09-24,2021-10-03,2,113.1500,Ship to 9-B,"9012, rue des Bouchers",Marseille,,10368,France
+10664,28,1,2021-09-10,2021-10-08,2021-09-19,3,1.2700,Destination OTSWR,Jardim das rosas n. 9012,Lisboa,,10177,Portugal
+10665,48,1,2021-09-11,2021-10-09,2021-09-17,2,26.3100,Ship to 48-B,6789 Chiaroscuro Rd.,Portland,OR,10233,USA
+10666,68,7,2021-09-12,2021-10-10,2021-09-22,2,232.4200,Ship to 68-A,Starenweg 6789,Genève,,10294,Switzerland
+10667,20,7,2021-09-12,2021-10-10,2021-09-19,1,78.0900,Destination CUVPF,Kirchgasse 1234,Graz,,10159,Austria
+10668,86,1,2021-09-15,2021-10-13,2021-09-23,2,47.2200,Ship to 86-C,Adenauerallee 0123,Stuttgart,,10349,Germany
+10669,73,2,2021-09-15,2021-10-13,2021-09-22,1,24.3900,Ship to 73-A,Vinbæltet 1234,Kobenhavn,,10310,Denmark
+10670,25,4,2021-09-16,2021-10-14,2021-09-18,1,203.4800,Destination QOCBL,Berliner Platz 1234,München,,10169,Germany
+10671,26,1,2021-09-17,2021-10-15,2021-09-24,1,30.3400,Destination OPXJT,"4567, rue Royale",Nantes,,10172,France
+10672,5,9,2021-09-17,2021-10-01,2021-09-26,2,95.7500,Ship to 5-C,Berguvsvägen  1234,Luleå,,10269,Sweden
+10673,90,2,2021-09-18,2021-10-16,2021-09-19,1,22.7600,Ship to 90-B,Keskuskatu 3456,Helsinki,,10362,Finland
+10674,38,4,2021-09-18,2021-10-16,2021-09-30,2,0.9000,Destination QVTLW,Garden House Crowther Way 7890,Cowes,Isle of Wight,10205,UK
+10675,25,5,2021-09-19,2021-10-17,2021-09-23,2,31.8500,Destination WEGWI,Berliner Platz 2345,München,,10170,Germany
+10676,80,2,2021-09-22,2021-10-20,2021-09-29,2,2.0100,Ship to 80-C,Avda. Azteca 5678,México D.F.,,10334,Mexico
+10677,3,1,2021-09-22,2021-10-20,2021-09-26,3,4.0300,Destination LANNN,Mataderos  4567,México D.F.,,10212,Mexico
+10678,71,7,2021-09-23,2021-10-21,2021-10-16,3,388.9800,Ship to 71-A,7890 Suffolk Ln.,Boise,ID,10305,USA
+10679,7,8,2021-09-23,2021-10-21,2021-09-30,3,27.9400,Ship to 7-A,"0123, place Kléber",Strasbourg,,10329,France
+10680,55,1,2021-09-24,2021-10-22,2021-09-26,1,26.6100,Ship to 55-B,8901 Bering St.,Anchorage,AK,10256,USA
+10681,32,3,2021-09-25,2021-10-23,2021-09-30,3,76.1300,Destination AVQUS,2345 Baker Blvd.,Eugene,OR,10190,USA
+10682,3,3,2021-09-25,2021-10-23,2021-10-01,2,36.1300,Destination RTGIS,Mataderos  2345,México D.F.,,10210,Mexico
+10683,18,2,2021-09-26,2021-10-24,2021-10-01,1,4.4000,Destination FVRGC,"2345, rue des Cinquante Otages",Nantes,,10150,France
+10684,56,3,2021-09-26,2021-10-24,2021-09-30,1,145.6300,Ship to 56-B,Mehrheimerstr. 1234,Köln,,10259,Germany
+10685,31,4,2021-09-29,2021-10-13,2021-10-03,2,33.7500,Destination VNIAG,"Av. Brasil, 9012",Campinas,SP,10187,Brazil
+10686,59,2,2021-09-30,2021-10-28,2021-10-08,1,96.5000,Ship to 59-B,Geislweg 7890,Salzburg,,10265,Austria
+10687,37,9,2021-09-30,2021-10-28,2021-10-30,2,296.4300,Destination KPVYJ,5678 Johnstown Road,Cork,Co. Cork,10203,Ireland
+10688,83,4,2021-10-01,2021-10-15,2021-10-07,2,299.0900,Ship to 83-A,Smagsloget 0123,Århus,,10339,Denmark
+10689,5,1,2021-10-01,2021-10-29,2021-10-07,2,13.4200,Ship to 5-B,Berguvsvägen  0123,Luleå,,10268,Sweden
+10690,34,1,2021-10-02,2021-10-30,2021-10-03,1,15.8000,Destination JPAIY,"Rua do Paço, 8901",Rio de Janeiro,RJ,10196,Brazil
+10691,63,2,2021-10-03,2021-11-14,2021-10-22,2,810.0500,Ship to 63-B,Taucherstraße 2345,Cunewalde,,10280,Germany
+10692,1,4,2021-10-03,2021-10-31,2021-10-13,2,61.0200,Destination RSVRP,Obere Str. 8901,Berlin,,10156,Germany
+10693,89,3,2021-10-06,2021-10-20,2021-10-10,3,139.3400,Ship to 89-C,9012 - 12th Ave. S.,Seattle,WA,10358,USA
+10694,63,8,2021-10-06,2021-11-03,2021-10-09,3,398.3600,Ship to 63-A,Taucherstraße 1234,Cunewalde,,10279,Germany
+10695,90,7,2021-10-07,2021-11-18,2021-10-14,1,16.7200,Ship to 90-C,Keskuskatu 4567,Helsinki,,10363,Finland
+10696,89,8,2021-10-08,2021-11-19,2021-10-14,3,102.5500,Ship to 89-A,7890 - 12th Ave. S.,Seattle,WA,10356,USA
+10697,47,3,2021-10-08,2021-11-05,2021-10-14,1,45.5200,Ship to 47-B,Ave. 5 de Mayo Porlamar 4567,I. de Margarita,Nueva Esparta,10231,Venezuela
+10698,20,4,2021-10-09,2021-11-06,2021-10-17,1,272.4700,Destination RVDMF,Kirchgasse 9012,Graz,,10157,Austria
+10699,52,3,2021-10-09,2021-11-06,2021-10-13,3,0.5800,Ship to 52-B,Heerstr. 0123,Leipzig,,10248,Germany
+10700,71,3,2021-10-10,2021-11-07,2021-10-16,1,65.1000,Ship to 71-C,9012 Suffolk Ln.,Boise,ID,10307,USA
+10701,37,6,2021-10-13,2021-10-27,2021-10-15,3,220.3100,Destination KPVYJ,5678 Johnstown Road,Cork,Co. Cork,10203,Ireland
+10702,1,4,2021-10-13,2021-11-24,2021-10-21,1,23.9400,Destination ZELZJ,Obere Str. 7890,Berlin,,10155,Germany
+10703,24,6,2021-10-14,2021-11-11,2021-10-20,2,152.3000,Destination KBSBN,Åkergatan 9012,Bräcke,,10167,Sweden
+10704,62,6,2021-10-14,2021-11-11,2021-11-07,1,4.7800,Ship to 62-C,"Alameda dos Canàrios, 0123",Sao Paulo,SP,10278,Brazil
+10705,35,9,2021-10-15,2021-11-12,2021-11-18,2,3.5200,Destination JYDLM,Carrera1234 con Ave. Carlos Soublette #8-35,San Cristóbal,Táchira,10199,Venezuela
+10706,55,8,2021-10-16,2021-11-13,2021-10-21,3,135.6300,Ship to 55-C,9012 Bering St.,Anchorage,AK,10257,USA
+10707,4,4,2021-10-16,2021-10-30,2021-10-23,3,21.7400,Ship to 4-A,Brook Farm Stratford St. Mary 0123,Colchester,Essex,10238,UK
+10708,77,6,2021-10-17,2021-11-28,2021-11-05,2,2.9600,Ship to 77-C,3456 Jefferson Way Suite 2,Portland,OR,10322,USA
+10709,31,1,2021-10-17,2021-11-14,2021-11-20,3,210.8000,Destination GWPFK,"Av. Brasil, 0123",Campinas,SP,10188,Brazil
+10710,27,1,2021-10-20,2021-11-17,2021-10-23,1,4.9800,Destination FFLQT,Via Monte Bianco 6789,Torino,,10174,Italy
+10711,71,5,2021-10-21,2021-12-02,2021-10-29,2,52.4100,Ship to 71-A,7890 Suffolk Ln.,Boise,ID,10305,USA
+10712,37,3,2021-10-21,2021-11-18,2021-10-31,1,89.9300,Destination KPVYJ,5678 Johnstown Road,Cork,Co. Cork,10203,Ireland
+10713,71,1,2021-10-22,2021-11-19,2021-10-24,1,167.0500,Ship to 71-C,9012 Suffolk Ln.,Boise,ID,10307,USA
+10714,71,5,2021-10-22,2021-11-19,2021-10-27,3,24.4900,Ship to 71-A,7890 Suffolk Ln.,Boise,ID,10305,USA
+10715,9,3,2021-10-23,2021-11-06,2021-10-29,1,63.2000,Ship to 9-B,"9012, rue des Bouchers",Marseille,,10368,France
+10716,64,4,2021-10-24,2021-11-21,2021-10-27,2,22.5700,Ship to 64-B,Av. del Libertador 5678,Buenos Aires,,10283,Argentina
+10717,25,1,2021-10-24,2021-11-21,2021-10-29,2,59.2500,Destination QOCBL,Berliner Platz 1234,München,,10169,Germany
+10718,39,1,2021-10-27,2021-11-24,2021-10-29,3,170.8800,Destination DKMQA,Maubelstr. 0123,Brandenburg,,10208,Germany
+10719,45,8,2021-10-27,2021-11-24,2021-11-05,2,51.4400,Ship to 45-A,8901 Polk St. Suite 5,San Francisco,CA,10225,USA
+10720,61,8,2021-10-28,2021-11-11,2021-11-05,2,9.5300,Ship to 61-C,"Rua da Panificadora, 7890",Rio de Janeiro,RJ,10275,Brazil
+10721,63,5,2021-10-29,2021-11-26,2021-10-31,3,48.9200,Ship to 63-A,Taucherstraße 1234,Cunewalde,,10279,Germany
+10722,71,8,2021-10-29,2021-12-10,2021-11-04,1,74.5800,Ship to 71-A,7890 Suffolk Ln.,Boise,ID,10305,USA
+10723,89,3,2021-10-30,2021-11-27,2021-11-25,1,21.7200,Ship to 89-C,9012 - 12th Ave. S.,Seattle,WA,10358,USA
+10724,51,8,2021-10-30,2021-12-11,2021-11-05,2,57.7500,Ship to 51-A,6789 rue St. Laurent,Montréal,Québec,10244,Canada
+10725,21,4,2021-10-31,2021-11-28,2021-11-05,3,10.8300,Destination KKELL,"Rua Orós, 4567",Sao Paulo,SP,10162,Brazil
+10726,19,4,2021-11-03,2021-11-17,2021-12-05,1,16.5600,Destination FRCGJ,5678 King George,London,,10153,UK
+10727,66,2,2021-11-03,2021-12-01,2021-12-05,1,89.9000,Ship to 66-A,Strada Provinciale 0123,Reggio Emilia,,10288,Italy
+10728,62,4,2021-11-04,2021-12-02,2021-11-11,2,58.3300,Ship to 62-A,"Alameda dos Canàrios, 8901",Sao Paulo,SP,10276,Brazil
+10729,47,8,2021-11-04,2021-12-16,2021-11-14,3,141.0600,Ship to 47-A,Ave. 5 de Mayo Porlamar 3456,I. de Margarita,Nueva Esparta,10230,Venezuela
+10730,9,5,2021-11-05,2021-12-03,2021-11-14,1,20.1200,Ship to 9-A,"8901, rue des Bouchers",Marseille,,10367,France
+10731,14,7,2021-11-06,2021-12-04,2021-11-14,1,96.6500,Destination YUJRD,Hauptstr. 1234,Bern,,10139,Switzerland
+10732,9,3,2021-11-06,2021-12-04,2021-11-07,1,16.9700,Ship to 9-A,"8901, rue des Bouchers",Marseille,,10367,France
+10733,5,1,2021-11-07,2021-12-05,2021-11-10,3,110.1100,Ship to 5-A,Berguvsvägen  9012,Luleå,,10267,Sweden
+10734,31,2,2021-11-07,2021-12-05,2021-11-12,3,1.6300,Destination VNIAG,"Av. Brasil, 9012",Campinas,SP,10187,Brazil
+10735,45,6,2021-11-10,2021-12-08,2021-11-21,2,45.9700,Ship to 45-A,8901 Polk St. Suite 5,San Francisco,CA,10225,USA
+10736,37,9,2021-11-11,2021-12-09,2021-11-21,2,44.1000,Destination DGKOU,6789 Johnstown Road,Cork,Co. Cork,10204,Ireland
+10737,85,2,2021-11-11,2021-12-09,2021-11-18,2,7.7900,Ship to 85-C,7890 rue de l'Abbaye,Reims,,10346,France
+10738,74,2,2021-11-12,2021-12-10,2021-11-18,1,2.9100,Ship to 74-A,"3456, rue Lauriston",Paris,,10312,France
+10739,85,3,2021-11-12,2021-12-10,2021-11-17,3,11.0800,Ship to 85-C,7890 rue de l'Abbaye,Reims,,10346,France
+10740,89,4,2021-11-13,2021-12-11,2021-11-25,2,81.8800,Ship to 89-B,8901 - 12th Ave. S.,Seattle,WA,10357,USA
+10741,4,4,2021-11-14,2021-11-28,2021-11-18,3,10.9600,Ship to 4-C,Brook Farm Stratford St. Mary 2345,Colchester,Essex,10240,UK
+10742,10,3,2021-11-14,2021-12-12,2021-11-18,3,243.7300,Destination LPHSI,3456 Tsawassen Blvd.,Tsawassen,BC,10131,Canada
+10743,4,1,2021-11-17,2021-12-15,2021-11-21,2,23.7200,Ship to 4-C,Brook Farm Stratford St. Mary 2345,Colchester,Essex,10240,UK
+10744,83,6,2021-11-17,2021-12-15,2021-11-24,1,69.1900,Ship to 83-A,Smagsloget 0123,Århus,,10339,Denmark
+10745,63,9,2021-11-18,2021-12-16,2021-11-27,1,3.5200,Ship to 63-C,Taucherstraße 3456,Cunewalde,,10281,Germany
+10746,14,1,2021-11-19,2021-12-17,2021-11-21,3,31.4300,Destination NRTZZ,Hauptstr. 0123,Bern,,10138,Switzerland
+10747,59,6,2021-11-19,2021-12-17,2021-11-26,1,117.3300,Ship to 59-B,Geislweg 7890,Salzburg,,10265,Austria
+10748,71,3,2021-11-20,2021-12-18,2021-11-28,1,232.5500,Ship to 71-B,8901 Suffolk Ln.,Boise,ID,10306,USA
+10749,38,4,2021-11-20,2021-12-18,2021-12-19,2,61.5300,Destination QVTLW,Garden House Crowther Way 7890,Cowes,Isle of Wight,10205,UK
+10750,87,9,2021-11-21,2021-12-19,2021-11-24,1,79.3000,Ship to 87-C,Torikatu 3456,Oulu,,10352,Finland
+10751,68,3,2021-11-24,2021-12-22,2021-12-03,3,130.7900,Ship to 68-A,Starenweg 6789,Genève,,10294,Switzerland
+10752,53,2,2021-11-24,2021-12-22,2021-11-28,3,1.3900,Ship to 53-C,South House 3456 Queensbridge,London,,10251,UK
+10753,27,3,2021-11-25,2021-12-23,2021-11-27,1,7.7000,Destination DICGM,Via Monte Bianco 7890,Torino,,10175,Italy
+10754,49,6,2021-11-25,2021-12-23,2021-11-27,3,2.3800,Ship to 49-B,Via Ludovico il Moro 9012,Bergamo,,10236,Italy
+10755,9,4,2021-11-26,2021-12-24,2021-11-28,2,16.7100,Ship to 9-C,"0123, rue des Bouchers",Marseille,,10369,France
+10756,75,8,2021-11-27,2021-12-25,2021-12-02,2,73.2100,Ship to 75-C,P.O. Box 7890,Lander,WY,10316,USA
+10757,71,6,2021-11-27,2021-12-25,2021-12-15,1,8.1900,Ship to 71-B,8901 Suffolk Ln.,Boise,ID,10306,USA
+10758,68,3,2021-11-28,2021-12-26,2021-12-04,3,138.1700,Ship to 68-C,Starenweg 8901,Genève,,10296,Switzerland
+10759,2,3,2021-11-28,2021-12-26,2021-12-12,3,11.9900,Destination QOTQA,Avda. de la Constitución 3456,México D.F.,,10181,Mexico
+10760,50,4,2021-12-01,2021-12-29,2021-12-10,1,155.6400,Ship to 50-B,Rue Joseph-Bens 4567,Bruxelles,,10242,Belgium
+10761,65,5,2021-12-02,2021-12-30,2021-12-08,2,18.6600,Ship to 65-B,8901 Milton Dr.,Albuquerque,NM,10286,USA
+10762,24,3,2021-12-02,2021-12-30,2021-12-09,1,328.7400,Destination YCMPK,Åkergatan 8901,Bräcke,,10166,Sweden
+10763,23,3,2021-12-03,2021-12-31,2021-12-08,3,37.3500,Destination PXQRR,"5678, chaussée de Tournai",Lille,,10163,France
+10764,20,6,2021-12-03,2021-12-31,2021-12-08,3,145.4500,Destination CUVPF,Kirchgasse 1234,Graz,,10159,Austria
+10765,63,3,2021-12-04,2022-01-01,2021-12-09,3,42.7400,Ship to 63-A,Taucherstraße 1234,Cunewalde,,10279,Germany
+10766,56,4,2021-12-05,2022-01-02,2021-12-09,1,157.5500,Ship to 56-C,Mehrheimerstr. 2345,Köln,,10260,Germany
+10767,76,4,2021-12-05,2022-01-02,2021-12-15,3,1.5900,Ship to 76-B,"Boulevard Tirou, 9012",Charleroi,,10318,Belgium
+10768,4,3,2021-12-08,2022-01-05,2021-12-15,2,146.3200,Ship to 4-B,Brook Farm Stratford St. Mary 1234,Colchester,Essex,10239,UK
+10769,83,3,2021-12-08,2022-01-05,2021-12-12,1,65.0600,Ship to 83-C,Smagsloget 2345,Århus,,10341,Denmark
+10770,34,8,2021-12-09,2022-01-06,2021-12-17,3,5.3200,Destination JPAIY,"Rua do Paço, 8901",Rio de Janeiro,RJ,10196,Brazil
+10771,20,9,2021-12-10,2022-01-07,2022-01-02,2,11.1900,Destination CUVPF,Kirchgasse 1234,Graz,,10159,Austria
+10772,44,3,2021-12-10,2022-01-07,2021-12-19,2,91.2800,Ship to 44-B,Magazinweg 5678,Frankfurt a.M.,,10223,Germany
+10773,20,1,2021-12-11,2022-01-08,2021-12-16,3,96.4300,Destination FFXKT,Kirchgasse 0123,Graz,,10158,Austria
+10774,24,4,2021-12-11,2021-12-25,2021-12-12,1,48.2000,Destination KBSBN,Åkergatan 9012,Bräcke,,10167,Sweden
+10775,78,7,2021-12-12,2022-01-09,2021-12-26,1,20.2500,Ship to 78-A,4567 Grizzly Peak Rd.,Butte,MT,10323,USA
+10776,20,1,2021-12-15,2022-01-12,2021-12-18,3,351.5300,Destination RVDMF,Kirchgasse 9012,Graz,,10157,Austria
+10777,31,7,2021-12-15,2021-12-29,2022-01-21,2,3.0100,Destination GWPFK,"Av. Brasil, 0123",Campinas,SP,10188,Brazil
+10778,5,3,2021-12-16,2022-01-13,2021-12-24,1,6.7900,Ship to 5-A,Berguvsvägen  9012,Luleå,,10267,Sweden
+10779,52,3,2021-12-16,2022-01-13,2022-01-14,2,58.1300,Ship to 52-A,Heerstr. 9012,Leipzig,,10247,Germany
+10780,46,2,2021-12-16,2021-12-30,2021-12-25,1,42.1300,Ship to 46-C,Carrera 2345 con Ave. Bolívar #65-98 Llano Largo,Barquisimeto,Lara,10229,Venezuela
+10781,87,2,2021-12-17,2022-01-14,2021-12-19,3,73.1600,Ship to 87-A,Torikatu 1234,Oulu,,10350,Finland
+10782,12,9,2021-12-17,2022-01-14,2021-12-22,3,1.1000,Destination CJDJB,Cerrito 8901,Buenos Aires,,10136,Argentina
+10783,34,4,2021-12-18,2022-01-15,2021-12-19,2,124.9800,Destination DPCVR,"Rua do Paço, 6789",Rio de Janeiro,RJ,10194,Brazil
+10784,49,4,2021-12-18,2022-01-15,2021-12-22,3,70.0900,Ship to 49-A,Via Ludovico il Moro 8901,Bergamo,,10235,Italy
+10785,33,1,2021-12-18,2022-01-15,2021-12-24,3,1.5100,Destination FQJFJ,5ª Ave. Los Palos Grandes 4567,Caracas,DF,10192,Venezuela
+10786,62,8,2021-12-19,2022-01-16,2021-12-23,1,110.8700,Ship to 62-B,"Alameda dos Canàrios, 9012",Sao Paulo,SP,10277,Brazil
+10787,41,2,2021-12-19,2022-01-02,2021-12-26,1,249.9300,Destination DWJIO,9012 rue Alsace-Lorraine,Toulouse,,10217,France
+10788,63,1,2021-12-22,2022-01-19,2022-01-19,2,42.7000,Ship to 63-C,Taucherstraße 3456,Cunewalde,,10281,Germany
+10789,23,1,2021-12-22,2022-01-19,2021-12-31,2,100.6000,Destination PXQRR,"5678, chaussée de Tournai",Lille,,10163,France
+10790,31,6,2021-12-22,2022-01-19,2021-12-26,1,28.2300,Destination XOIGC,"Av. Brasil, 8901",Campinas,SP,10186,Brazil
+10791,25,6,2021-12-23,2022-01-20,2022-01-01,2,16.8500,Destination QOCBL,Berliner Platz 1234,München,,10169,Germany
+10792,91,1,2021-12-23,2022-01-20,2021-12-31,3,23.7900,Ship to 91-C,ul. Filtrowa 7890,Warszawa,,10366,Poland
+10793,4,3,2021-12-24,2022-01-21,2022-01-08,3,4.5200,Ship to 4-B,Brook Farm Stratford St. Mary 1234,Colchester,Essex,10239,UK
+10794,61,6,2021-12-24,2022-01-21,2022-01-02,1,21.4900,Ship to 61-C,"Rua da Panificadora, 7890",Rio de Janeiro,RJ,10275,Brazil
+10795,20,8,2021-12-24,2022-01-21,2022-01-20,2,126.6600,Destination FFXKT,Kirchgasse 0123,Graz,,10158,Austria
+10796,35,3,2021-12-25,2022-01-22,2022-01-14,1,26.5200,Destination UOUWK,Carrera 9012 con Ave. Carlos Soublette #8-35,San Cristóbal,Táchira,10197,Venezuela
+10797,17,7,2021-12-25,2022-01-22,2022-01-05,2,33.3500,Destination AJTHX,Walserweg 9012,Aachen,,10147,Germany
+10798,38,2,2021-12-26,2022-01-23,2022-01-05,1,2.3300,Destination AXVHD,Garden House Crowther Way 9012,Cowes,Isle of Wight,10207,UK
+10799,39,9,2021-12-26,2022-02-06,2022-01-05,3,30.7600,Destination DKMQA,Maubelstr. 0123,Brandenburg,,10208,Germany
+10800,72,1,2021-12-26,2022-01-23,2022-01-05,3,137.4400,Ship to 72-C,1234 Wadhurst Rd.,London,,10309,UK
+10801,8,4,2021-12-29,2022-01-26,2021-12-31,2,97.0900,Ship to 8-C,"C/ Araquil, 1234",Madrid,,10360,Spain
+10802,73,4,2021-12-29,2022-01-26,2022-01-02,2,257.2600,Ship to 73-A,Vinbæltet 1234,Kobenhavn,,10310,Denmark
+10803,88,4,2021-12-30,2022-01-27,2022-01-06,1,55.2300,Ship to 88-B,"Rua do Mercado, 5678",Resende,SP,10354,Brazil
+10804,72,6,2021-12-30,2022-01-27,2022-01-07,2,27.3300,Ship to 72-C,1234 Wadhurst Rd.,London,,10309,UK
+10805,77,2,2021-12-30,2022-01-27,2022-01-09,3,237.3400,Ship to 77-A,1234 Jefferson Way Suite 2,Portland,OR,10320,USA
+10806,84,3,2021-12-31,2022-01-28,2022-01-05,2,22.1100,Ship to 84-C,"5678, rue du Commerce",Lyon,,10344,France
+10807,27,4,2021-12-31,2022-01-28,2022-01-30,1,1.3600,Destination XNLFB,Via Monte Bianco 5678,Torino,,10173,Italy
+10808,55,2,2022-01-01,2022-01-29,2022-01-09,3,45.5300,Ship to 55-B,8901 Bering St.,Anchorage,AK,10256,USA
+10809,88,7,2022-01-01,2022-01-29,2022-01-07,1,4.8700,Ship to 88-C,"Rua do Mercado, 6789",Resende,SP,10355,Brazil
+10810,42,2,2022-01-01,2022-01-29,2022-01-07,3,4.3300,Ship to 42-A,1234 Elm St.,Vancouver,BC,10219,Canada
+10811,47,8,2022-01-02,2022-01-30,2022-01-08,1,31.2200,Ship to 47-B,Ave. 5 de Mayo Porlamar 4567,I. de Margarita,Nueva Esparta,10231,Venezuela
+10812,66,5,2022-01-02,2022-01-30,2022-01-12,1,59.7800,Ship to 66-B,Strada Provinciale 1234,Reggio Emilia,,10289,Italy
+10813,67,1,2022-01-05,2022-02-02,2022-01-09,1,47.3800,Ship to 67-C,"Av. Copacabana, 5678",Rio de Janeiro,RJ,10293,Brazil
+10814,84,3,2022-01-05,2022-02-02,2022-01-14,3,130.9400,Ship to 84-B,"4567, rue du Commerce",Lyon,,10343,France
+10815,71,2,2022-01-05,2022-02-02,2022-01-14,3,14.6200,Ship to 71-A,7890 Suffolk Ln.,Boise,ID,10305,USA
+10816,32,4,2022-01-06,2022-02-03,2022-02-04,2,719.7800,Destination AVQUS,2345 Baker Blvd.,Eugene,OR,10190,USA
+10817,39,3,2022-01-06,2022-01-20,2022-01-13,2,306.0700,Destination RMBHM,Maubelstr. 1234,Brandenburg,,10209,Germany
+10818,49,7,2022-01-07,2022-02-04,2022-01-12,3,65.4800,Ship to 49-B,Via Ludovico il Moro 9012,Bergamo,,10236,Italy
+10819,12,2,2022-01-07,2022-02-04,2022-01-16,3,19.7600,Destination QTHBC,Cerrito 6789,Buenos Aires,,10134,Argentina
+10820,65,3,2022-01-07,2022-02-04,2022-01-13,2,37.5200,Ship to 65-B,8901 Milton Dr.,Albuquerque,NM,10286,USA
+10821,75,1,2022-01-08,2022-02-05,2022-01-15,1,36.6800,Ship to 75-A,P.O. Box 5678,Lander,WY,10314,USA
+10822,82,6,2022-01-08,2022-02-05,2022-01-16,3,7.0000,Ship to 82-B,9012 DaVinci Blvd.,Kirkland,WA,10338,USA
+10823,46,5,2022-01-09,2022-02-06,2022-01-13,2,163.9700,Ship to 46-A,Carrera 0123 con Ave. Bolívar #65-98 Llano Largo,Barquisimeto,Lara,10227,Venezuela
+10824,24,8,2022-01-09,2022-02-06,2022-01-30,1,1.2300,Destination NCKKO,Åkergatan 7890,Bräcke,,10165,Sweden
+10825,17,1,2022-01-09,2022-02-06,2022-01-14,1,79.2500,Destination BJCXA,Walserweg 7890,Aachen,,10145,Germany
+10826,7,6,2022-01-12,2022-02-09,2022-02-06,1,7.0900,Ship to 7-C,"2345, place Kléber",Strasbourg,,10331,France
+10827,9,1,2022-01-12,2022-01-26,2022-02-06,2,63.5400,Ship to 9-B,"9012, rue des Bouchers",Marseille,,10368,France
+10828,64,9,2022-01-13,2022-01-27,2022-02-04,1,90.8500,Ship to 64-B,Av. del Libertador 5678,Buenos Aires,,10283,Argentina
+10829,38,9,2022-01-13,2022-02-10,2022-01-23,1,154.7200,Destination QVTLW,Garden House Crowther Way 7890,Cowes,Isle of Wight,10205,UK
+10830,81,4,2022-01-13,2022-02-24,2022-01-21,2,81.8300,Ship to 81-C,"Av. Inês de Castro, 7890",Sao Paulo,SP,10336,Brazil
+10831,70,3,2022-01-14,2022-02-11,2022-01-23,2,72.1900,Ship to 70-B,Erling Skakkes gate 5678,Stavern,,10303,Norway
+10832,41,2,2022-01-14,2022-02-11,2022-01-19,2,43.2600,Ship to 41-C,0123 rue Alsace-Lorraine,Toulouse,,10218,France
+10833,56,6,2022-01-15,2022-02-12,2022-01-23,2,71.4900,Ship to 56-B,Mehrheimerstr. 1234,Köln,,10259,Germany
+10834,81,1,2022-01-15,2022-02-12,2022-01-19,3,29.7800,Ship to 81-A,"Av. Inês de Castro, 6789",Sao Paulo,SP,10335,Brazil
+10835,1,1,2022-01-15,2022-02-12,2022-01-21,3,69.5300,Destination LOUIE,Obere Str. 6789,Berlin,,10154,Germany
+10836,20,7,2022-01-16,2022-02-13,2022-01-21,1,411.8800,Destination CUVPF,Kirchgasse 1234,Graz,,10159,Austria
+10837,5,9,2022-01-16,2022-02-13,2022-01-23,3,13.3200,Ship to 5-A,Berguvsvägen  9012,Luleå,,10267,Sweden
+10838,47,3,2022-01-19,2022-02-16,2022-01-23,3,59.2800,Ship to 47-A,Ave. 5 de Mayo Porlamar 3456,I. de Margarita,Nueva Esparta,10230,Venezuela
+10839,81,3,2022-01-19,2022-02-16,2022-01-22,3,35.4300,Ship to 81-C,"Av. Inês de Castro, 7890",Sao Paulo,SP,10336,Brazil
+10840,47,4,2022-01-19,2022-03-02,2022-02-16,2,2.7100,Ship to 47-A,Ave. 5 de Mayo Porlamar 3456,I. de Margarita,Nueva Esparta,10230,Venezuela
+10841,76,5,2022-01-20,2022-02-17,2022-01-29,2,424.3000,Ship to 76-B,"Boulevard Tirou, 9012",Charleroi,,10318,Belgium
+10842,80,1,2022-01-20,2022-02-17,2022-01-29,3,54.4200,Ship to 80-A,Avda. Azteca 3456,México D.F.,,10332,Mexico
+10843,84,4,2022-01-21,2022-02-18,2022-01-26,2,9.2600,Ship to 84-C,"5678, rue du Commerce",Lyon,,10344,France
+10844,59,8,2022-01-21,2022-02-18,2022-01-26,2,25.2200,Ship to 59-A,Geislweg 6789,Salzburg,,10264,Austria
+10845,63,8,2022-01-21,2022-02-04,2022-01-30,1,212.9800,Ship to 63-A,Taucherstraße 1234,Cunewalde,,10279,Germany
+10846,76,2,2022-01-22,2022-03-05,2022-01-23,3,56.4600,Ship to 76-C,"Boulevard Tirou, 0123",Charleroi,,10319,Belgium
+10847,71,4,2022-01-22,2022-02-05,2022-02-10,3,487.5700,Ship to 71-A,7890 Suffolk Ln.,Boise,ID,10305,USA
+10848,16,7,2022-01-23,2022-02-20,2022-01-29,2,38.2400,Destination QKQNB,Berkeley Gardens 5678  Brewery,London,,10143,UK
+10849,39,9,2022-01-23,2022-02-20,2022-01-30,2,0.5600,Destination DKMQA,Maubelstr. 0123,Brandenburg,,10208,Germany
+10850,84,1,2022-01-23,2022-03-06,2022-01-30,1,49.1900,Ship to 84-C,"5678, rue du Commerce",Lyon,,10344,France
+10851,67,5,2022-01-26,2022-02-23,2022-02-02,1,160.5500,Ship to 67-C,"Av. Copacabana, 5678",Rio de Janeiro,RJ,10293,Brazil
+10852,65,8,2022-01-26,2022-02-09,2022-01-30,1,174.0500,Ship to 65-A,7890 Milton Dr.,Albuquerque,NM,10285,USA
+10853,6,9,2022-01-27,2022-02-24,2022-02-03,2,53.8300,Ship to 6-B,Forsterstr. 3456,Mannheim,,10301,Germany
+10854,20,3,2022-01-27,2022-02-24,2022-02-05,2,100.2200,Destination CUVPF,Kirchgasse 1234,Graz,,10159,Austria
+10855,55,3,2022-01-27,2022-02-24,2022-02-04,1,170.9700,Ship to 55-A,7890 Bering St.,Anchorage,AK,10255,USA
+10856,3,3,2022-01-28,2022-02-25,2022-02-10,2,58.4300,Destination FQFLS,Mataderos  3456,México D.F.,,10211,Mexico
+10857,5,8,2022-01-28,2022-02-25,2022-02-06,2,188.8500,Ship to 5-B,Berguvsvägen  0123,Luleå,,10268,Sweden
+10858,40,2,2022-01-29,2022-02-26,2022-02-03,1,52.5100,Destination POAEW,"7890, avenue de l'Europe",Versailles,,10215,France
+10859,25,1,2022-01-29,2022-02-26,2022-02-02,2,76.1000,Destination QOCBL,Berliner Platz 1234,München,,10169,Germany
+10860,26,3,2022-01-29,2022-02-26,2022-02-04,3,19.2600,Destination XBVKN,"3456, rue Royale",Nantes,,10171,France
+10861,89,4,2022-01-30,2022-02-27,2022-02-17,2,14.9300,Ship to 89-C,9012 - 12th Ave. S.,Seattle,WA,10358,USA
+10862,44,8,2022-01-30,2022-03-13,2022-02-02,2,53.2300,Ship to 44-C,Magazinweg 6789,Frankfurt a.M.,,10224,Germany
+10863,35,4,2022-02-02,2022-03-02,2022-02-17,2,30.2600,Destination UOUWK,Carrera 9012 con Ave. Carlos Soublette #8-35,San Cristóbal,Táchira,10197,Venezuela
+10864,4,4,2022-02-02,2022-03-02,2022-02-09,2,3.0400,Ship to 4-C,Brook Farm Stratford St. Mary 2345,Colchester,Essex,10240,UK
+10865,63,2,2022-02-02,2022-02-16,2022-02-12,1,348.1400,Ship to 63-A,Taucherstraße 1234,Cunewalde,,10279,Germany
+10866,5,5,2022-02-03,2022-03-03,2022-02-12,1,109.1100,Ship to 5-B,Berguvsvägen  0123,Luleå,,10268,Sweden
+10867,48,6,2022-02-03,2022-03-17,2022-02-11,1,1.9300,Ship to 48-B,6789 Chiaroscuro Rd.,Portland,OR,10233,USA
+10868,62,7,2022-02-04,2022-03-04,2022-02-23,2,191.2700,Ship to 62-C,"Alameda dos Canàrios, 0123",Sao Paulo,SP,10278,Brazil
+10869,72,5,2022-02-04,2022-03-04,2022-02-09,1,143.2800,Ship to 72-A,0123 Wadhurst Rd.,London,,10308,UK
+10870,91,5,2022-02-04,2022-03-04,2022-02-13,3,12.0400,Ship to 91-A,ul. Filtrowa 5678,Warszawa,,10364,Poland
+10871,9,9,2022-02-05,2022-03-05,2022-02-10,2,112.2700,Ship to 9-B,"9012, rue des Bouchers",Marseille,,10368,France
+10872,30,5,2022-02-05,2022-03-05,2022-02-09,2,175.3200,Destination GGQIR,"C/ Romero, 6789",Sevilla,,10184,Spain
+10873,90,4,2022-02-06,2022-03-06,2022-02-09,1,0.8200,Ship to 90-B,Keskuskatu 3456,Helsinki,,10362,Finland
+10874,30,5,2022-02-06,2022-03-06,2022-02-11,2,19.5800,Destination IIYDD,"C/ Romero, 5678",Sevilla,,10183,Spain
+10875,5,4,2022-02-06,2022-03-06,2022-03-03,2,32.3700,Ship to 5-A,Berguvsvägen  9012,Luleå,,10267,Sweden
+10876,9,7,2022-02-09,2022-03-09,2022-02-12,3,60.4200,Ship to 9-A,"8901, rue des Bouchers",Marseille,,10367,France
+10877,67,1,2022-02-09,2022-03-09,2022-02-19,1,38.0600,Ship to 67-B,"Av. Copacabana, 4567",Rio de Janeiro,RJ,10292,Brazil
+10878,63,4,2022-02-10,2022-03-10,2022-02-12,1,46.6900,Ship to 63-B,Taucherstraße 2345,Cunewalde,,10280,Germany
+10879,90,3,2022-02-10,2022-03-10,2022-02-12,3,8.5000,Ship to 90-A,Keskuskatu 2345,Helsinki,,10361,Finland
+10880,24,7,2022-02-10,2022-03-24,2022-02-18,1,88.0100,Destination KBSBN,Åkergatan 9012,Bräcke,,10167,Sweden
+10881,12,4,2022-02-11,2022-03-11,2022-02-18,1,2.8400,Destination IGLOB,Cerrito 7890,Buenos Aires,,10135,Argentina
+10882,71,4,2022-02-11,2022-03-11,2022-02-20,3,23.1000,Ship to 71-B,8901 Suffolk Ln.,Boise,ID,10306,USA
+10883,48,8,2022-02-12,2022-03-12,2022-02-20,3,0.5300,Ship to 48-C,7890 Chiaroscuro Rd.,Portland,OR,10234,USA
+10884,45,4,2022-02-12,2022-03-12,2022-02-13,2,90.9700,Ship to 45-C,9012 Polk St. Suite 5,San Francisco,CA,10226,USA
+10885,76,6,2022-02-12,2022-03-12,2022-02-18,3,5.6400,Ship to 76-B,"Boulevard Tirou, 9012",Charleroi,,10318,Belgium
+10886,34,1,2022-02-13,2022-03-13,2022-03-02,1,4.9900,Destination SCQXA,"Rua do Paço, 7890",Rio de Janeiro,RJ,10195,Brazil
+10887,29,8,2022-02-13,2022-03-13,2022-02-16,3,1.2500,Destination VPNNG,"Rambla de Cataluña, 0123",Barcelona,,10178,Spain
+10888,30,1,2022-02-16,2022-03-16,2022-02-23,2,51.8700,Destination IIYDD,"C/ Romero, 5678",Sevilla,,10183,Spain
+10889,65,9,2022-02-16,2022-03-16,2022-02-23,3,280.6100,Ship to 65-C,9012 Milton Dr.,Albuquerque,NM,10287,USA
+10890,18,7,2022-02-16,2022-03-16,2022-02-18,1,32.7600,Destination JNSYI,"1234, rue des Cinquante Otages",Nantes,,10149,France
+10891,44,7,2022-02-17,2022-03-17,2022-02-19,2,20.3700,Ship to 44-A,Magazinweg 4567,Frankfurt a.M.,,10222,Germany
+10892,50,4,2022-02-17,2022-03-17,2022-02-19,2,120.2700,Ship to 50-A,Rue Joseph-Bens 3456,Bruxelles,,10241,Belgium
+10893,39,9,2022-02-18,2022-03-18,2022-02-20,2,77.7800,Destination RMBHM,Maubelstr. 1234,Brandenburg,,10209,Germany
+10894,71,1,2022-02-18,2022-03-18,2022-02-20,1,116.1300,Ship to 71-A,7890 Suffolk Ln.,Boise,ID,10305,USA
+10895,20,3,2022-02-18,2022-03-18,2022-02-23,1,162.7500,Destination CUVPF,Kirchgasse 1234,Graz,,10159,Austria
+10896,50,7,2022-02-19,2022-03-19,2022-02-27,3,32.4500,Ship to 50-A,Rue Joseph-Bens 3456,Bruxelles,,10241,Belgium
+10897,37,3,2022-02-19,2022-03-19,2022-02-25,2,603.5400,Destination DGKOU,6789 Johnstown Road,Cork,Co. Cork,10204,Ireland
+10898,54,4,2022-02-20,2022-03-20,2022-03-06,2,1.2700,Ship to 54-B,Ing. Gustavo Moncada 5678 Piso 20-A,Buenos Aires,,10253,Argentina
+10899,46,5,2022-02-20,2022-03-20,2022-02-26,3,1.2100,Ship to 46-C,Carrera 2345 con Ave. Bolívar #65-98 Llano Largo,Barquisimeto,Lara,10229,Venezuela
+10900,88,1,2022-02-20,2022-03-20,2022-03-04,2,1.6600,Ship to 88-A,"Rua do Mercado, 4567",Resende,SP,10353,Brazil
+10901,35,4,2022-02-23,2022-03-23,2022-02-26,1,62.0900,Destination UOUWK,Carrera 9012 con Ave. Carlos Soublette #8-35,San Cristóbal,Táchira,10197,Venezuela
+10902,24,1,2022-02-23,2022-03-23,2022-03-03,1,44.1500,Destination NCKKO,Åkergatan 7890,Bräcke,,10165,Sweden
+10903,34,3,2022-02-24,2022-03-24,2022-03-04,3,36.7100,Destination DPCVR,"Rua do Paço, 6789",Rio de Janeiro,RJ,10194,Brazil
+10904,89,3,2022-02-24,2022-03-24,2022-02-27,3,162.9500,Ship to 89-A,7890 - 12th Ave. S.,Seattle,WA,10356,USA
+10905,88,9,2022-02-24,2022-03-24,2022-03-06,2,13.7200,Ship to 88-A,"Rua do Mercado, 4567",Resende,SP,10353,Brazil
+10906,91,4,2022-02-25,2022-03-11,2022-03-03,3,26.2900,Ship to 91-B,ul. Filtrowa 6789,Warszawa,,10365,Poland
+10907,74,6,2022-02-25,2022-03-25,2022-02-27,3,9.1900,Ship to 74-B,"4567, rue Lauriston",Paris,,10313,France
+10908,66,4,2022-02-26,2022-03-26,2022-03-06,2,32.9600,Ship to 66-B,Strada Provinciale 1234,Reggio Emilia,,10289,Italy
+10909,70,1,2022-02-26,2022-03-26,2022-03-10,2,53.0500,Ship to 70-C,Erling Skakkes gate 6789,Stavern,,10304,Norway
+10910,90,1,2022-02-26,2022-03-26,2022-03-04,3,38.1100,Ship to 90-A,Keskuskatu 2345,Helsinki,,10361,Finland
+10911,30,3,2022-02-26,2022-03-26,2022-03-05,1,38.1900,Destination IIYDD,"C/ Romero, 5678",Sevilla,,10183,Spain
+10912,37,2,2022-02-26,2022-03-26,2022-03-18,2,580.9100,Destination DGKOU,6789 Johnstown Road,Cork,Co. Cork,10204,Ireland
+10913,62,4,2022-02-26,2022-03-26,2022-03-04,1,33.0500,Ship to 62-A,"Alameda dos Canàrios, 8901",Sao Paulo,SP,10276,Brazil
+10914,62,6,2022-02-27,2022-03-27,2022-03-02,1,21.1900,Ship to 62-B,"Alameda dos Canàrios, 9012",Sao Paulo,SP,10277,Brazil
+10915,80,2,2022-02-27,2022-03-27,2022-03-02,2,3.5100,Ship to 80-C,Avda. Azteca 5678,México D.F.,,10334,Mexico
+10916,64,1,2022-02-27,2022-03-27,2022-03-09,2,63.7700,Ship to 64-C,Av. del Libertador 6789,Buenos Aires,,10284,Argentina
+10917,69,4,2022-03-02,2022-03-30,2022-03-11,2,8.2900,Ship to 69-C,"Gran Vía, 1234",Madrid,,10299,Spain
+10918,10,3,2022-03-02,2022-03-30,2022-03-11,3,48.8300,Destination OLSSJ,2345 Tsawassen Blvd.,Tsawassen,BC,10130,Canada
+10919,47,2,2022-03-02,2022-03-30,2022-03-04,2,19.8000,Ship to 47-B,Ave. 5 de Mayo Porlamar 4567,I. de Margarita,Nueva Esparta,10231,Venezuela
+10920,4,4,2022-03-03,2022-03-31,2022-03-09,2,29.6100,Ship to 4-A,Brook Farm Stratford St. Mary 0123,Colchester,Essex,10238,UK
+10921,83,1,2022-03-03,2022-04-14,2022-03-09,1,176.4800,Ship to 83-A,Smagsloget 0123,Århus,,10339,Denmark
+10922,34,5,2022-03-03,2022-03-31,2022-03-05,3,62.7400,Destination DPCVR,"Rua do Paço, 6789",Rio de Janeiro,RJ,10194,Brazil
+10923,41,7,2022-03-03,2022-04-14,2022-03-13,3,68.2600,Destination OLJND,8901 rue Alsace-Lorraine,Toulouse,,10216,France
+10924,5,3,2022-03-04,2022-04-01,2022-04-08,2,151.5200,Ship to 5-A,Berguvsvägen  9012,Luleå,,10267,Sweden
+10925,34,3,2022-03-04,2022-04-01,2022-03-13,1,2.2700,Destination JPAIY,"Rua do Paço, 8901",Rio de Janeiro,RJ,10196,Brazil
+10926,2,4,2022-03-04,2022-04-01,2022-03-11,3,39.9200,Destination RAIGI,Avda. de la Constitución 4567,México D.F.,,10182,Mexico
+10927,40,4,2022-03-05,2022-04-02,2022-04-08,1,19.7900,Destination WWJLO,"6789, avenue de l'Europe",Versailles,,10214,France
+10928,29,1,2022-03-05,2022-04-02,2022-03-18,1,1.3600,Destination WOFLH,"Rambla de Cataluña, 1234",Barcelona,,10179,Spain
+10929,25,6,2022-03-05,2022-04-02,2022-03-12,1,33.9300,Destination QOCBL,Berliner Platz 1234,München,,10169,Germany
+10930,76,4,2022-03-06,2022-04-17,2022-03-18,3,15.5500,Ship to 76-A,"Boulevard Tirou, 8901",Charleroi,,10317,Belgium
+10931,68,4,2022-03-06,2022-03-20,2022-03-19,2,13.6000,Ship to 68-B,Starenweg 7890,Genève,,10295,Switzerland
+10932,9,8,2022-03-06,2022-04-03,2022-03-24,1,134.6400,Ship to 9-B,"9012, rue des Bouchers",Marseille,,10368,France
+10933,38,6,2022-03-06,2022-04-03,2022-03-16,3,54.1500,Destination QVTLW,Garden House Crowther Way 7890,Cowes,Isle of Wight,10205,UK
+10934,44,3,2022-03-09,2022-04-06,2022-03-12,3,32.0100,Ship to 44-C,Magazinweg 6789,Frankfurt a.M.,,10224,Germany
+10935,88,4,2022-03-09,2022-04-06,2022-03-18,3,47.5900,Ship to 88-A,"Rua do Mercado, 4567",Resende,SP,10353,Brazil
+10936,32,3,2022-03-09,2022-04-06,2022-03-18,2,33.6800,Destination AVQUS,2345 Baker Blvd.,Eugene,OR,10190,USA
+10937,12,7,2022-03-10,2022-03-24,2022-03-13,3,31.5100,Destination QTHBC,Cerrito 6789,Buenos Aires,,10134,Argentina
+10938,63,3,2022-03-10,2022-04-07,2022-03-16,2,31.8900,Ship to 63-C,Taucherstraße 3456,Cunewalde,,10281,Germany
+10939,49,2,2022-03-10,2022-04-07,2022-03-13,2,76.3300,Ship to 49-A,Via Ludovico il Moro 8901,Bergamo,,10235,Italy
+10940,9,8,2022-03-11,2022-04-08,2022-03-23,3,19.7700,Ship to 9-C,"0123, rue des Bouchers",Marseille,,10369,France
+10941,71,7,2022-03-11,2022-04-08,2022-03-20,2,400.8100,Ship to 71-A,7890 Suffolk Ln.,Boise,ID,10305,USA
+10942,66,9,2022-03-11,2022-04-08,2022-03-18,3,17.9500,Ship to 66-C,Strada Provinciale 2345,Reggio Emilia,,10290,Italy
+10943,11,4,2022-03-11,2022-04-08,2022-03-19,2,2.1700,Destination NZASL,Fauntleroy Circus 5678,London,,10133,UK
+10944,10,6,2022-03-12,2022-03-26,2022-03-13,3,52.9200,Destination XJIBQ,1234 Tsawassen Blvd.,Tsawassen,BC,10129,Canada
+10945,52,4,2022-03-12,2022-04-09,2022-03-18,1,10.2200,Ship to 52-B,Heerstr. 0123,Leipzig,,10248,Germany
+10946,83,1,2022-03-12,2022-04-09,2022-03-19,2,27.2000,Ship to 83-B,Smagsloget 1234,Århus,,10340,Denmark
+10947,11,3,2022-03-13,2022-04-10,2022-03-16,2,3.2600,Destination NZASL,Fauntleroy Circus 5678,London,,10133,UK
+10948,30,3,2022-03-13,2022-04-10,2022-03-19,3,23.3900,Destination GGQIR,"C/ Romero, 6789",Sevilla,,10184,Spain
+10949,10,2,2022-03-13,2022-04-10,2022-03-17,3,74.4400,Destination OLSSJ,2345 Tsawassen Blvd.,Tsawassen,BC,10130,Canada
+10950,49,1,2022-03-16,2022-04-13,2022-03-23,2,2.5000,Ship to 49-B,Via Ludovico il Moro 9012,Bergamo,,10236,Italy
+10951,68,9,2022-03-16,2022-04-27,2022-04-07,2,30.8500,Ship to 68-A,Starenweg 6789,Genève,,10294,Switzerland
+10952,1,1,2022-03-16,2022-04-27,2022-03-24,1,40.4200,Destination LOUIE,Obere Str. 6789,Berlin,,10154,Germany
+10953,4,9,2022-03-16,2022-03-30,2022-03-25,2,23.7200,Ship to 4-B,Brook Farm Stratford St. Mary 1234,Colchester,Essex,10239,UK
+10954,47,5,2022-03-17,2022-04-28,2022-03-20,1,27.9100,Ship to 47-B,Ave. 5 de Mayo Porlamar 4567,I. de Margarita,Nueva Esparta,10231,Venezuela
+10955,24,8,2022-03-17,2022-04-14,2022-03-20,2,3.2600,Destination YCMPK,Åkergatan 8901,Bräcke,,10166,Sweden
+10956,6,6,2022-03-17,2022-04-28,2022-03-20,2,44.6500,Ship to 6-B,Forsterstr. 3456,Mannheim,,10301,Germany
+10957,35,8,2022-03-18,2022-04-15,2022-03-27,3,105.3600,Destination UOUWK,Carrera 9012 con Ave. Carlos Soublette #8-35,San Cristóbal,Táchira,10197,Venezuela
+10958,54,7,2022-03-18,2022-04-15,2022-03-27,2,49.5600,Ship to 54-C,Ing. Gustavo Moncada 6789 Piso 20-A,Buenos Aires,,10254,Argentina
+10959,31,6,2022-03-18,2022-04-29,2022-03-23,2,4.9800,Destination GWPFK,"Av. Brasil, 0123",Campinas,SP,10188,Brazil
+10960,35,3,2022-03-19,2022-04-02,2022-04-08,1,2.0800,Destination SXYQX,Carrera 0123 con Ave. Carlos Soublette #8-35,San Cristóbal,Táchira,10198,Venezuela
+10961,62,8,2022-03-19,2022-04-16,2022-03-30,1,104.4700,Ship to 62-A,"Alameda dos Canàrios, 8901",Sao Paulo,SP,10276,Brazil
+10962,63,8,2022-03-19,2022-04-16,2022-03-23,2,275.7900,Ship to 63-B,Taucherstraße 2345,Cunewalde,,10280,Germany
+10963,28,9,2022-03-19,2022-04-16,2022-03-26,3,2.7000,Destination CIRQO,Jardim das rosas n. 8901,Lisboa,,10176,Portugal
+10964,74,3,2022-03-20,2022-04-17,2022-03-24,2,87.3800,Ship to 74-B,"4567, rue Lauriston",Paris,,10313,France
+10965,55,6,2022-03-20,2022-04-17,2022-03-30,3,144.3800,Ship to 55-B,8901 Bering St.,Anchorage,AK,10256,USA
+10966,14,4,2022-03-20,2022-04-17,2022-04-08,1,27.1900,Destination NRTZZ,Hauptstr. 0123,Bern,,10138,Switzerland
+10967,79,2,2022-03-23,2022-04-20,2022-04-02,2,62.2200,Ship to 79-B,Luisenstr. 8901,Münster,,10327,Germany
+10968,20,1,2022-03-23,2022-04-20,2022-04-01,3,74.6000,Destination CUVPF,Kirchgasse 1234,Graz,,10159,Austria
+10969,15,1,2022-03-23,2022-04-20,2022-03-30,2,0.2100,Destination EVHYA,"Av. dos Lusíadas, 3456",Sao Paulo,SP,10141,Brazil
+10970,8,9,2022-03-24,2022-04-07,2022-04-24,1,16.1600,Ship to 8-C,"C/ Araquil, 1234",Madrid,,10360,Spain
+10971,26,2,2022-03-24,2022-04-21,2022-04-02,2,121.8200,Destination XBVKN,"3456, rue Royale",Nantes,,10171,France
+10972,40,4,2022-03-24,2022-04-21,2022-03-26,2,0.0200,Destination MVTWX,"5678, avenue de l'Europe",Versailles,,10213,France
+10973,40,6,2022-03-24,2022-04-21,2022-03-27,2,15.1700,Destination WWJLO,"6789, avenue de l'Europe",Versailles,,10214,France
+10974,75,3,2022-03-25,2022-04-08,2022-04-03,3,12.9600,Ship to 75-B,P.O. Box 6789,Lander,WY,10315,USA
+10975,10,1,2022-03-25,2022-04-22,2022-03-27,3,32.2700,Destination OLSSJ,2345 Tsawassen Blvd.,Tsawassen,BC,10130,Canada
+10976,35,1,2022-03-25,2022-05-06,2022-04-03,1,37.9700,Destination SXYQX,Carrera 0123 con Ave. Carlos Soublette #8-35,San Cristóbal,Táchira,10198,Venezuela
+10977,24,8,2022-03-26,2022-04-23,2022-04-10,3,208.5000,Destination NCKKO,Åkergatan 7890,Bräcke,,10165,Sweden
+10978,50,9,2022-03-26,2022-04-23,2022-04-23,2,32.8200,Ship to 50-A,Rue Joseph-Bens 3456,Bruxelles,,10241,Belgium
+10979,20,8,2022-03-26,2022-04-23,2022-03-31,2,353.0700,Destination CUVPF,Kirchgasse 1234,Graz,,10159,Austria
+10980,24,4,2022-03-27,2022-05-08,2022-04-17,1,1.2600,Destination YCMPK,Åkergatan 8901,Bräcke,,10166,Sweden
+10981,34,1,2022-03-27,2022-04-24,2022-04-02,2,193.3700,Destination JPAIY,"Rua do Paço, 8901",Rio de Janeiro,RJ,10196,Brazil
+10982,10,2,2022-03-27,2022-04-24,2022-04-08,1,14.0100,Destination XJIBQ,1234 Tsawassen Blvd.,Tsawassen,BC,10129,Canada
+10983,71,2,2022-03-27,2022-04-24,2022-04-06,2,657.5400,Ship to 71-B,8901 Suffolk Ln.,Boise,ID,10306,USA
+10984,71,1,2022-03-30,2022-04-27,2022-04-03,3,211.2200,Ship to 71-B,8901 Suffolk Ln.,Boise,ID,10306,USA
+10985,37,2,2022-03-30,2022-04-27,2022-04-02,1,91.5100,Destination ATSOA,4567 Johnstown Road,Cork,Co. Cork,10202,Ireland
+10986,54,8,2022-03-30,2022-04-27,2022-04-21,2,217.8600,Ship to 54-A,Ing. Gustavo Moncada 4567 Piso 20-A,Buenos Aires,,10252,Argentina
+10987,19,8,2022-03-31,2022-04-28,2022-04-06,1,185.4800,Destination FRCGJ,5678 King George,London,,10153,UK
+10988,65,3,2022-03-31,2022-04-28,2022-04-10,2,61.1400,Ship to 65-A,7890 Milton Dr.,Albuquerque,NM,10285,USA
+10989,61,2,2022-03-31,2022-04-28,2022-04-02,1,34.7600,Ship to 61-A,"Rua da Panificadora, 5678",Rio de Janeiro,RJ,10273,Brazil
+10990,20,2,2022-04-01,2022-05-13,2022-04-07,3,117.6100,Destination RVDMF,Kirchgasse 9012,Graz,,10157,Austria
+10991,63,1,2022-04-01,2022-04-29,2022-04-07,1,38.5100,Ship to 63-A,Taucherstraße 1234,Cunewalde,,10279,Germany
+10992,77,1,2022-04-01,2022-04-29,2022-04-03,3,4.2700,Ship to 77-C,3456 Jefferson Way Suite 2,Portland,OR,10322,USA
+10993,24,7,2022-04-01,2022-04-29,2022-04-10,3,8.8100,Destination NCKKO,Åkergatan 7890,Bräcke,,10165,Sweden
+10994,83,2,2022-04-02,2022-04-16,2022-04-09,3,65.5300,Ship to 83-C,Smagsloget 2345,Århus,,10341,Denmark
+10995,58,1,2022-04-02,2022-04-30,2022-04-06,3,46.0000,Ship to 58-B,Calle Dr. Jorge Cash 4567,México D.F.,,10262,Mexico
+10996,63,4,2022-04-02,2022-04-30,2022-04-10,2,1.1200,Ship to 63-C,Taucherstraße 3456,Cunewalde,,10281,Germany
+10997,46,8,2022-04-03,2022-05-15,2022-04-13,2,73.9100,Ship to 46-A,Carrera 0123 con Ave. Bolívar #65-98 Llano Largo,Barquisimeto,Lara,10227,Venezuela
+10998,91,8,2022-04-03,2022-04-17,2022-04-17,2,20.3100,Ship to 91-A,ul. Filtrowa 5678,Warszawa,,10364,Poland
+10999,56,6,2022-04-03,2022-05-01,2022-04-10,2,96.3500,Ship to 56-B,Mehrheimerstr. 1234,Köln,,10259,Germany
+11000,65,2,2022-04-06,2022-05-04,2022-04-14,3,55.1200,Ship to 65-A,7890 Milton Dr.,Albuquerque,NM,10285,USA
+11001,24,2,2022-04-06,2022-05-04,2022-04-14,2,197.3000,Destination YCMPK,Åkergatan 8901,Bräcke,,10166,Sweden
+11002,71,4,2022-04-06,2022-05-04,2022-04-16,1,141.1600,Ship to 71-A,7890 Suffolk Ln.,Boise,ID,10305,USA
+11003,78,3,2022-04-06,2022-05-04,2022-04-08,3,14.9100,Ship to 78-B,5678 Grizzly Peak Rd.,Butte,MT,10324,USA
+11004,50,3,2022-04-07,2022-05-05,2022-04-20,1,44.8400,Ship to 50-C,Rue Joseph-Bens 5678,Bruxelles,,10243,Belgium
+11005,90,2,2022-04-07,2022-05-05,2022-04-10,1,0.7500,Ship to 90-A,Keskuskatu 2345,Helsinki,,10361,Finland
+11006,32,3,2022-04-07,2022-05-05,2022-04-15,2,25.1900,Destination LLUXZ,1234 Baker Blvd.,Eugene,OR,10189,USA
+11007,60,8,2022-04-08,2022-05-06,2022-04-13,2,202.2400,Ship to 60-C,Estrada da saúde n. 4567,Lisboa,,10272,Portugal
+11008,20,7,2022-04-08,2022-05-06,,3,79.4600,Destination CUVPF,Kirchgasse 1234,Graz,,10159,Austria
+11009,30,2,2022-04-08,2022-05-06,2022-04-10,1,59.1100,Destination WVLDH,"C/ Romero, 7890",Sevilla,,10185,Spain
+11010,66,2,2022-04-09,2022-05-07,2022-04-21,2,28.7100,Ship to 66-A,Strada Provinciale 0123,Reggio Emilia,,10288,Italy
+11011,1,3,2022-04-09,2022-05-07,2022-04-13,1,1.2100,Destination LOUIE,Obere Str. 6789,Berlin,,10154,Germany
+11012,25,1,2022-04-09,2022-04-23,2022-04-17,3,242.9500,Destination WEGWI,Berliner Platz 2345,München,,10170,Germany
+11013,69,2,2022-04-09,2022-05-07,2022-04-10,1,32.9900,Ship to 69-A,"Gran Vía, 9012",Madrid,,10297,Spain
+11014,47,2,2022-04-10,2022-05-08,2022-04-15,3,23.6000,Ship to 47-A,Ave. 5 de Mayo Porlamar 3456,I. de Margarita,Nueva Esparta,10230,Venezuela
+11015,70,2,2022-04-10,2022-04-24,2022-04-20,2,4.6200,Ship to 70-C,Erling Skakkes gate 6789,Stavern,,10304,Norway
+11016,4,9,2022-04-10,2022-05-08,2022-04-13,2,33.8000,Ship to 4-A,Brook Farm Stratford St. Mary 0123,Colchester,Essex,10238,UK
+11017,20,9,2022-04-13,2022-05-11,2022-04-20,2,754.2600,Destination CUVPF,Kirchgasse 1234,Graz,,10159,Austria
+11018,48,4,2022-04-13,2022-05-11,2022-04-16,2,11.6500,Ship to 48-B,6789 Chiaroscuro Rd.,Portland,OR,10233,USA
+11019,64,6,2022-04-13,2022-05-11,,3,3.1700,Ship to 64-B,Av. del Libertador 5678,Buenos Aires,,10283,Argentina
+11020,56,2,2022-04-14,2022-05-12,2022-04-16,2,43.3000,Ship to 56-B,Mehrheimerstr. 1234,Köln,,10259,Germany
+11021,63,3,2022-04-14,2022-05-12,2022-04-21,1,297.1800,Ship to 63-B,Taucherstraße 2345,Cunewalde,,10280,Germany
+11022,34,9,2022-04-14,2022-05-12,2022-05-04,2,6.2700,Destination SCQXA,"Rua do Paço, 7890",Rio de Janeiro,RJ,10195,Brazil
+11023,11,1,2022-04-14,2022-04-28,2022-04-24,2,123.8300,Destination NZASL,Fauntleroy Circus 5678,London,,10133,UK
+11024,19,4,2022-04-15,2022-05-13,2022-04-20,1,74.3600,Destination BBMRT,4567 King George,London,,10152,UK
+11025,87,6,2022-04-15,2022-05-13,2022-04-24,3,29.1700,Ship to 87-C,Torikatu 3456,Oulu,,10352,Finland
+11026,27,4,2022-04-15,2022-05-13,2022-04-28,1,47.0900,Destination DICGM,Via Monte Bianco 7890,Torino,,10175,Italy
+11027,10,1,2022-04-16,2022-05-14,2022-04-20,1,52.5200,Destination XJIBQ,1234 Tsawassen Blvd.,Tsawassen,BC,10129,Canada
+11028,39,2,2022-04-16,2022-05-14,2022-04-22,1,29.5900,Destination DKMQA,Maubelstr. 0123,Brandenburg,,10208,Germany
+11029,14,4,2022-04-16,2022-05-14,2022-04-27,1,47.8400,Destination YUJRD,Hauptstr. 1234,Bern,,10139,Switzerland
+11030,71,7,2022-04-17,2022-05-15,2022-04-27,2,830.7500,Ship to 71-C,9012 Suffolk Ln.,Boise,ID,10307,USA
+11031,71,6,2022-04-17,2022-05-15,2022-04-24,2,227.2200,Ship to 71-C,9012 Suffolk Ln.,Boise,ID,10307,USA
+11032,89,2,2022-04-17,2022-05-15,2022-04-23,3,606.1900,Ship to 89-B,8901 - 12th Ave. S.,Seattle,WA,10357,USA
+11033,68,7,2022-04-17,2022-05-15,2022-04-23,3,84.7400,Ship to 68-A,Starenweg 6789,Genève,,10294,Switzerland
+11034,55,8,2022-04-20,2022-06-01,2022-04-27,1,40.3200,Ship to 55-B,8901 Bering St.,Anchorage,AK,10256,USA
+11035,76,2,2022-04-20,2022-05-18,2022-04-24,2,0.1700,Ship to 76-B,"Boulevard Tirou, 9012",Charleroi,,10318,Belgium
+11036,17,8,2022-04-20,2022-05-18,2022-04-22,3,149.4700,Destination YPUYI,Walserweg 8901,Aachen,,10146,Germany
+11037,30,7,2022-04-21,2022-05-19,2022-04-27,1,3.2000,Destination GGQIR,"C/ Romero, 6789",Sevilla,,10184,Spain
+11038,76,1,2022-04-21,2022-05-19,2022-04-30,2,29.5900,Ship to 76-A,"Boulevard Tirou, 8901",Charleroi,,10317,Belgium
+11039,47,1,2022-04-21,2022-05-19,,2,65.0000,Ship to 47-C,Ave. 5 de Mayo Porlamar 5678,I. de Margarita,Nueva Esparta,10232,Venezuela
+11040,32,4,2022-04-22,2022-05-20,,3,18.8400,Destination VYOBK,3456 Baker Blvd.,Eugene,OR,10191,USA
+11041,14,3,2022-04-22,2022-05-20,2022-04-28,2,48.2200,Destination YUJRD,Hauptstr. 1234,Bern,,10139,Switzerland
+11042,15,2,2022-04-22,2022-05-06,2022-05-01,1,29.9900,Destination EVHYA,"Av. dos Lusíadas, 3456",Sao Paulo,SP,10141,Brazil
+11043,74,5,2022-04-22,2022-05-20,2022-04-29,2,8.8000,Ship to 74-B,"4567, rue Lauriston",Paris,,10313,France
+11044,91,4,2022-04-23,2022-05-21,2022-05-01,1,8.7200,Ship to 91-B,ul. Filtrowa 6789,Warszawa,,10365,Poland
+11045,10,6,2022-04-23,2022-05-21,,2,70.5800,Destination LPHSI,3456 Tsawassen Blvd.,Tsawassen,BC,10131,Canada
+11046,86,8,2022-04-23,2022-05-21,2022-04-24,2,71.6400,Ship to 86-C,Adenauerallee 0123,Stuttgart,,10349,Germany
+11047,19,7,2022-04-24,2022-05-22,2022-05-01,3,46.6200,Destination FRCGJ,5678 King George,London,,10153,UK
+11048,10,7,2022-04-24,2022-05-22,2022-04-30,3,24.1200,Destination XJIBQ,1234 Tsawassen Blvd.,Tsawassen,BC,10129,Canada
+11049,31,3,2022-04-24,2022-05-22,2022-05-04,1,8.3400,Destination XOIGC,"Av. Brasil, 8901",Campinas,SP,10186,Brazil
+11050,24,8,2022-04-27,2022-05-25,2022-05-05,2,59.4100,Destination YCMPK,Åkergatan 8901,Bräcke,,10166,Sweden
+11051,41,7,2022-04-27,2022-05-25,,3,2.7900,Destination OLJND,8901 rue Alsace-Lorraine,Toulouse,,10216,France
+11052,34,3,2022-04-27,2022-05-25,2022-05-01,1,67.2600,Destination DPCVR,"Rua do Paço, 6789",Rio de Janeiro,RJ,10194,Brazil
+11053,59,2,2022-04-27,2022-05-25,2022-04-29,2,53.0500,Ship to 59-A,Geislweg 6789,Salzburg,,10264,Austria
+11054,12,8,2022-04-28,2022-05-26,,1,0.3300,Destination QTHBC,Cerrito 6789,Buenos Aires,,10134,Argentina
+11055,35,7,2022-04-28,2022-05-26,2022-05-05,2,120.9200,Destination JYDLM,Carrera1234 con Ave. Carlos Soublette #8-35,San Cristóbal,Táchira,10199,Venezuela
+11056,19,8,2022-04-28,2022-05-12,2022-05-01,2,278.9600,Destination QTKCU,3456 King George,London,,10151,UK
+11057,53,3,2022-04-29,2022-05-27,2022-05-01,3,4.1300,Ship to 53-C,South House 3456 Queensbridge,London,,10251,UK
+11058,6,9,2022-04-29,2022-05-27,,3,31.1400,Ship to 6-A,Forsterstr. 2345,Mannheim,,10300,Germany
+11059,67,2,2022-04-29,2022-06-10,,2,85.8000,Ship to 67-A,"Av. Copacabana, 3456",Rio de Janeiro,RJ,10291,Brazil
+11060,27,2,2022-04-30,2022-05-28,2022-05-04,2,10.9800,Destination DICGM,Via Monte Bianco 7890,Torino,,10175,Italy
+11061,32,4,2022-04-30,2022-06-11,,3,14.0100,Destination VYOBK,3456 Baker Blvd.,Eugene,OR,10191,USA
+11062,66,4,2022-04-30,2022-05-28,,2,29.9300,Ship to 66-B,Strada Provinciale 1234,Reggio Emilia,,10289,Italy
+11063,37,3,2022-04-30,2022-05-28,2022-05-06,2,81.7300,Destination KPVYJ,5678 Johnstown Road,Cork,Co. Cork,10203,Ireland
+11064,71,1,2022-05-01,2022-05-29,2022-05-04,1,30.0900,Ship to 71-C,9012 Suffolk Ln.,Boise,ID,10307,USA
+11065,46,8,2022-05-01,2022-05-29,,1,12.9100,Ship to 46-C,Carrera 2345 con Ave. Bolívar #65-98 Llano Largo,Barquisimeto,Lara,10229,Venezuela
+11066,89,7,2022-05-01,2022-05-29,2022-05-04,2,44.7200,Ship to 89-A,7890 - 12th Ave. S.,Seattle,WA,10356,USA
+11067,17,1,2022-05-04,2022-05-18,2022-05-06,2,7.9800,Destination BJCXA,Walserweg 7890,Aachen,,10145,Germany
+11068,62,8,2022-05-04,2022-06-01,,2,81.7500,Ship to 62-A,"Alameda dos Canàrios, 8901",Sao Paulo,SP,10276,Brazil
+11069,80,1,2022-05-04,2022-06-01,2022-05-06,2,15.6700,Ship to 80-B,Avda. Azteca 4567,México D.F.,,10333,Mexico
+11070,44,2,2022-05-05,2022-06-02,,1,136.0000,Ship to 44-A,Magazinweg 4567,Frankfurt a.M.,,10222,Germany
+11071,46,1,2022-05-05,2022-06-02,,1,0.9300,Ship to 46-B,Carrera 1234 con Ave. Bolívar #65-98 Llano Largo,Barquisimeto,Lara,10228,Venezuela
+11072,20,4,2022-05-05,2022-06-02,,2,258.6400,Destination RVDMF,Kirchgasse 9012,Graz,,10157,Austria
+11073,58,2,2022-05-05,2022-06-02,,2,24.9500,Ship to 58-B,Calle Dr. Jorge Cash 4567,México D.F.,,10262,Mexico
+11074,73,7,2022-05-06,2022-06-03,,2,18.4400,Ship to 73-A,Vinbæltet 1234,Kobenhavn,,10310,Denmark
+11075,68,8,2022-05-06,2022-06-03,,2,6.1900,Ship to 68-A,Starenweg 6789,Genève,,10294,Switzerland
+11076,9,4,2022-05-06,2022-06-03,,2,38.2800,Ship to 9-A,"8901, rue des Bouchers",Marseille,,10367,France
+11077,65,1,2022-05-06,2022-06-03,,2,8.5300,Ship to 65-A,7890 Milton Dr.,Albuquerque,NM,10285,USA
