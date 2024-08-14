@@ -3,6 +3,8 @@ import os
 import pyspark.pandas as ps
 import pyspark.sql.functions as f
 
+from pyspark.sql.functions import col,lit
+
 # COMMAND ----------
 
 # MAGIC %sql
@@ -37,7 +39,7 @@ df_bronze = df_bronze.withColumn("Ordered_Revenue", f.regexp_replace('Ordered_Re
 
 #create a silver dataframe
 df_silver = DeltaTable.forName(spark, "contosodev.sales.Sales_Retail")
-display(df_silver)
+
 df_silver.alias("silver").merge(df_bronze.alias("bronze"), "silver.ASIN= bronze.ASIN")\
     .whenMatchedUpdate(set={"Product_Title": "bronze.Product_Title" ,
                             "Ordered_Revenue": "bronze.Ordered_Revenue",
