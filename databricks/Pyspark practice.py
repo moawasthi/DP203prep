@@ -9,6 +9,10 @@
 
 # COMMAND ----------
 
+from pyspark.sql.functions import col
+
+# COMMAND ----------
+
 
 df_orders = spark.read.csv("dbfs:/FileStore/Sales_Orders.csv", header=True)
 #display(df_orders)
@@ -29,4 +33,28 @@ display(df_orders_lastday["orderid","orderdate", "custid","empid"])
 
 # COMMAND ----------
 
+# MAGIC %md
+# MAGIC ## Query the HR.Employees and give lastname with a letter multiple times
 
+# COMMAND ----------
+
+df_employee = spark.read\
+              .option("multiline", True)\
+              .json("dbfs:/FileStore/HR_Employees.json")
+df_employee_filtered = df_employee.filter(col('lastname').like('%a%') )
+#display(df_employee)
+display(df_employee_filtered)
+
+# COMMAND ----------
+
+# MAGIC %md
+# MAGIC ##query Sales.Orders returning three shipped to countries with highest average freight
+
+# COMMAND ----------
+
+df_orders = spark.read.csv("dbfs:/FileStore/Sales_Orders.csv", header=True)
+schema_orders = StructType([StructField("shipcountry", StringType(),True), \
+                            StructField("freight", DoubleType(), True)])
+df_schemabound_orders = df_orders.select(col("shipcountry"), col("freight")).schema(schema_orders)
+df_grouped= df_schemabound_orders.groupBy("shipcountry").sum("freight").alias("TotalFreight")
+display(df_grouped)
