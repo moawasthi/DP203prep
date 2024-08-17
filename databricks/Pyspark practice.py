@@ -9,7 +9,8 @@
 
 # COMMAND ----------
 
-from pyspark.sql.functions import col
+from pyspark.sql.functions import col, last_day, countDistinct, sum
+from pyspark.sql.types import StructType, StructField, StringType, DoubleType
 
 # COMMAND ----------
 
@@ -17,18 +18,20 @@ from pyspark.sql.functions import col
 df_orders = spark.read.csv("dbfs:/FileStore/Sales_Orders.csv", header=True)
 #display(df_orders)
 df_orders_filtered = df_orders.filter((df_orders.orderdate >= "2021-06-01") & (df_orders.orderdate < "2021-07-01") )
-display(df_orders_filtered["orderid","orderdate", "custid","empid"])
+#display(df_orders_filtered["orderid","orderdate", "custid","empid"])
+
+display(df_orders_filtered)
  
 
 # COMMAND ----------
 
 # MAGIC %md
-# MAGIC ## Query the Sales.Orders table and give only orders placed on last day of the montha
+# MAGIC ## Query the Sales.Orders table and give only orders placed on last day of the months
 
 # COMMAND ----------
 
-df_orders = spark.read.csv("dbfs:/FileStore/Sales_Orders.csv", header=True)")
-df_orders_lastday = df_orders.filter("orderdate" = last_day("orderdate"))
+df_orders = spark.read.csv("dbfs:/FileStore/Sales_Orders.csv", header=True)
+df_orders_lastday = df_orders.filter("orderdate" == last_day("orderdate"))
 display(df_orders_lastday["orderid","orderdate", "custid","empid"])
 
 # COMMAND ----------
@@ -55,6 +58,69 @@ display(df_employee_filtered)
 df_orders = spark.read.csv("dbfs:/FileStore/Sales_Orders.csv", header=True)
 schema_orders = StructType([StructField("shipcountry", StringType(),True), \
                             StructField("freight", DoubleType(), True)])
-df_schemabound_orders = df_orders.select(col("shipcountry"), col("freight")).schema(schema_orders)
+df_schemabound_orders = df_orders.select(
+    col("shipcountry").cast(StringType()),
+    col("freight").cast(DoubleType())
+)
 df_grouped= df_schemabound_orders.groupBy("shipcountry").sum("freight").alias("TotalFreight")
 display(df_grouped)
+df_grouped_orderby = df_grouped.orderBy(col("sum(freight)").desc())
+df_grouped_top3 = df_grouped_orderby.limit(3)
+#display(df_grouped_top3('shipcountry', col("sum(freight)")
+
+
+display(df_grouped_top3.select("shipcountry", col("sum(freight)").alias("TotalFreight")))
+
+# COMMAND ----------
+
+# MAGIC %md
+# MAGIC # Joins
+
+# COMMAND ----------
+
+# MAGIC %md
+# MAGIC ## Generate five copies of Employee table
+
+# COMMAND ----------
+
+df_employee = spark.read.option("multiline", True).json("dbfs:/FileStore/HR_Employees.json")
+#df_employees = df_employee.crossJoin(df_employee).crossJoin(df_employee).crossJoin(df_employee)
+
+df_nums = spark.read.option("header",True).csv("dbfs:/FileStore/Nums.csv")
+df_employees = df_employee.crossJoin(df_nums.filter(col("n")<=5))
+display(df_employees)
+
+# COMMAND ----------
+
+# MAGIC %md
+# MAGIC ## Return US customers along with number of orders and total quantity
+
+# COMMAND ----------
+
+df_customers = spark.read.csv("dbfs:/FileStore/Sales_Customers.csv", header=True)
+df_salesOrders = spark.read.csv("dbfs:/FileStore/Sales_Orders.csv", header=True)
+df_salesOrderDetails = spark.read.csv("dbfs:/FileStore/Sales_OrderDetails.csv", header=True)
+
+df_final = df_customers.filter(col('country') == "USA")\
+                       .join(df_salesOrders, \
+                             df_customers.custid == df_salesOrders.custid)\
+                       .join(df_salesOrderDetails, \
+                              df_salesOrders.orderid == df_salesOrderDetails.orderid)\
+                        .groupBy(df_customers.custid).agg(\
+                                    countDistinct(df_salesOrders.orderid).alias("TotalOrders") , sum(df_salesOrderDetails.qty).alias("TotalQuantity") )
+                                   
+display(df_final)
+
+
+
+# COMMAND ----------
+
+# MAGIC %md
+# MAGIC ## Return customers who placed no orders
+
+# COMMAND ----------
+
+df_customers = spark.read.csv("dbfs:/FileStore/Sales_Customers.csv", header=True)
+df_orders = spark.read.csv("dbfs:/FileStore/Sales_Orders.csv", header=True)
+
+df_final = df_customers.join(df_orders, df_customers.custid == df_orders.custid, "left").filter(df_orders.orderid.isNull() == True)
