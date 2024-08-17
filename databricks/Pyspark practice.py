@@ -123,4 +123,5 @@ display(df_final)
 df_customers = spark.read.csv("dbfs:/FileStore/Sales_Customers.csv", header=True)
 df_orders = spark.read.csv("dbfs:/FileStore/Sales_Orders.csv", header=True)
 
-df_final = df_customers.join(df_orders, df_customers.custid == df_orders.custid, "left").filter(df_orders.orderid.isNull() == True)
+df_final = df_customers.join(df_orders, df_customers.custid == df_orders.custid, "left").filter(df_orders.orderid.isNull() == True).select(df_customers.custid, df_customers.companyname)
+display(df_final)
