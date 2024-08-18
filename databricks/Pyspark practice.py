@@ -103,9 +103,9 @@ df_salesOrderDetails = spark.read.csv("dbfs:/FileStore/Sales_OrderDetails.csv", 
 
 df_final = df_customers.filter(col('country') == "USA")\
                        .join(df_salesOrders, \
-                             df_customers.custid == df_salesOrders.custid)\
+                             df_customers.custid == df_salesOrders.custid,"inner")\
                        .join(df_salesOrderDetails, \
-                              df_salesOrders.orderid == df_salesOrderDetails.orderid)\
+                              df_salesOrders.orderid == df_salesOrderDetails.orderid,"inner")\
                         .groupBy(df_customers.custid).agg(\
                                     countDistinct(df_salesOrders.orderid).alias("TotalOrders") , sum(df_salesOrderDetails.qty).alias("TotalQuantity") )
                                    
@@ -124,4 +124,73 @@ df_customers = spark.read.csv("dbfs:/FileStore/Sales_Customers.csv", header=True
 df_orders = spark.read.csv("dbfs:/FileStore/Sales_Orders.csv", header=True)
 
 df_final = df_customers.join(df_orders, df_customers.custid == df_orders.custid, "left").filter(df_orders.orderid.isNull() == True).select(df_customers.custid, df_customers.companyname)
+display(df_final)
+
+# COMMAND ----------
+
+# MAGIC %md
+# MAGIC #Subqueries alternatives and Ranking functions
+
+# COMMAND ----------
+
+# MAGIC %md
+# MAGIC ## max value in orderdate column for each employee
+
+# COMMAND ----------
+
+from pyspark.sql.functions import max
+
+df_orders = spark.read.csv("dbfs:/FileStore/Sales_Orders.csv", header=True)
+df_final = df_orders.groupBy("empid")\
+                    .agg(max("orderdate").alias("maxorderdate") )\
+                    .select("empid", "maxorderdate")
+display(df_final)
+
+# COMMAND ----------
+
+# MAGIC %md
+# MAGIC ## Add orderid and custid in the above resultset
+
+# COMMAND ----------
+
+from pyspark.sql.functions import max
+df_orders = spark.read.csv("dbfs:/FileStore/Sales_Orders.csv", header=True)
+df_maxdateorders = df_orders.groupBy("empid")\
+                            .agg(max("orderdate").alias("maxorderdate") )\
+                            .select("empid", "maxorderdate")
+df_orders_alias = df_orders.alias("orders")
+df_maxdateorders_alias = df_maxdateorders.alias("maxdateorders")
+df_orders_final = df_orders_alias.join(df_maxdateorders_alias, df_orders_alias.empid == df_maxdateorders_alias.empid, "left").select(df_orders_alias.empid, df_orders_alias.orderdate, df_orders_alias.orderid, df_orders_alias.custid)
+display(df_orders_final)                        
+
+# COMMAND ----------
+
+# MAGIC %md
+# MAGIC ## RowNumber for each order based on Orderdate,orderid
+
+# COMMAND ----------
+
+from pyspark.sql.window import Window
+from pyspark.sql.functions import row_number
+
+
+windowSpec  = Window.orderBy("orderid", "orderdate")
+
+df_orders = spark.read.csv("dbfs:/FileStore/Sales_Orders.csv", header= True)
+df_final = df_orders.withColumn("rnk", row_number().over(windowSpec))
+display(df_final)
+
+# COMMAND ----------
+
+# MAGIC %md
+# MAGIC ## filter row_numbers 1 to 10 from above resultset
+
+# COMMAND ----------
+
+from pyspark.sql.window import Window
+from pyspark.sql.functions import row_number
+
+df_orders = spark.read.csv("dbfs:/FileStore/Sales_Orders.csv", header= True)
+df_rnk_no = df_orders.withColumn("rnk", row_number().over(windowSpec))
+df_final = df_rnk_no.filter((df_rnk_no.rnk >=1) & (df_rnk_no.rnk <= 10))
 display(df_final)
