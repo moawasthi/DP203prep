@@ -160,7 +160,7 @@ df_maxdateorders = df_orders.groupBy("empid")\
                             .select("empid", "maxorderdate")
 df_orders_alias = df_orders.alias("orders")
 df_maxdateorders_alias = df_maxdateorders.alias("maxdateorders")
-df_orders_final = df_orders_alias.join(df_maxdateorders_alias, df_orders_alias.empid == df_maxdateorders_alias.empid, "left").select(df_orders_alias.empid, df_orders_alias.orderdate, df_orders_alias.orderid, df_orders_alias.custid)
+df_orders_final = df_orders_alias.join(df_maxdateorders_alias, (df_orders_alias.empid == df_maxdateorders_alias.empid) & (df_orders_alias.orderdate == df_maxdateorders_alias.orderdate),  "left").select(df_orders_alias.empid, df_orders_alias.orderdate, df_orders_alias.orderid, df_orders_alias.custid)
 display(df_orders_final)                        
 
 # COMMAND ----------
