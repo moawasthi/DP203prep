@@ -160,7 +160,12 @@ df_maxdateorders = df_orders.groupBy("empid")\
                             .select("empid", "maxorderdate")
 df_orders_alias = df_orders.alias("orders")
 df_maxdateorders_alias = df_maxdateorders.alias("maxdateorders")
-df_orders_final = df_orders_alias.join(df_maxdateorders_alias, (df_orders_alias.empid == df_maxdateorders_alias.empid) & (df_orders_alias.orderdate == df_maxdateorders_alias.orderdate),  "left").select(df_orders_alias.empid, df_orders_alias.orderdate, df_orders_alias.orderid, df_orders_alias.custid)
+df_orders_final = df_orders_alias.join(df_maxdateorders_alias, \
+                                        (df_orders_alias.empid == df_maxdateorders_alias.empid) & (df_orders_alias.orderdate == df_maxdateorders_alias.orderdate),  "left")\
+                    .select(df_orders_alias.empid, 
+                            df_orders_alias.orderdate, 
+                            df_orders_alias.orderid, 
+                            df_orders_alias.custid)
 display(df_orders_final)                        
 
 # COMMAND ----------
@@ -194,3 +199,76 @@ df_orders = spark.read.csv("dbfs:/FileStore/Sales_Orders.csv", header= True)
 df_rnk_no = df_orders.withColumn("rnk", row_number().over(windowSpec))
 df_final = df_rnk_no.filter((df_rnk_no.rnk >=1) & (df_rnk_no.rnk <= 10))
 display(df_final)
+
+# COMMAND ----------
+
+# MAGIC %md
+# MAGIC # Other important operations
+
+# COMMAND ----------
+
+# MAGIC %md
+# MAGIC ## SET based Operations
+
+# COMMAND ----------
+
+# UNION
+df_orders = spark.read.csv("dbfs:/FileStore/Sales_Orders.csv", header= True)
+df_orders_2021 = df_orders.filter(df_orders.orderdate.like("%2021%"))
+df_orders_2022 = df_orders.filter(df_orders.orderdate.like("%2022%"))
+df_final = df_orders_2021.union(df_orders_2022)
+display(df_final)
+# EXCEPT
+df_except = df_orders_2021.subtract(df_orders_2022)
+print("with except clause")
+display(df_except)
+#INTERSECT
+df_intersect = df_orders_2021.intersect(df_orders_2022)
+print("with intersect clause")
+display(df_intersect)
+
+
+# COMMAND ----------
+
+# MAGIC %md
+# MAGIC ## SQL Operations
+
+# COMMAND ----------
+
+df_orders = spark.read.csv("dbfs:/FileStore/Sales_Orders.csv", header= True)
+df_orders_2021 = df_orders.filter(df_orders.orderdate.like("%2021%"))
+df_orders_2022 = df_orders.filter(df_orders.orderdate.like("%2022%"))
+
+df_orders_2021.createOrReplaceTempView("orders_2021")
+df_orders_2022.createOrReplaceTempView("orders_2022")
+result = spark.sql("SELECT * FROM orders_2021 EXCEPT SELECT * FROM orders_2022")
+display(result)
+
+                   
+
+# COMMAND ----------
+
+# MAGIC %md
+# MAGIC ## More Commands
+
+# COMMAND ----------
+
+df_orders = spark.read.csv("dbfs:/FileStore/Sales_Orders.csv", header= True)
+df_orders_2021 = df_orders.filter(df_orders.orderdate.like("%2021%"))
+df_orders_2022 = df_orders.filter(df_orders.orderdate.like("%2022%"))
+
+# count rows in a dataframe
+num = df_orders_2021.count()
+display(num)
+
+# distinct rows in a dataframe
+df_distinct = df_orders_2021.distinct()
+display(df_distinct)
+
+# remove duplicates
+df_orders.dropDuplicates()
+
+# write data 
+df_orders_2021.write.csv("dbfs:/FileStore/Sales_Orders_2021.csv")
+
+
