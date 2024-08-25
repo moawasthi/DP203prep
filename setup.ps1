@@ -2,7 +2,7 @@
 Connect-AzAccount
 
 # Define resource group, server, and database names
-$resourceGroupName = "rg-contoso-2508-dev"
+$resourceGroupName = "rg-contoso-2608-dev"
 $location = "SouthIndia"  # Choose a region close to your location for cost efficiency
 $serverName = "sqldbcontoso2508dev"  # Must be unique across all Azure SQL Servers
 $adminUsername = "testuser"
