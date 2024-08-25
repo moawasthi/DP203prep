@@ -24,7 +24,7 @@ data = {
     'movie_genre':[0,1,1,0,1,1,0,1,1], # 0: Action, 1: Comedy
     'user_age':[23,23,23,45,45,35,25,25,25],
     'user_gender':[0,0,0,1,1,0,0,1,1],
-    'rating':[5,5,5,4,4,3,2,2,2]
+    'rating':[0,0,1,4,4,3,2,2,2]
 }
 
 df = pd.DataFrame(data)
@@ -47,4 +47,46 @@ print(Y.head())
 
 # COMMAND ----------
 
+# MAGIC %md
+# MAGIC # Split the data into training and testing Sets
 
+# COMMAND ----------
+
+X_train , X_test, Y_train, Y_test = train_test_split(X, Y, test_size=0.2, random_state=42)
+print(f"Training set size {X_train.shape[0]}")
+print(f"Test set size : {X_test.shape[0]}")
+
+# COMMAND ----------
+
+# MAGIC %md
+# MAGIC # Initialize and Train Random Forest classifier
+
+# COMMAND ----------
+
+clf = RandomForestClassifier(n_estimators=100, random_state=42)
+clf.fit(X_train, Y_train)
+
+
+# COMMAND ----------
+
+# MAGIC %md
+# MAGIC # Make Predictions
+
+# COMMAND ----------
+
+y_predict = clf.predict(X_test)
+print(y_predict)
+
+# COMMAND ----------
+
+# MAGIC %md
+# MAGIC # Evaluate the Model 
+
+# COMMAND ----------
+
+accuracy = accuracy_score(Y_test, y_predict)
+print(f"accuracy: {accuracy:.2f}")
+confusion_matrix = confusion_matrix(Y_test, y_predict)
+print(f"confusion matrix : {confusion_matrix}")
+report = classification_report(Y_test, y_predict)
+print(f"Classification report {report}")
