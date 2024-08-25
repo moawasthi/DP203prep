@@ -1,16 +1,16 @@
 # Connect-AzAccount
 # The SubscriptionId in which to create these objects
-$SubscriptionId = '6a4c1741-e88c-44c0-8a38-22ac6269c95c'
+$SubscriptionId = ''
 # Set the resource group name and location for your server
-$resourceGroupName = "myResourceGroup-$(Get-Random)"
+$resourceGroupName = "rg-contoso-$(Get-Random)"
 $location = "westus2"
 # Set an admin login and password for your server
 $adminSqlLogin = "SqlAdmin"
 $password = "ChangeYourAdminPassword1"
 # Set server name - the logical server name has to be unique in the system
-$serverName = "server-$(Get-Random)"
+$serverName = "sql-db-server-$(Get-Random)"
 # The sample database name
-$databaseName = "mySampleDatabase"
+$databaseName = "tsqlv6"
 # The ip address range that you want to allow to access your server
 $startIp = "0.0.0.0"
 $endIp = "0.0.0.0"
