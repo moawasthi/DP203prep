@@ -15,6 +15,9 @@ $databaseName = "tsqlv6"
 $startIp = "0.0.0.0"
 $endIp = "0.0.0.0"
 
+$STRGACCNAME= "strggetpractical01"
+$TypeSTRG= "Standard_LRS"
+
 # Set subscription 
 Set-AzContext -SubscriptionId $subscriptionId
 
@@ -29,6 +32,9 @@ $serverFirewallRule = New-AzSqlServerFirewallRule -ResourceGroupName $resourceGr
 
 # Create a blank database with an S0 performance level
 $database = New-AzSqlDatabase  -ResourceGroupName $resourceGroupName -ServerName $serverName -DatabaseName $databaseName -RequestedServiceObjectiveName "S0" -SampleName "AdventureWorksLT"
+
+# Create a storage account
+$storageaccount = New-AzStorageAccount -ResourceGroupName $resourceGroupName -Name $STRGACCNAME -Type $TypeSTRG -Location $location
 
 # Clean up deployment 
 # Remove-AzResourceGroup -ResourceGroupName $resourceGroupName
