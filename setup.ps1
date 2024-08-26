@@ -1,6 +1,6 @@
 # Connect-AzAccount
 # The SubscriptionId in which to create these objects
-$SubscriptionId = '6a4c1741-e88c-44c0-8a38-22ac6269c95c'
+$SubscriptionId = ''
 # Set the resource group name and location for your server
 $resourceGroupName = "rg-contoso-$(Get-Random)"
 $location = "westus2"
