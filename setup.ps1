@@ -15,7 +15,7 @@ $databaseName = "tsqlv6"
 $startIp = "0.0.0.0"
 $endIp = "0.0.0.0"
 
-$STRGACCNAME= "strggetpractical01"
+$STRGACCNAME= "sabicontosodev-$(Get-Random)"
 $TypeSTRG= "Standard_LRS"
 
 # Set subscription 
