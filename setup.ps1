@@ -13,6 +13,9 @@ $TypeSTRG= "Standard_LRS"
 $containerName  = "masterdata"
 $prefixName     = "loop"
 
+# Create a context object using Azure AD credentials
+$ctx = New-AzStorageContext -StorageAccountName $STRGACCNAME -UseConnectedAccount
+
 #data factory name
 $dataFactoryName = "Contoso-ADF-dev$(Get-Random)";
 
@@ -26,7 +29,7 @@ $resourceGroup = New-AzResourceGroup -Name $resourceGroupName -Location $locatio
 #$server = New-AzSqlServer -ResourceGroupName $resourceGroupName -ServerName $serverName -Location $location -SqlAdministratorCredentials $(New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList $adminSqlLogin, $(ConvertTo-SecureString -String $password -AsPlainText -Force))
 
 # Create a server firewall rule that allows access from the specified IP range
-$serverFirewallRule = New-AzSqlServerFirewallRule -ResourceGroupName $resourceGroupName -ServerName $serverName -FirewallRuleName "AllowedIPs" -StartIpAddress $startIp -EndIpAddress $endIp
+#$serverFirewallRule = New-AzSqlServerFirewallRule -ResourceGroupName $resourceGroupName -ServerName $serverName -FirewallRuleName "AllowedIPs" -StartIpAddress $startIp -EndIpAddress $endIp
 
 # Create a blank database with an S0 performance level
 #$database = New-AzSqlDatabase  -ResourceGroupName $resourceGroupName -ServerName $serverName -DatabaseName $databaseName -RequestedServiceObjectiveName "S0" -SampleName "AdventureWorksLT"
