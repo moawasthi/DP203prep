@@ -1,22 +1,20 @@
 # Connect-AzAccount
 # The SubscriptionId in which to create these objects
-$SubscriptionId = ''
+Register-AzResourceProvider -ProviderNamespace Microsoft.Databricks
+
+$SubscriptionId = '' # Provide your subscription Id
 # Set the resource group name and location for your server
-$resourceGroupName = "rg-contoso-$(Get-Random)"
+$resourceGroupName = "RG-DATAFACTORY-DEV$(Get-Random)"
 $location = "westus2"
-# Set an admin login and password for your server
-$adminSqlLogin = "SqlAdmin"
-$password = "ChangeYourAdminPassword1"
-# Set server name - the logical server name has to be unique in the system
-$serverName = "sql-db-server-$(Get-Random)"
-# The sample database name
-$databaseName = "tsqlv6"
-# The ip address range that you want to allow to access your server
-$startIp = "0.0.0.0"
-$endIp = "0.0.0.0"
+
 
 $STRGACCNAME= "sabicontosodev$(Get-Random)"
 $TypeSTRG= "Standard_LRS"
+$containerName  = "individual-container"
+$prefixName     = "loop"
+
+#data factory name
+$dataFactoryName = "Contoso-ADF-dev$(Get-Random)";
 
 # Set subscription 
 Set-AzContext -SubscriptionId $subscriptionId
@@ -35,6 +33,13 @@ $database = New-AzSqlDatabase  -ResourceGroupName $resourceGroupName -ServerName
 
 # Create a storage account
 $storageaccount = New-AzStorageAccount -ResourceGroupName $resourceGroupName -Name $STRGACCNAME -Type $TypeSTRG -Location $location
+
+# Approach 1: Create a container
+New-AzStorageContainer -Name $containerName -Context $ctx
+
+$DataFactory = Set-AzDataFactoryV2 -ResourceGroupName $resourceGroupName -Location $location -Name $dataFactoryName
+
+New-AzDatabricksWorkspace -Name mydatabricksws -ResourceGroupName $resourceGroupName -Location $location -ManagedResourceGroupName databricks-group -Sku standard
 
 # Clean up deployment 
 # Remove-AzResourceGroup -ResourceGroupName $resourceGroupName
