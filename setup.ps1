@@ -13,8 +13,7 @@ $TypeSTRG= "Standard_LRS"
 $containerName  = "masterdata"
 $prefixName     = "loop"
 
-# Create a context object using Azure AD credentials
-$ctx = New-AzStorageContext -StorageAccountName $STRGACCNAME -UseConnectedAccount
+
 
 #data factory name
 $dataFactoryName = "Contoso-ADF-dev$(Get-Random)";
@@ -36,6 +35,9 @@ $resourceGroup = New-AzResourceGroup -Name $resourceGroupName -Location $locatio
 
 # Create a storage account
 $storageaccount = New-AzStorageAccount -ResourceGroupName $resourceGroupName -Name $STRGACCNAME -Type $TypeSTRG -Location $location
+
+# Create a context object using Azure AD credentials
+$ctx = New-AzStorageContext -StorageAccountName $STRGACCNAME -UseConnectedAccount
 
 # Approach 1: Create a container
 New-AzStorageContainer -Name $containerName -Context $ctx
