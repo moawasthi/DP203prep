@@ -36,7 +36,6 @@ $resourceGroup = New-AzResourceGroup -Name $resourceGroupName -Location $locatio
 # Create a storage account
 $storageaccount = New-AzStorageAccount -ResourceGroupName $resourceGroupName -Name $STRGACCNAME -Type $TypeSTRG -Location $location
 
-
 $DataFactory = Set-AzDataFactoryV2 -ResourceGroupName $resourceGroupName -Location $location -Name $dataFactoryName
 
 New-AzDatabricksWorkspace -Name mydatabricksws -ResourceGroupName $resourceGroupName -Location $location -ManagedResourceGroupName databricks-group -Sku standard
@@ -45,6 +44,10 @@ New-AzDatabricksWorkspace -Name mydatabricksws -ResourceGroupName $resourceGroup
 Connect-AzAccount
 # Create a context object using Azure AD credentials
 $stgact = Get-AzStorageAccount -ResourceGroupName $resourceGroupName -Name $STRGACCNAME
+
+#for Gen2
+Set-AzStorageAccount -ResourceGroupName $resourceGroupName -Name $stgact -EnableHierarchicalNamespace $true
+
 $ctx = $stgact.Context
 
 # Approach 1: Create a container
