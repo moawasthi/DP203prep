@@ -44,7 +44,8 @@ New-AzDatabricksWorkspace -Name mydatabricksws -ResourceGroupName $resourceGroup
 # Connect to your Azure subscription
 Connect-AzAccount
 # Create a context object using Azure AD credentials
-$ctx = New-AzStorageContext -StorageAccountName $STRGACCNAME -UseConnectedAccount
+$stgact = Get-AzStorageAccount -ResourceGroupName $resourceGroupName -Name $STRGACCNAME
+$ctx = $stgact.Context
 
 # Approach 1: Create a container
 New-AzStorageContainer -Name $containerName -Context $ctx
