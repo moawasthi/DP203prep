@@ -43,7 +43,7 @@ from pyspark.sql import functions as F
 # in sales order, return empid, totalfreight, count of orders for custid 71
 sales_orders = spark.read.option("header", True).format("csv").load("dbfs:/FileStore/Orders.csv")
 sales_orders_filtered = sales_orders.where(sales_orders["custid"] ==  71)
-sales_orders_filtered_addYear = sales_orders_filtered.withColumn("orderyear", col("orderdate").cast(DateType()))
+sales_orders_filtered_addYear = sales_orders_filtered.withColumn("orderyear", year(col("orderdate").cast(DateType())) )
 sales_orders_agg = sales_orders_filtered_addYear.groupBy("empid", "orderyear").agg(sum("freight").alias("totalfreight"), count("orderid").alias("numorders") )
 display(sales_orders_agg)
 
@@ -51,8 +51,17 @@ display(sales_orders_agg)
 # COMMAND ----------
 
 # from sales orders fetch employee id, orderyear, distinct number of customers
+from pyspark.sql.functions import col, year, max, countDistinct
 
-sales_orders = spark.read.option(["header", True, "inferSchema", True]).format("csv").load("dbfs:/FileStore/Orders.csv")
+sales_orders = spark.read.option("header", True)\
+                         .option("inferSchema", True)\
+                         .format("csv").load("dbfs:/FileStore/Orders.csv")
+
+sales_orders_orderyear = sales_orders.withColumn("orderyear", year("orderdate"))
+
+sales_agg_orderyear_num = sales_orders_orderyear.groupBy("empid", "orderyear").agg(countDistinct("custid").alias("numcust"))
+
+display(sales_agg_orderyear_num)
 
 # COMMAND ----------
 
